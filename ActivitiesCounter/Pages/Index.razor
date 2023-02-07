@@ -11,3 +11,4 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 <button class="btn btn-success" @onclick="@(e => FilesManager.LoadFilesData())">Cargar datos</button>
+<button class="btn btn-success" @onclick="@(e => FilesManager.LoadFilesData(true))">Restaurar datos</button>

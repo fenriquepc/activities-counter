@@ -1,0 +1,35 @@
+﻿@page "/actividad"
+@inject IActivitiesManager ActivitiesManager
+
+<h3>@HeaderText</h3>
+
+<EditForm Model="@Activity" OnValidSubmit="@Upsert">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText id="name" @bind-Value="Activity.Name" />
+
+    <InputNumber id="players" @bind-Value="Activity.Capacity" DisplayName="Jugadores" />
+
+    <InputDate id="date" @bind-Value="Activity.Date" Type="InputDateType.DateTimeLocal" />
+
+    <button type="submit">Guardar</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public Activity Activity { get; set; } = new();
+
+    private string HeaderText => Activity?.Name ?? "Nueva actividad";
+
+    public void SetActivity(Activity activity)
+    {
+        Activity = activity;
+        StateHasChanged();
+    }
+
+    private async Task Upsert()
+    {
+        await ActivitiesManager.UpsertActivity(Activity);
+    }
+}

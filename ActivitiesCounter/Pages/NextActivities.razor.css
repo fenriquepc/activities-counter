@@ -1,0 +1,35 @@
+﻿@font-face {
+    font-family: 'inversionz';
+    src: url('/fonts/Inversionz Unboxed.otf');
+}
+
+.next-activities {
+    font-family: inversionz;
+    color: white;
+    background-color: #2e2321;
+    background-image: url('img/background.jpg');
+    font-size: 34px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    font-size: 0.9em;
+    margin: 0 auto;
+}
+
+.nombre.completo {
+    text-decoration: line-through;
+}
+
+#contenido {
+    width: 100%;
+}
+
+a.boton {
+    cursor: pointer;
+}

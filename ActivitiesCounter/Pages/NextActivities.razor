@@ -1,0 +1,59 @@
+﻿@page "/proximasactividades"
+@inject IActivitiesManager ActivitiesManager
+
+<PageTitle>Próximas actividades</PageTitle>
+
+<div class="next-activities">
+<h1>Próximas actividades</h1>
+
+@if (activities == null)
+{
+	<p><em>Cargando...</em></p>
+}
+else
+{
+	<table class="activities-table">
+		<thead>
+			<tr>
+				<th></th>
+				<th>Nombre</th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var activity in activities)
+			{
+				<tr>
+					<td>@activity.Date</td>
+					<td>
+							<a @onclick="() => ShowPopup(activity)">@activity.Name</a>
+							
+							<Popup @ref="popupRef" />
+					</td>
+					<td>@activity.AvailableCapacity</td>
+					<td>
+						<button class="btn btn-success" @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))">Añadir</button>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+</div>
+@code {
+	private IEnumerable<Activity> activities;
+
+	protected override async Task OnInitializedAsync()
+	{
+		activities = await ActivitiesManager.GetNextActivitiesAsync();
+	}
+
+	private Popup popupRef;
+
+	private void ShowPopup(Activity activity)
+	{
+		popupRef.Show(activity);
+	}
+}
