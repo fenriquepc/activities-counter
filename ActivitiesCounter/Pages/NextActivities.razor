@@ -1,4 +1,5 @@
 ﻿@page "/proximasactividades"
+@using System.Globalization
 @inject IActivitiesManager ActivitiesManager
 
 <PageTitle>Próximas actividades</PageTitle>
@@ -26,7 +27,7 @@ else
 			@foreach (var activity in activities)
 			{
 				<tr>
-					<td>@activity.Date</td>
+					<td>@GetTimeText(activity.Date)</td>
 					<td>
 							<a @onclick="() => ShowPopup(activity)">@activity.Name</a>
 							
@@ -55,5 +56,17 @@ else
 	private void ShowPopup(Activity activity)
 	{
 		popupRef.Show(activity);
+	}
+
+	private string GetTimeText(DateTime date)
+	{
+		var result = date.ToString("HH:mm");
+
+		if (date.Date == DateTime.Now.Date)
+			return result;
+
+		var ci = new CultureInfo("Es-Es");
+		var dayText = ci.DateTimeFormat.GetDayName(date.DayOfWeek).Substring(0, 3);
+		return $"{result} ({dayText})";
 	}
 }
