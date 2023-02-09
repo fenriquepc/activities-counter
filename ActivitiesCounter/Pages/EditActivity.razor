@@ -7,13 +7,29 @@
     <DataAnnotationsValidator />
     <ValidationSummary />
 
-    <InputText id="name" @bind-Value="Activity.Name" />
+    <div class="form-floating mb-3">
+        <InputText id="name" class="form-control" placeholder="La casa Corbitt" @bind-Value="Activity.Name" />
+        <label for="name">Nombre de la actividad</label>
+    </div>
 
-    <InputNumber id="players" @bind-Value="Activity.Capacity" DisplayName="Jugadores" />
+    <div class="input-group">
+        <div class="mb-3">
+            <label for="players">Número de jugadores</label>
+            <InputNumber id="players" class="form-control" @bind-Value="Activity.Capacity" DisplayName="Jugadores" />
+        </div>
 
-    <InputDate id="date" @bind-Value="Activity.Date" Type="InputDateType.DateTimeLocal" />
+        <div class="mb-3">
+            <label for="date">Fecha</label>
+            <InputDate id="date" class="form-control" @bind-Value="Activity.Date" Type="InputDateType.DateTimeLocal" />
+        </div>
+    </div>
 
-    <button type="submit">Guardar</button>
+    <div class="form-floating mb-3">
+        <InputTextArea id="description" class="form-control" placeholder="Descripción" @bind-Value="Activity.Description" />
+        <label for="description">Descripción de la actividad</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </EditForm>
 
 @code {
