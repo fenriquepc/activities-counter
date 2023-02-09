@@ -1,6 +1,7 @@
 ﻿@page "/proximasactividades"
 @using System.Globalization
 @inject IActivitiesManager ActivitiesManager
+@inject IJSRuntime JS
 
 <PageTitle>Próximas actividades</PageTitle>
 
@@ -19,8 +20,12 @@ else
 			{
 				<tr>
 					<td>@GetTimeText(activity.Date)</td>
-					<td><span class="material-symbols-outlined" hidden="@(!activity.AdultsOnly)">18_up_rating</span></td>
-					<td>
+						<td>
+							<HxTooltip Text="Solo para mayores de edad">
+								<span class="material-symbols-outlined adults-only" hidden="@(!activity.AdultsOnly)">18_up_rating</span>
+							</HxTooltip>
+						</td>
+						<td>
 							<a @onclick="() => ShowModal(activity)">@activity.Name</a>
 							
 					</td>
