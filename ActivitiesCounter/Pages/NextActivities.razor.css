@@ -33,3 +33,18 @@ table {
 a.boton {
     cursor: pointer;
 }
+
+span.adults-only {
+    color: red;
+    background-color: white;
+}
+
+::deep .activity-description {
+    position: fixed;
+    z-index: 10;
+}
+
+::deep .activity-description .card {
+    background-color: var(--secondary-color) !important;
+}
+

@@ -1,7 +1,6 @@
 ﻿@page "/proximasactividades"
 @using System.Globalization
 @inject IActivitiesManager ActivitiesManager
-@inject IJSRuntime JS
 
 <PageTitle>Próximas actividades</PageTitle>
 
@@ -20,18 +19,52 @@ else
 			{
 				<tr>
 					<td>@GetTimeText(activity.Date)</td>
-						<td>
-							<HxTooltip Text="Solo para mayores de edad">
-								<span class="material-symbols-outlined adults-only" hidden="@(!activity.AdultsOnly)">18_up_rating</span>
-							</HxTooltip>
-						</td>
-						<td>
-							<a @onclick="() => ShowModal(activity)">@activity.Name</a>
-							
+					<td>
+						<HxTooltip Text="Solo para mayores de edad">
+							<span class="material-symbols-outlined adults-only" hidden="@(!activity.AdultsOnly)">18_up_rating</span>
+						</HxTooltip>
+					</td>
+					<td>
+						@activity.Name 
+						<HxTooltip Text="Inscribir participante">
+							<HxCollapseToggleButton Text="help" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="material-symbols-outlined more-button fs-6 user-select-none" />
+						</HxTooltip>
+							<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
+							<HxCard BodyCssClass="fs-5">
+								<BodyTemplate>
+									@activity.Description
+								</BodyTemplate>
+							</HxCard>
+						</HxCollapse>
 					</td>
 					<td>@activity.AvailableCapacity</td>
-					<td>
-						<button class="btn btn-success" @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))">Añadir</button>
+					<td class="user-select-none">
+						<HxTooltip Text="Inscribir participante">
+							<span  @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))" class="material-symbols-outlined">
+								group_add
+							</span>
+						</HxTooltip>
+					</td>
+					<td class=" user-select-none">
+						<HxDropdown>
+								<HxDropdownToggleElement CssClass="material-symbols-outlined" role="button">
+								settings
+							</HxDropdownToggleElement>
+							<HxDropdownMenu>
+								<HxDropdownItem OnClick="() => ShowModal(activity)">
+									<span class="material-symbols-outlined">
+										edit
+									</span>
+									Editar actividad
+								</HxDropdownItem>
+								<HxDropdownItem>
+									<span class="material-symbols-outlined">
+										delete
+									</span>
+									Borrar actividad
+								</HxDropdownItem>
+							</HxDropdownMenu>
+						</HxDropdown>
 					</td>
 				</tr>
 			}
