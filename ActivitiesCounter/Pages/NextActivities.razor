@@ -48,27 +48,19 @@ else
 					</td>
 					<td class="user-select-none">
 						<HxTooltip Text="Inscribir participante">
-							<span  @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))" class="material-symbols-outlined">
-								group_add
-							</span>
+							<i class="fa-solid fa-user-gear" @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))"></i>
 						</HxTooltip>
 					</td>
 					<td class=" user-select-none">
 						<HxDropdown>
-								<HxDropdownToggleElement CssClass="material-symbols-outlined" role="button">
+								<HxDropdownToggleElement CssClass="hover-shadow" role="button">
 									<i class="fa-solid fa-gear fa-spin-hover"></i>
 							</HxDropdownToggleElement>
 							<HxDropdownMenu>
 								<HxDropdownItem OnClick="() => ShowModal(activity)">
-									<span class="material-symbols-outlined">
-										edit
-									</span>
 									Editar actividad
 								</HxDropdownItem>
 								<HxDropdownItem>
-									<span class="material-symbols-outlined">
-										delete
-									</span>
 									Borrar actividad
 								</HxDropdownItem>
 							</HxDropdownMenu>
