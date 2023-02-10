@@ -38,6 +38,11 @@ table {
     position: relative;
 }
 
+.activities-table i {
+    font-size: 0.5em;
+    vertical-align: middle;
+}
+
 a.boton {
     cursor: pointer;
 }
@@ -59,7 +64,6 @@ a.boton {
 
 ::deep .name-cell .more-button {
     color: white;
-    font-size: 0.4em;
     display: none;
     vertical-align: top;
 }
@@ -86,12 +90,11 @@ a.boton {
     bottom: -1px;
     left: -5px;
     color: #dc3545;
-    font-size: 0.5em;
 }
 
 .fa-spin-hover:hover {
-    -webkit-animation: fa-spin 2s infinite linear;
-    -moz-animation: fa-spin 2s infinite linear;
-    -o-animation: fa-spin 2s infinite linear;
-    animation: fa-spin 2s infinite linear;
+    -webkit-animation: fa-spin 4s infinite linear;
+    -moz-animation: fa-spin 4s infinite linear;
+    -o-animation: fa-spin 4s infinite linear;
+    animation: fa-spin 4s infinite linear;
 }
