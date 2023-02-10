@@ -18,16 +18,20 @@ else
 			@foreach (var activity in _activities)
 			{
 				<tr>
-					<td>@GetTimeText(activity.Date)</td>
+					<td class="no-space">
+						@GetTimeText(activity.Date)
+					</td>
 					<td>
 						<HxTooltip Text="Solo para mayores de edad">
 							<span class="badge bg-danger adults-only" hidden="@(!activity.AdultsOnly)">+18</span>
 						</HxTooltip>
 					</td>
-					<td>
-						@activity.Name 
-						<HxTooltip Text="Inscribir participante">
-							<HxCollapseToggleButton Text="help" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="material-symbols-outlined more-button fs-6 user-select-none" />
+					<td class="name-cell">
+							@activity.Name 
+						<HxTooltip Text="Más información" CssClass="asdf">
+							<HxCollapseToggleButton Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0" >
+								<i class="fa-solid fa-circle-info fa-xs"></i>
+							</HxCollapseToggleButton>
 						</HxTooltip>
 							<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
 							<HxCard BodyCssClass="fs-5">
@@ -37,7 +41,11 @@ else
 							</HxCard>
 						</HxCollapse>
 					</td>
-					<td>@activity.AvailableCapacity</td>
+					<td class="no-space" style="position: relative">
+							@activity.AvailableCapacity
+							<i class="fa-brands fa-hotjar hot"></i>
+						/ @activity.Capacity
+					</td>
 					<td class="user-select-none">
 						<HxTooltip Text="Inscribir participante">
 							<span  @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))" class="material-symbols-outlined">
@@ -48,7 +56,7 @@ else
 					<td class=" user-select-none">
 						<HxDropdown>
 								<HxDropdownToggleElement CssClass="material-symbols-outlined" role="button">
-								settings
+									<i class="fa-solid fa-gear fa-spin-hover"></i>
 							</HxDropdownToggleElement>
 							<HxDropdownMenu>
 								<HxDropdownItem OnClick="() => ShowModal(activity)">

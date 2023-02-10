@@ -26,8 +26,23 @@ table {
     width: 100%;
 }
 
+.activities-table {
+    line-height: 0.4;
+}
+
+.activities-table .no-space {
+    word-spacing: -0.8em;
+}
+
+.activities-table td {
+    position: relative;
+}
+
 a.boton {
     cursor: pointer;
+}
+
+.name-cell {
 }
 
 .adults-only {
@@ -36,6 +51,25 @@ a.boton {
     font-weight: 100;
     vertical-align: middle;
 }
+
+::deep .asdf {
+    position: absolute;
+    top: 0;
+}
+
+::deep .name-cell .more-button {
+    color: white;
+    font-size: 0.4em;
+    display: none;
+    vertical-align: top;
+}
+
+::deep .name-cell:hover .more-button {
+    display: inherit;
+}
+
+::deep .more-button:hover {
+    color: var(--remark-color);
 }
 
 ::deep .activity-description {
@@ -47,3 +81,17 @@ a.boton {
     background-color: var(--secondary-color) !important;
 }
 
+.hot {
+    position: absolute;
+    bottom: -1px;
+    left: -5px;
+    color: #dc3545;
+    font-size: 0.5em;
+}
+
+.fa-spin-hover:hover {
+    -webkit-animation: fa-spin 2s infinite linear;
+    -moz-animation: fa-spin 2s infinite linear;
+    -o-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
