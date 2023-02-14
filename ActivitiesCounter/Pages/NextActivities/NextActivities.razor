@@ -22,14 +22,7 @@ else
 						@GetTimeText(activity.Date)
 					</td>
 					<td>
-			
-							<span class="fa-layers fa-fw" hidden="@(!activity.AdultsOnly)">
-								<i class="fa-solid fa-ban"></i>
-								<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">18</span>
-							</span>
-						<HxTooltip Text="Solo para mayores de edad">
-							<span class="badge bg-danger adults-only" hidden="@(!activity.AdultsOnly)">+18</span>
-						</HxTooltip>
+						<Icons AdultsOnly="@activity.AdultsOnly" />
 					</td>
 					<td class="name-cell">
 							@activity.Name 

@@ -1,0 +1,16 @@
+﻿@if (AdultsOnly)
+{
+	<span class="fa-layers fa-fw">
+		<i class="fa-solid fa-ban" style="color: #dc3545"></i>
+		<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">18</span>
+	</span>
+	<HxTooltip Text="Solo para mayores de edad">
+		<span class="badge bg-danger adults-only" hidden="@(!AdultsOnly)">+18</span>
+	</HxTooltip>
+}
+
+
+@code {
+	[Parameter]
+	public bool AdultsOnly { get; set; }
+}
