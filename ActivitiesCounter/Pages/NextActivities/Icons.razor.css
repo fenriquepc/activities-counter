@@ -1,0 +1,13 @@
+﻿.adults-only 
+{
+    font-size: 0.5em;
+    vertical-align: middle;
+}
+
+.adults-only svg {
+    color: #dc3545;
+}
+
+.adults-only span {
+    font-family: Arial;
+}

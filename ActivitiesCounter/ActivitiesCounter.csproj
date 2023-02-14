@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\NextActivities\Icons.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Pages\NextActivities\Icons.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Blazored.LocalStorage" Version="4.3.0" />
     <PackageReference Include="Blazored.Modal" Version="7.1.0" />
     <PackageReference Include="Havit.Blazor.Components.Web.Bootstrap" Version="3.2.6" />

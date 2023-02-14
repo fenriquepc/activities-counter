@@ -21,7 +21,7 @@ else
 					<td class="no-space">
 						@GetTimeText(activity.Date)
 					</td>
-					<td>
+					<td class="user-select-none" style="position: relative">
 						<Icons AdultsOnly="@activity.AdultsOnly" />
 					</td>
 					<td class="name-cell">
@@ -42,7 +42,7 @@ else
 					<td class="no-space" style="position: relative">
 						<CapacityCounter Activity="@activity" />
 					</td>
-					<td class=" user-select-none">
+					<td class="user-select-none">
 						<HxDropdown>
 								<HxDropdownToggleElement CssClass="hover-shadow" role="button">
 									<i class="fa-solid fa-gear fa-spin-hover"></i>
