@@ -49,11 +49,6 @@ else
 					<td class="no-space" style="position: relative">
 						<CapacityCounter Activity="@activity" />
 					</td>
-					<td class="user-select-none">
-						<HxTooltip Text="Inscribir participante">
-							<i class="fa-solid fa-user-gear" @onclick="@(e => ActivitiesManager.AddParticipant(activity, "sfdfg"))"></i>
-						</HxTooltip>
-					</td>
 					<td class=" user-select-none">
 						<HxDropdown>
 								<HxDropdownToggleElement CssClass="hover-shadow" role="button">
@@ -62,6 +57,9 @@ else
 							<HxDropdownMenu>
 								<HxDropdownItem OnClick="() => ShowModal(activity)">
 									Editar actividad
+								</HxDropdownItem>
+								<HxDropdownItem>
+									<i class="fa-solid fa-user-gear"></i>
 								</HxDropdownItem>
 								<HxDropdownItem>
 									Borrar actividad
