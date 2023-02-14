@@ -26,11 +26,11 @@ table {
     width: 100%;
 }
 
-.activities-table {
+::deep .activities-table {
     line-height: 0.8;
 }
 
-.activities-table .no-space {
+::deep .activities-table .no-space {
     word-spacing: -0.8em;
 }
 
@@ -38,7 +38,7 @@ table {
     position: relative;
 }
 
-.activities-table i {
+::deep .activities-table i {
     font-size: 0.5em;
     vertical-align: middle;
 }
@@ -85,16 +85,14 @@ a.boton {
     background-color: var(--secondary-color) !important;
 }
 
-.hot {
-    position: absolute;
-    bottom: -1px;
-    left: -5px;
-    color: #dc3545;
-}
-
 .fa-spin-hover:hover {
     -webkit-animation: fa-spin 4s infinite linear;
     -moz-animation: fa-spin 4s infinite linear;
     -o-animation: fa-spin 4s infinite linear;
     animation: fa-spin 4s infinite linear;
+}
+
+/* Modal */
+.custom-modal-overlay {
+    background-color: var(--secondary-color);
 }

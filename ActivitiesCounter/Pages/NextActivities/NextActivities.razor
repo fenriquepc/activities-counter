@@ -22,6 +22,11 @@ else
 						@GetTimeText(activity.Date)
 					</td>
 					<td>
+			
+							<span class="fa-layers fa-fw" hidden="@(!activity.AdultsOnly)">
+								<i class="fa-solid fa-ban"></i>
+								<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">18</span>
+							</span>
 						<HxTooltip Text="Solo para mayores de edad">
 							<span class="badge bg-danger adults-only" hidden="@(!activity.AdultsOnly)">+18</span>
 						</HxTooltip>
@@ -33,7 +38,7 @@ else
 								<i class="fa-solid fa-circle-info"></i>
 							</HxCollapseToggleButton>
 						</HxTooltip>
-							<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
+						<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
 							<HxCard BodyCssClass="fs-5">
 								<BodyTemplate>
 									@activity.Description
@@ -42,9 +47,7 @@ else
 						</HxCollapse>
 					</td>
 					<td class="no-space" style="position: relative">
-							@activity.AvailableCapacity
-							<i class="fa-brands fa-hotjar hot"></i>
-						/ @activity.Capacity
+						<CapacityCounter Activity="@activity" />
 					</td>
 					<td class="user-select-none">
 						<HxTooltip Text="Inscribir participante">

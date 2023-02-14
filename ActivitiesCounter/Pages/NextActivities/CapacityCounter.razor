@@ -1,0 +1,54 @@
+﻿<span @onclick="() => OnClick()">
+	@Activity.AvailableCapacity / @Activity.Capacity
+
+	@if (LastPlaces)
+	{
+		<i class="fa-brands fa-hotjar hot"></i>
+	}
+
+	<HxCollapse CssClass="activity-description w-50" @ref="_collapse">
+		<HxCard BodyCssClass="fs-5">
+			<BodyTemplate>
+				<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
+					@bind-Value="_newParticipantName" @onkeypress="OnKeyDown" @onfocusout="HideCollapse"/>
+			</BodyTemplate>
+		</HxCard>
+	</HxCollapse>
+
+</span>
+
+@code {
+
+	[Parameter]
+	public Activity Activity { get; set; }
+
+	private bool LastPlaces => Activity.Capacity < 3;
+
+	private InputText _participantNameInput;
+	private HxCollapse _collapse;
+	private string _newParticipantName = string.Empty;
+
+	private async Task OnClick()
+	{
+		_newParticipantName = string.Empty;
+		await _collapse.ShowAsync();
+
+		await _participantNameInput.Element.Value.FocusAsync();
+	}
+
+	private async Task OnKeyDown(KeyboardEventArgs e)
+	{
+		if (e.Code != "Enter" && e.Code != "NumpadEnter")
+			return;
+
+		Activity.AddParticipant(_newParticipantName);
+
+		await HideCollapse();
+	}
+
+	private async Task HideCollapse()
+	{
+		_newParticipantName = string.Empty;
+		await _collapse.HideAsync();
+	}
+}
