@@ -1,6 +1,5 @@
 ﻿.adults-only 
 {
-    font-size: 0.5em;
     vertical-align: middle;
 }
 
@@ -10,4 +9,5 @@
 
 .adults-only span {
     font-family: Arial;
+    font-size: 0.5em;
 }

@@ -38,23 +38,13 @@ table {
     position: relative;
 }
 
-::deep .activities-table i {
+::deep .activities-table svg {
     font-size: 0.5em;
     vertical-align: middle;
 }
 
 a.boton {
     cursor: pointer;
-}
-
-.name-cell {
-}
-
-.adults-only {
-    font-family: a-space;
-    font-size: 0.25em;
-    font-weight: 100;
-    vertical-align: middle;
 }
 
 ::deep .asdf {
@@ -83,13 +73,6 @@ a.boton {
 
 ::deep .activity-description .card {
     background-color: var(--secondary-color) !important;
-}
-
-.fa-spin-hover:hover {
-    -webkit-animation: fa-spin 4s infinite linear;
-    -moz-animation: fa-spin 4s infinite linear;
-    -o-animation: fa-spin 4s infinite linear;
-    animation: fa-spin 4s infinite linear;
 }
 
 /* Modal */
