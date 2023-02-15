@@ -1,4 +1,9 @@
-﻿.hot {
+﻿.capacity-counter {
+    user-select: none;
+    cursor: pointer;
+}
+
+.hot {
     position: absolute;
     bottom: -1px;
     left: -5px;

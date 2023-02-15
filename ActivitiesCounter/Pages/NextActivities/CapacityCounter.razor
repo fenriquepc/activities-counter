@@ -1,23 +1,25 @@
 ﻿@using ActivitiesCounter.Utils;
 
-<span @onclick="SimpleCallback.Create(OnClick)">
-	@Activity.AvailableCapacity / @Activity.Capacity
+<HxTooltip Text="Añadir participante">
+    <span class="capacity-counter" @onclick="SimpleCallback.Create(OnClick)">
+	    @Activity.AvailableCapacity / @Activity.Capacity
 
-	@if (LastPlaces)
-	{
-		<i class="fa-brands fa-hotjar hot"></i>
-	}
+	    @if (LastPlaces)
+	    {
+		    <i class="fa-brands fa-hotjar hot"></i>
+	    }
 
-	<HxCollapse CssClass="activity-description w-50" @ref="_collapse">
-		<HxCard BodyCssClass="fs-5">
-			<BodyTemplate>
-				<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-                    @bind-Value="_newParticipantName" @onkeydown="SimpleCallback.Create(OnKeyDown)" @onfocusout="HideCollapse" />
-			</BodyTemplate>
-		</HxCard>
-	</HxCollapse>
+	    <HxCollapse CssClass="activity-description w-50" @ref="_collapse">
+		    <HxCard BodyCssClass="fs-5">
+			    <BodyTemplate>
+				    <InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
+                        @bind-Value="_newParticipantName" @onkeydown="SimpleCallback.Create(OnKeyDown)" @onfocusout="HideCollapse" />
+			    </BodyTemplate>
+		    </HxCard>
+	    </HxCollapse>
 
-</span>
+    </span>
+</HxTooltip>
 
 @code {
 
