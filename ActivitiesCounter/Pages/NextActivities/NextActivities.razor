@@ -27,9 +27,9 @@ else
 					<td class="name-cell">
 							@activity.Name 
 						<HxTooltip Text="Más información" CssClass="asdf">
-							<HxCollapseToggleButton Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0" >
+							<HxCollapseToggleElement Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0" >
 								<i class="fa-solid fa-circle-info"></i>
-							</HxCollapseToggleButton>
+							</HxCollapseToggleElement>
 						</HxTooltip>
 						<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
 							<HxCard BodyCssClass="fs-5">
@@ -64,6 +64,8 @@ else
 			}
 		</tbody>
 	</table>
+
+	<Clock/>
 }
 </div>
 @code {

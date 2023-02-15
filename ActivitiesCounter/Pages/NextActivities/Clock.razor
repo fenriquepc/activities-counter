@@ -1,0 +1,25 @@
+﻿@using System.Threading
+@implements IDisposable
+
+<article class="clock">@_time</article>
+
+@code {
+    private string _time = DateTime.Now.ToLongTimeString();
+    private Timer aTimer;
+
+    protected override void OnInitialized()
+    {
+        aTimer = new Timer(Tick, null, 0, 1000);
+    }
+
+    private void Tick(object _)
+    {
+        _time = DateTime.Now.ToLongTimeString();
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        aTimer?.Dispose();
+    }
+}
