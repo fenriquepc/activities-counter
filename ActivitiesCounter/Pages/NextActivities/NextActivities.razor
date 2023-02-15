@@ -1,5 +1,4 @@
 ﻿@page "/proximasactividades"
-@using System.Globalization
 @inject IActivitiesManager ActivitiesManager
 
 <PageTitle>Próximas actividades</PageTitle>
@@ -19,10 +18,10 @@ else
 			{
 				<tr>
 					<td class="no-space">
-						@GetTimeText(activity.Date)
+						<ActivityDate Date="@activity.Date" />
 					</td>
 					<td class="user-select-none" style="position: relative">
-						<Icons AdultsOnly="@activity.AdultsOnly" />
+						<Icons AdultsOnly="@activity.AdultsOnly" ActivityDate="@activity.Date" />
 					</td>
 					<td class="name-cell">
 							@activity.Name 
@@ -59,17 +58,5 @@ else
 	protected override async Task OnInitializedAsync()
 	{
 		_activities = await ActivitiesManager.GetNextActivitiesAsync();
-	}
-
-	private string GetTimeText(DateTime date)
-	{
-		var result = date.ToString("HH:mm");
-
-		if (date.Date == DateTime.Now.Date)
-			return result;
-
-		var ci = new CultureInfo("Es-Es");
-		var dayText = ci.DateTimeFormat.GetDayName(date.DayOfWeek).Substring(0, 3);
-		return $"{result} ({dayText})";
 	}
 }
