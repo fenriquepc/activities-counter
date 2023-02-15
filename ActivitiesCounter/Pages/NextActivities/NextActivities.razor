@@ -43,22 +43,7 @@ else
 						<CapacityCounter Activity="@activity" />
 					</td>
 					<td class="user-select-none">
-						<HxDropdown>
-							<HxDropdownToggleElement role="button">
-								<i class="fa-solid fa-gear"></i>
-							</HxDropdownToggleElement>
-							<HxDropdownMenu>
-								<HxDropdownItem OnClick="() => ShowModal(activity)">
-									Editar actividad
-								</HxDropdownItem>
-								<HxDropdownItem>
-									<i class="fa-solid fa-user-gear"></i>
-								</HxDropdownItem>
-								<HxDropdownItem>
-									Borrar actividad
-								</HxDropdownItem>
-							</HxDropdownMenu>
-						</HxDropdown>
+						<ActivityOptions Activity="@activity" />
 					</td>
 				</tr>
 			}
@@ -69,27 +54,11 @@ else
 }
 </div>
 @code {
-	[CascadingParameter] 
-	public IModalService Modal { get; set; } = default!;
-
 	private IEnumerable<Activity> _activities = default!;
 
 	protected override async Task OnInitializedAsync()
 	{
 		_activities = await ActivitiesManager.GetNextActivitiesAsync();
-	}
-
-	private void ShowModal(Activity activity)
-	{
-		var parameters = new ModalParameters()
-			.Add(nameof(EditActivity.Activity), activity);
-		var options = new ModalOptions()
-		{
-			Position = ModalPosition.Middle
-			//Class = "edit-activity-modal"
-		};
-
-		var moviesModal = Modal.Show<EditActivity>("Editar actividad", parameters, options);
 	}
 
 	private string GetTimeText(DateTime date)
