@@ -10,7 +10,12 @@
 				<Icons />
 			</td>
 			<td class="name-cell">
-				@activity.Name
+				<span class="game">
+					@activity.Game?.Name
+				</span>
+				<span class="activity">
+					@activity.Name
+				</span>
 				<HxTooltip Text="Más información" CssClass="asdf">
 					<HxCollapseToggleElement Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0">
 						<i class="fa-solid fa-circle-info"></i>
