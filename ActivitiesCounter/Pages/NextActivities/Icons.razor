@@ -48,8 +48,11 @@
 	private void OnTimeChanged(object _)
 	{
 		var startTimeDifference = ActivityDate - DateTime.Now;
-		if (startTimeDifference.Minutes < -10 || startTimeDifference.Minutes > 10)
+		if (startTimeDifference.Minutes > 10)
 			return;
+
+		if (startTimeDifference.Minutes < -10)
+			_timer.Dispose();
 
 		StateHasChanged();
 	}
