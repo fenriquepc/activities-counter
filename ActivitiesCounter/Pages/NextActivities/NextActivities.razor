@@ -12,48 +12,23 @@
 }
 else
 {
-	<table class="activities-table">
-		<tbody>
-			@foreach (var activity in _activities)
-			{
-				<tr>
-					<td class="no-space">
-						<ActivityDate Date="@activity.Date" />
-					</td>
-					<td class="user-select-none" style="position: relative">
-						<Icons AdultsOnly="@activity.AdultsOnly" ActivityDate="@activity.Date" />
-					</td>
-					<td class="name-cell">
-							@activity.Name 
-						<HxTooltip Text="Más información" CssClass="asdf">
-							<HxCollapseToggleElement Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0" >
-								<i class="fa-solid fa-circle-info"></i>
-							</HxCollapseToggleElement>
-						</HxTooltip>
-						<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
-							<HxCard BodyCssClass="fs-5">
-								<BodyTemplate>
-									@activity.Description
-								</BodyTemplate>
-							</HxCard>
-						</HxCollapse>
-					</td>
-					<td class="no-space" style="position: relative">
-						<CapacityCounter Activity="@activity" />
-					</td>
-					<td class="user-select-none">
-						<ActivityOptions Activity="@activity" />
-					</td>
-				</tr>
-			}
-		</tbody>
-	</table>
+	<CascadingValue Value="@TimeChanged" Name="TimeChanged">
+		<table class="activities-table">
+			<tbody>
+				@foreach (var activity in _activities)
+				{
+					<ActivityRow activity="@activity" />
+				}
+			</tbody>
+		</table>
 
-	<Clock/>
+		<Clock/>
+	</CascadingValue>
 }
 </div>
 @code {
-	private IEnumerable<Activity> _activities = default!;
+	private IEnumerable<Activity> _activities;
+	private event Action TimeChanged;
 
 	protected override async Task OnInitializedAsync()
 	{

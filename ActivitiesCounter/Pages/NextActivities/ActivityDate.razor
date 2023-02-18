@@ -6,19 +6,19 @@
 		<span class="fa-layers fa-fw adults-only">
 			<i class="fa-regular fa-calendar"></i>
 			<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8" style="font-weight:900">
-				@_culture.DateTimeFormat.GetDayName(Date.DayOfWeek).Substring(0, 3)
+				@_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek).Substring(0, 3)
 			</span>
 		</span>
 	</HxTooltip>
 }
 
-@Date.ToString("HH:mm")
+@Activity.Date.ToString("HH:mm")
 
 @code {
-	[Parameter]
-	public DateTime Date { get; set; }
+	[CascadingParameter]
+	public Activity Activity { get; set; }
 
-	private bool ShowDay => Date.Date != DateTime.Now.Date;
+	private bool ShowDay => Activity.Date.Date != DateTime.Now.Date;
 	private readonly CultureInfo _culture = new CultureInfo("Es-Es");
-	private string _dayTooltipMessage => $"Partida programada para el {_culture.DateTimeFormat.GetDayName(Date.DayOfWeek)}";
+	private string _dayTooltipMessage => $"Partida programada para el {_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek)}";
 }

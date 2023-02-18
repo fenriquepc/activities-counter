@@ -1,4 +1,6 @@
-﻿@if (StartSoon)
+﻿@implements IDisposable
+
+@if (StartSoon)
 {
 	<HxTooltip Text="Inscripciones apunto de abrirse">
 		<i class="fa-solid fa-clock fa-shake"></i>
@@ -23,14 +25,32 @@
 	</HxTooltip>
 }
 
-
 @code {
-	[Parameter]
-	public bool AdultsOnly { get; set; }
+	[CascadingParameter]
+	public Activity Activity { get; set; }
 
-	[Parameter]
-	public DateTime ActivityDate { get; set; }
-
+	private Timer _timer;
+	private bool AdultsOnly => Activity.AdultsOnly;
+	private DateTime ActivityDate => Activity.Date;
 	private bool StartSoon => ActivityDate > DateTime.Now && ActivityDate - DateTime.Now < TimeSpan.FromMinutes(10);
 	private bool RecentlyOpen => DateTime.Now > ActivityDate && DateTime.Now - ActivityDate < TimeSpan.FromMinutes(10);
+
+	protected override void OnInitialized()
+	{
+		_timer = new Timer(OnTimeChanged, null, 0, 5000);
+	}
+
+	public void Dispose()
+	{
+		_timer?.Dispose();
+	}
+
+	private void OnTimeChanged(object _)
+	{
+		var startTimeDifference = ActivityDate - DateTime.Now;
+		if (startTimeDifference.Minutes < -10 || startTimeDifference.Minutes > 10)
+			return;
+
+		StateHasChanged();
+	}
 }
