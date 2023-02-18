@@ -27,8 +27,12 @@ namespace ActivitiesCounter.Repositories
             var activities = (await GetAll()).ToList() ?? new List<Activity>();
             var existingActivityIndex = activities.FindIndex(a => a.Id == activity.Id);
 
-            if (existingActivityIndex < 0) activities.Add(activity);
-            else activities[existingActivityIndex] = activity;
+            if (existingActivityIndex < 0)
+            {
+                activities.Add(activity);
+            }
+            else 
+                activities[existingActivityIndex] = activity;
 
             await PersistActivities(activities);
         }
