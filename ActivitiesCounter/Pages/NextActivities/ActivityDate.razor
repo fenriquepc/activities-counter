@@ -1,18 +1,15 @@
 ﻿@using System.Globalization;
 
-@if (ShowDay)
-{
-	<HxTooltip Text="@_dayTooltipMessage">
-		<span class="fa-layers fa-fw adults-only">
-			<i class="fa-regular fa-calendar"></i>
-			<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8" style="font-weight:900">
-				@_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek).Substring(0, 3)
-			</span>
-		</span>
-	</HxTooltip>
-}
+<div class="activity-date">
+	@if (ShowDay)
+	{
+		<HxTooltip Text="@_dayTooltipMessage">
+			<span class="day user-select-none">@_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek).Substring(0, 3)</span>
+		</HxTooltip>
+	}
 
-@Activity.Date.ToString("HH:mm")
+	@Activity.Date.ToString("HH:mm")
+</div>
 
 @code {
 	[CascadingParameter]
