@@ -1,6 +1,8 @@
-﻿.adults-only 
-{
-    vertical-align: middle;
+﻿.icons {
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
 }
 
 .adults-only svg {
