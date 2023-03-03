@@ -3,7 +3,7 @@
 	min-height: 20px;
 }
 
-.activity-options:hover .options-button {
+tr:hover .options-button {
 	visibility: visible;
 	opacity: 1;
 }
