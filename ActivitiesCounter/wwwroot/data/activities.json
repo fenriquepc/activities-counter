@@ -6,12 +6,9 @@
     "type": 1,
     "level": 1,
     "date": "2023-03-25T17:00"
-
   },
   {
-    "game": {
-      "name": "Vampiro Edad Oscura (ReV)"
-    },
+    "game": "Vampiro Edad Oscura (ReV)",
     "name": "Qarabaqa Oscura. La Reina Dorada",
     "description": "Se trata de un rol en vivo en forma de escenas narradas y toleradas ideal para conocer lo que es el rol en vivo y para adentrarse en la crónica de Vampiro Edad Oscura que se juega en Caravaca De la Cruz.\r\nLa Vampiresa oscura Zoreen La Reina Dorada administra su feudo con mano de hierro y presentará en sociedad a su chiquilla Nadia en una excepcional ceremonia vampírica.",
     "capacity": 15,
@@ -20,9 +17,7 @@
     "date": "2023-03-25T19:00"
   },
   {
-    "game": {
-      "name": "Zweihänder (D100)"
-    },
+    "game": "Zweihänder (D100)",
     "name": "Desapariciones en Mullensburg",
     "description": "Ha estallado la guerra entre el Reino de Barrenburg y el Ducado de Lapsburg, y el hambre y la ruina ha caído sobre el pequeño pueblo de Mullensburg, dominada por el férreo barón Von Aspinfeld. Nuestros protagonistas hacen una parada en Mullensburg para aprovisionarse de camino al frente, y pronto se verán envueltos en sucesos oscuros y peligrosos que arrojan su sombra sobre la otrora tranquila villa...\r\nAventura del juego de rol 'Zweihänder', sistema D100. Sólo para audiencia adulta.",
     "capacity": 5,
@@ -41,9 +36,7 @@
     "adultsOnly": false
   },
   {
-    "game": {
-      "name": "Warhammer Fantasy 4ª ed."
-    },
+    "game": "Warhammer Fantasy 4ª ed.",
     "name": "Noche de Sangre",
     "description": "La lluvia cae torrencialmente desde unas nubes oscuras y turbulentas. En lo alto, los rayos brillan a través del cielo. A lo lejos se oye el grito ahogado de alguna extraña criatura. Es una noche para estar resguardado porque, ¿Quién sabe qué se esconde bajo los oscuros árboles en los bosques del Imperio?",
     "capacity": 4,

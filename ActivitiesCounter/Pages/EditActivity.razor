@@ -1,27 +1,59 @@
 ﻿@page "/actividad"
 @inject IActivitiesManager ActivitiesManager
+@using ActivitiesCounter.Utils;
 
 <h3>@HeaderText</h3>
 
-<EditForm Model="@Activity" OnValidSubmit="@Upsert">
+<EditForm Model="@Activity" OnValidSubmit="@Upsert" class="activity-form">
     <DataAnnotationsValidator />
     <ValidationSummary />
 
-    <div class="form-floating mb-3">
-        <InputText id="name" class="form-control" placeholder="La casa Corbitt" @bind-Value="Activity.Name" />
-        <label for="name">Nombre de la actividad</label>
+    <div class="row">
+        <div class="col">
+            <label for="name">Nombre de la actividad</label>
+            <InputText id="name" class="form-control" @bind-Value="Activity.Name" />
+        </div>
+
+        <div class="col">
+            <label for="game">Juego</label>
+            <InputText id="game" class="form-control" @bind-Value="Activity.Game" />
+        </div>
     </div>
 
-    <div class="input-group">
-        <div class="mb-3">
+    <div class="row">
+        <div class="col">
             <label for="players">Número de jugadores</label>
-            <InputNumber id="players" class="form-control" @bind-Value="Activity.Capacity" DisplayName="Jugadores" />
+            <InputNumber id="players" class="form-control" @bind-Value="Activity.Capacity" />
         </div>
 
-        <div class="mb-3">
-            <label for="date">Fecha</label>
+        <div class="col">
+            <label for="date">Fecha y hora</label>
             <InputDate id="date" class="form-control" @bind-Value="Activity.Date" Type="InputDateType.DateTimeLocal" />
         </div>
+
+        <div class="col">
+            <label for="type">Tipo de actividad</label>
+            <InputSelect id="type" class="form-control" @bind-Value="Activity.Type">
+                @foreach (ActivityType type in Enum.GetValues(typeof(ActivityType)))
+                {
+                    <option value="@type">@type.GetDescription()</option>
+                }
+            </InputSelect>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="type">Nivel</label>
+            <InputSelect id="type" class="form-control" @bind-Value="Activity.Level">
+                @foreach (ActivityLevel level in Enum.GetValues(typeof(ActivityLevel)))
+                {
+                    <option value="@level">@level.GetDescription()</option>
+                }
+            </InputSelect>
+        </div>
+        <HxSwitch Label="Solo para adultos" CssClass="col" @bind-Value="Activity.AdultsOnly" />
+        <HxSwitch Label="Permitir preinscripciones" CssClass="col" @bind-Value="Activity.AllowPreinscription" />
     </div>
 
     <div class="form-floating mb-3">
