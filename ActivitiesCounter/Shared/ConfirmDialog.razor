@@ -1,0 +1,29 @@
+﻿<form @onsubmit="SubmitForm">
+    <label>@Message</label>
+
+    <div class="row text-center">
+        <button class="btn btn-primary col-3" type="submit">Ok</button>
+        <button class="btn btn-secondary col-3" @onclick="Cancel" type="button">Cancelar</button>
+    </div>
+</form>
+
+@code {
+    [Parameter]
+    public string Message { get; set; }
+
+    [Parameter]
+    public Action ConfirmCallback { get; set; }
+
+    [Parameter]
+    public Action CancelCallback { get; set; }
+
+    public void SubmitForm()
+    {
+        ConfirmCallback();
+    }
+
+    public void Cancel()
+    {
+        CancelCallback();
+    }
+}
