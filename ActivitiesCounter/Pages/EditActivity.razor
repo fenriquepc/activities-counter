@@ -36,16 +36,15 @@
     [Parameter]
     public Activity Activity { get; set; } = new();
 
-    private string HeaderText => Activity?.Name ?? "Nueva actividad";
+    [Parameter]
+    public Action Callback { get; set; }
 
-    public void SetActivity(Activity activity)
-    {
-        Activity = activity;
-        StateHasChanged();
-    }
+    private string HeaderText => Activity?.Name ?? "Nueva actividad";
 
     private async Task Upsert()
     {
         await ActivitiesManager.UpsertActivity(Activity);
+
+        if(Callback != null) Callback();
     }
 }
