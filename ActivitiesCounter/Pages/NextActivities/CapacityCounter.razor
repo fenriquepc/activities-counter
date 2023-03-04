@@ -2,7 +2,7 @@
 @inject IActivitiesManager ActivitiesManager;
 
 <HxTooltip Text="Añadir participante">
-    <span class="capacity-counter" @onclick="SimpleCallback.Create(OnClick)">
+    <span class="capacity-counter" @onclick="OnClick">
 	    @Activity.AvailableCapacity / @Activity.Capacity
 
 	    @if (LastPlaces)
@@ -14,7 +14,7 @@
 		    <HxCard BodyCssClass="fs-5">
 			    <BodyTemplate>
 				    <InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-                        @bind-Value="_newParticipantName" @onkeyup="SimpleCallback.Create(OnKeyUp)" @onfocusout="HideCollapse" />
+                        @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
 			    </BodyTemplate>
 		    </HxCard>
 	    </HxCollapse>
