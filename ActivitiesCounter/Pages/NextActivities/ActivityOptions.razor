@@ -64,20 +64,23 @@
 			});
 	}
 
-	private void Remove()
+	private async Task Remove()
 	{
 		var parameters = new ModalParameters()
-			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres borrar la actividad?")
-			.Add(nameof(ConfirmDialog.ConfirmCallback), async () => {
-				await ActivitiesManager.RemoveActivityAsync(Activity);
-				ActivitiesChanged();
-				_modal.Close();
-			})
-			.Add(nameof(ConfirmDialog.CancelCallback), () => _modal.Close());
+			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres borrar la actividad?");
 
 		_modal = ModalService.Show<ConfirmDialog>("Confirmar borrado", parameters, new()
 			{
 				Position = ModalPosition.Middle,
 			});
+
+		var result = await _modal.Result;
+		if (result.Confirmed)
+		{
+			await ActivitiesManager.RemoveActivityAsync(Activity);
+			ActivitiesChanged();
+		}
+
+		_modal.Close();
 	}
 }

@@ -8,22 +8,11 @@
 </form>
 
 @code {
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!; 
+    
     [Parameter]
     public string Message { get; set; }
 
-    [Parameter]
-    public Func<Task> ConfirmCallback { get; set; }
-
-    [Parameter]
-    public Action CancelCallback { get; set; }
-
-    public async Task SubmitForm()
-    {
-        await ConfirmCallback();
-    }
-
-    public void Cancel()
-    {
-        CancelCallback();
-    }
+    private async Task SubmitForm() => await BlazoredModal.CloseAsync(ModalResult.Ok());
+    private async Task Cancel() => await BlazoredModal.CancelAsync();
 }

@@ -45,20 +45,22 @@
 		collapseNavMenu = !collapseNavMenu;
 	}
 
-	private void Restore()
+	private async Task Restore()
 	{
 		var parameters = new ModalParameters()
-			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres las activiades? Se borrarán todos los cambios")
-			.Add(nameof(ConfirmDialog.ConfirmCallback), async () =>
-				{
-					await ActivitiesManager.BulkActivitiesFromFiles(true);
-					_modal.Close();
-				})
-			.Add(nameof(ConfirmDialog.CancelCallback), () => _modal.Close());
+			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres las activiades? Se borrarán todos los cambios");
 
 		_modal = ModalService.Show<ConfirmDialog>("Confirmar restauración", parameters, new()
 			{
 				Position = ModalPosition.Middle,
 			});
+
+		var result = await _modal.Result;
+		if (result.Confirmed)
+		{
+			await ActivitiesManager.BulkActivitiesFromFiles(true);
+		}
+
+		_modal.Close();
 	}
 }
