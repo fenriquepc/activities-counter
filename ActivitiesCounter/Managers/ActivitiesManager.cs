@@ -3,11 +3,11 @@ using ActivitiesCounter.Repositories;
 
 namespace ActivitiesCounter.Managers;
 
-public class ActivitiesManager : IActivitiesManager
+public class ActivitiesManager
 {
-	private readonly IActivityRepository _activityRepository;
+	private readonly ActivityRepository _activityRepository;
 
-	public ActivitiesManager(IActivityRepository activityRepository)
+	public ActivitiesManager(ActivityRepository activityRepository)
 	{
 		_activityRepository = activityRepository;
 	}
@@ -27,6 +27,6 @@ public class ActivitiesManager : IActivitiesManager
 		return UpsertActivityAsync(activity);
 	}
 
-    public Task RemoveActivityAsync(Activity activity) => 
+	public Task RemoveActivityAsync(Activity activity) => 
 		_activityRepository.RemoveActivity(activity.Id);
 }

@@ -3,7 +3,7 @@ using Blazored.LocalStorage;
 
 namespace ActivitiesCounter.Repositories;
 
-public class ActivityRepository : IActivityRepository
+public class ActivityRepository
 {
 	private const string ACTIVITIES_KEY = "activities";
 	private readonly ILocalStorageService _localStorage;
@@ -41,7 +41,7 @@ public class ActivityRepository : IActivityRepository
 	{
 		var activities = (await GetAll()).ToList();
 
-        if (activities is null || !activities.Any())
+		if (activities is null || !activities.Any())
 			return;
 
 		activities.RemoveAll(a => a.Id == id);

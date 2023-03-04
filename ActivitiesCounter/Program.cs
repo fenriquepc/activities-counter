@@ -17,9 +17,9 @@ builder.Services.AddBlazoredLocalStorage();
 builder.Services.AddBlazoredModal();
 builder.Services.AddHxServices();
 
-builder.Services.AddScoped<IFilesManager, FilesManager>();
-builder.Services.AddScoped<IActivitiesManager, ActivitiesManager>();
-builder.Services.AddScoped<IActivityRepository, ActivityRepository>();
+builder.Services.AddScoped<FilesManager>();
+builder.Services.AddScoped<ActivitiesManager>();
+builder.Services.AddScoped<ActivityRepository>();
 
 var host =  builder.Build();
 
