@@ -4,7 +4,7 @@
 	@for (var i = 0; i < Activity.Participants.Count; i++)
 	{
 		<tr>
-			<th scope="row">@i</th>
+			<th scope="row">@(i+1)</th>
 			<td>@Activity.Participants.ElementAt(i)</td>
 		</tr>
 	}
