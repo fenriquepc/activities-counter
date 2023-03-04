@@ -2,57 +2,57 @@
 @inject IActivitiesManager ActivitiesManager;
 
 <HxTooltip Text="Añadir participante">
-    <span class="capacity-counter" @onclick="OnClick">
-	    @Activity.AvailableCapacity / @Activity.Capacity
+	<span class="capacity-counter" @onclick="OnClick">
+		@Activity.AvailableCapacity / @Activity.Capacity
 
-	    @if (LastPlaces)
-	    {
-		    <i class="fa-brands fa-hotjar hot"></i>
-	    }
+		@if (LastPlaces)
+		{
+			<i class="fa-brands fa-hotjar hot"></i>
+		}
 
-	    <HxCollapse CssClass="activity-description w-50" @ref="_collapse">
-		    <HxCard BodyCssClass="fs-5">
-			    <BodyTemplate>
-				    <InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-                        @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
-			    </BodyTemplate>
-		    </HxCard>
-	    </HxCollapse>
+		<HxCollapse CssClass="activity-description w-50" @ref="_collapse">
+			<HxCard BodyCssClass="fs-5">
+				<BodyTemplate>
+					<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
+						@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+				</BodyTemplate>
+			</HxCard>
+		</HxCollapse>
 
-    </span>
+	</span>
 </HxTooltip>
 
 @code {
 
-    [Parameter]
-    public Activity Activity { get; set; }
+	[Parameter]
+	public Activity Activity { get; set; }
 
-    private bool LastPlaces => Activity.AvailableCapacity < 3;
+	private bool LastPlaces => Activity.AvailableCapacity < 3;
 
-    private InputText _participantNameInput;
-    private HxCollapse _collapse;
-    private string _newParticipantName = string.Empty;
+	private InputText _participantNameInput;
+	private HxCollapse _collapse;
+	private string _newParticipantName = string.Empty;
 
-    private async Task OnClick()
-    {
-        await _collapse.ShowAsync();
+	private async Task OnClick()
+	{
+		await _collapse.ShowAsync();
 
-        await _participantNameInput.Element.Value.FocusAsync();
-    }
+		await _participantNameInput.Element.Value.FocusAsync();
+	}
 
-    private async Task OnKeyUp(KeyboardEventArgs e)
-    {
-        if (e.Code != "Enter" && e.Code != "NumpadEnter")
-            return;
+	private async Task OnKeyUp(KeyboardEventArgs e)
+	{
+		if (e.Code != "Enter" && e.Code != "NumpadEnter")
+			return;
 
-        await ActivitiesManager.AddParticipantAsync(Activity, _newParticipantName);
+		await ActivitiesManager.AddParticipantAsync(Activity, _newParticipantName);
 
-        await HideCollapse();
-    }
+		await HideCollapse();
+	}
 
-    private async Task HideCollapse()
-    {
-        _newParticipantName = string.Empty;
-        await _collapse.HideAsync();
+	private async Task HideCollapse()
+	{
+		_newParticipantName = string.Empty;
+		await _collapse.HideAsync();
 	}
 }
