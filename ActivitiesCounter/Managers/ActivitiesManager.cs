@@ -5,11 +5,23 @@ namespace ActivitiesCounter.Managers;
 
 public class ActivitiesManager
 {
+	private readonly FilesManager _filesManager;
 	private readonly ActivityRepository _activityRepository;
 
-	public ActivitiesManager(ActivityRepository activityRepository)
+	public ActivitiesManager(ActivityRepository activityRepository, FilesManager filesManager)
 	{
 		_activityRepository = activityRepository;
+		_filesManager = filesManager;
+	}
+
+	public async Task BulkActivitiesFromFiles(bool resetExistingActivities = false)
+	{
+		var existActivities = await _activityRepository.ExistAny();
+		if (existActivities && !resetExistingActivities) 
+			return;
+
+		var activitiesFromFiles = await _filesManager.GetActivitiesFromFiles();
+		await _activityRepository.BulkActivities(activitiesFromFiles);
 	}
 
 	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()

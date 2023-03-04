@@ -13,6 +13,9 @@ public class ActivityRepository
 		_localStorage = localStorage;
 	}
 
+	public ValueTask<bool> ExistAny() =>
+		_localStorage.ContainKeyAsync(ACTIVITIES_KEY);
+
 	public async ValueTask<IEnumerable<Activity>> GetAll()
 	{
 		var result = await _localStorage.GetItemAsync<IEnumerable<Activity>>(ACTIVITIES_KEY); 
@@ -36,6 +39,9 @@ public class ActivityRepository
 
 		await PersistActivities(activities);
 	}
+
+	public ValueTask BulkActivities(IEnumerable<Activity> activities) => 
+		PersistActivities(activities);
 
 	public async Task RemoveActivity(Guid id)
 	{

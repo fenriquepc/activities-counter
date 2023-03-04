@@ -23,7 +23,4 @@ builder.Services.AddScoped<ActivityRepository>();
 
 var host =  builder.Build();
 
-var filesManager = host.Services.GetRequiredService<IFilesManager>();
-filesManager.LoadFilesData();
-
 await host.RunAsync();

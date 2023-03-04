@@ -1,5 +1,5 @@
 ﻿@page "/"
-@inject FilesManager FilesManager
+@inject ActivitiesManager ActivitiesManager
 
 <PageTitle>Ludus Myrtea</PageTitle>
 <div class="index">
@@ -7,4 +7,8 @@
 </div>
 
 @code {
-
+	protected override async Task OnInitializedAsync()
+	{
+		await ActivitiesManager.BulkActivitiesFromFiles();
+	}
+}

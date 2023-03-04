@@ -1,4 +1,4 @@
-﻿@inject FilesManager FilesManager
+﻿@inject ActivitiesManager ActivitiesManager
 
 <nav class="sidebar @NavMenuCssClass" @onclick="ToggleNavMenu">
 	<span id="sidebar-hoverer" />
@@ -49,19 +49,16 @@
 	{
 		var parameters = new ModalParameters()
 			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres las activiades? Se borrarán todos los cambios")
-			.Add(nameof(ConfirmDialog.ConfirmCallback), ConfirmRestore)
+			.Add(nameof(ConfirmDialog.ConfirmCallback), async () =>
+				{
+					await ActivitiesManager.BulkActivitiesFromFiles(true);
+					_modal.Close();
+				})
 			.Add(nameof(ConfirmDialog.CancelCallback), () => _modal.Close());
-		var options = new ModalOptions()
+
+		_modal = ModalService.Show<ConfirmDialog>("Confirmar restauración", parameters, new()
 			{
 				Position = ModalPosition.Middle,
-			};
-
-		_modal = ModalService.Show<ConfirmDialog>("Confirmar restauración", parameters, options);
-	}
-
-	private async Task ConfirmRestore()
-	{
-		await FilesManager.LoadFilesData(true);
-		_modal.Close();
+			});
 	}
 }
