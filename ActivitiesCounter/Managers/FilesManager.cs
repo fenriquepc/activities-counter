@@ -16,7 +16,7 @@ namespace ActivitiesCounter.Managers
             _activityRepository = activityRepository;
         }
 
-        public async void LoadFilesData(bool reset = false)
+        public async Task LoadFilesData(bool reset = false)
         {
             if (reset) await _activityRepository.RemoveAll();
 

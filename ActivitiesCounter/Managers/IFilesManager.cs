@@ -2,6 +2,6 @@
 {
     public interface IFilesManager
     {
-        void LoadFilesData(bool reset = false);
+        Task LoadFilesData(bool reset = false);
     }
 }

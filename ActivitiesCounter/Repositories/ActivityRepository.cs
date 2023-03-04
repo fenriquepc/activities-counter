@@ -37,6 +37,17 @@ public class ActivityRepository : IActivityRepository
 		await PersistActivities(activities);
 	}
 
+	public async Task RemoveActivity(Guid id)
+	{
+		var activities = (await GetAll()).ToList();
+
+        if (activities is null || !activities.Any())
+			return;
+
+		activities.RemoveAll(a => a.Id == id);
+		await PersistActivities(activities);
+	}
+
 	private ValueTask PersistActivities(IEnumerable<Activity> activities)
 		=> _localStorage.SetItemAsync(ACTIVITIES_KEY, activities);
 }

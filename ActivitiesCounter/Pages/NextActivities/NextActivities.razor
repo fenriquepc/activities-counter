@@ -13,16 +13,18 @@
 else
 {
 	<CascadingValue Value="@TimeChanged" Name="TimeChanged">
-		<table class="activities-table">
-			<tbody>
-				@foreach (var activity in _activities)
-				{
-					<ActivityRow activity="@activity" />
-				}
-			</tbody>
-		</table>
+		<CascadingValue Value="@ActivitiesChanged" Name="@nameof(ActivitiesChanged)">
+			<table class="activities-table">
+				<tbody>
+					@foreach (var activity in _activities)
+					{
+						<ActivityRow activity="@activity" />
+					}
+				</tbody>
+			</table>
 
-		<Clock/>
+			<Clock/>
+		</CascadingValue>
 	</CascadingValue>
 }
 </div>
@@ -33,5 +35,11 @@ else
 	protected override async Task OnInitializedAsync()
 	{
 		_activities = await ActivitiesManager.GetNextActivitiesAsync();
+	}
+
+	private async void ActivitiesChanged()
+	{
+		_activities = await ActivitiesManager.GetNextActivitiesAsync();
+		StateHasChanged();
 	}
 }

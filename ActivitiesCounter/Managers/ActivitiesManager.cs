@@ -26,4 +26,7 @@ public class ActivitiesManager : IActivitiesManager
 		activity.AddParticipant(participant);
 		return UpsertActivityAsync(activity);
 	}
+
+    public Task RemoveActivityAsync(Activity activity) => 
+		_activityRepository.RemoveActivity(activity.Id);
 }

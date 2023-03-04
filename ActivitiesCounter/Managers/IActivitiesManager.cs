@@ -7,5 +7,6 @@ namespace ActivitiesCounter.Managers
 		Task UpsertActivityAsync(Activity activity);
 		Task AddParticipantAsync(Activity activity, string participant);
 		Task<IEnumerable<Activity>> GetNextActivitiesAsync();
+		Task RemoveActivityAsync(Activity activity);
 	}
 }

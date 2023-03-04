@@ -1,4 +1,6 @@
-﻿<div class="activity-options">
+﻿@inject IActivitiesManager ActivitiesManager
+
+<div class="activity-options">
 	<HxDropdown>
 		<HxDropdownToggleElement role="button">
 			<i class="fa-solid fa-gear options-button"></i>
@@ -12,7 +14,7 @@
 				<i class="fa-solid fa-user-gear"></i>
 				Detalles de participantes
 			</HxDropdownItem>
-			<HxDropdownItem>
+			<HxDropdownItem OnClick="Remove">
 				<i class="fa-solid fa-trash-can"></i>
 				Borrar actividad
 			</HxDropdownItem>
@@ -30,13 +32,20 @@
 	[CascadingParameter(Name ="ActivityChanged")]
 	private Action ActivityChanged { get; set; }
 
+	[CascadingParameter(Name = "ActivitiesChanged")]
+	private Action ActivitiesChanged { get; set; }
+
 	private IModalReference _modal;
 
 	private void ShowModal()
 	{
 		var parameters = new ModalParameters()
 			.Add(nameof(EditActivity.Activity), Activity)
-			.Add(nameof(EditActivity.Callback), HideModal);
+			.Add(nameof(EditActivity.Callback), () =>
+			{
+				ActivityChanged();
+				_modal.Close();
+			});
 		var options = new ModalOptions()
 		{
 			Position = ModalPosition.Middle,
@@ -45,9 +54,20 @@
 		_modal = ModalService.Show<EditActivity>("Editar actividad", parameters, options);
 	}
 
-	private void HideModal()
+	private void Remove()
 	{
-		_modal.Close();
-		ActivityChanged.Invoke();
+		var parameters = new ModalParameters()
+			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres borrar la actividad?")
+			.Add(nameof(ConfirmDialog.ConfirmCallback), async () => {
+				await ActivitiesManager.RemoveActivityAsync(Activity);
+				ActivitiesChanged();
+				_modal.Close();
+			})
+			.Add(nameof(ConfirmDialog.CancelCallback), () => _modal.Close());
+
+		_modal = ModalService.Show<ConfirmDialog>("Confirmar borrado", parameters, new()
+			{
+				Position = ModalPosition.Middle,
+			});
 	}
 }

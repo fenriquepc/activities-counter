@@ -12,14 +12,14 @@
     public string Message { get; set; }
 
     [Parameter]
-    public Action ConfirmCallback { get; set; }
+    public Func<Task> ConfirmCallback { get; set; }
 
     [Parameter]
     public Action CancelCallback { get; set; }
 
-    public void SubmitForm()
+    public async Task SubmitForm()
     {
-        ConfirmCallback();
+        await ConfirmCallback();
     }
 
     public void Cancel()

@@ -59,9 +59,9 @@
         _modal = ModalService.Show<ConfirmDialog>("Confirmar restauración", parameters, options);
     }
 
-    private void ConfirmRestore()
+    private async Task ConfirmRestore()
     {
-        FilesManager.LoadFilesData(true);
+        await FilesManager.LoadFilesData(true);
         _modal.Close();
     }
 }
