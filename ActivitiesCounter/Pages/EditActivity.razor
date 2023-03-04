@@ -75,7 +75,7 @@
 
     private async Task Upsert()
     {
-        await ActivitiesManager.UpsertActivity(Activity);
+        await ActivitiesManager.UpsertActivityAsync(Activity);
 
         if(Callback != null) Callback();
     }

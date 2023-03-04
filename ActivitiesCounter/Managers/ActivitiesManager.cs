@@ -18,12 +18,12 @@ public class ActivitiesManager : IActivitiesManager
         return activities.OrderByDescending(a => a.Date);
     }
 
-    public Task UpsertActivity(Activity activity) 
+    public Task UpsertActivityAsync(Activity activity) 
         => _activityRepository.UpsertActivity(activity);
 
-    public async Task AddParticipant(Activity activity, string participant)
+    public Task AddParticipantAsync(Activity activity, string participant)
     {
         activity.AddParticipant(participant);
-        await _activityRepository.UpsertActivity(activity);
+        return UpsertActivityAsync(activity);
     }
 }
