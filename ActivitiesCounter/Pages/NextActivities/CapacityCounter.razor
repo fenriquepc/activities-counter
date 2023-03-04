@@ -2,7 +2,7 @@
 @inject ActivitiesManager ActivitiesManager;
 
 <HxTooltip Text="Añadir participante">
-	<span class="capacity-counter" @onclick="OnClick">
+	<span class="capacity-counter" @onclick="OnClick" @ondblclick="OnDoubleClick">
 		@Activity.AvailableCapacity / @Activity.Capacity
 
 		@if (LastPlaces)
@@ -23,6 +23,8 @@
 </HxTooltip>
 
 @code {
+	[CascadingParameter]
+	public IModalService ModalService { get; set; }
 
 	[Parameter]
 	public Activity Activity { get; set; }
@@ -32,12 +34,34 @@
 	private InputText _participantNameInput;
 	private HxCollapse _collapse;
 	private string _newParticipantName = string.Empty;
+	private IModalReference _modal;
+	private bool _doubleClick;
 
 	private async Task OnClick()
 	{
+		await Task.Delay(300);
+		if (_doubleClick) return;
+
 		await _collapse.ShowAsync();
 
 		await _participantNameInput.Element.Value.FocusAsync();
+	}
+
+	private async Task OnDoubleClick()
+	{
+		_doubleClick = true;
+
+		var parameters = new ModalParameters()
+			.Add(nameof(Participants.Activity), Activity);
+
+		_modal = ModalService.Show<Participants>($"Participantes de {Activity.Name}", parameters, new()
+			{
+				Position = ModalPosition.Middle
+			});
+
+		await _modal.Result;
+
+		_doubleClick = false;
 	}
 
 	private async Task OnKeyUp(KeyboardEventArgs e)

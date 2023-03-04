@@ -10,7 +10,7 @@
 				<i class="fa-regular fa-pen-to-square"></i>
 				Editar actividad
 			</HxDropdownItem>
-			<HxDropdownItem>
+			<HxDropdownItem OnClick="ShowParticipants">
 				<i class="fa-solid fa-user-gear"></i>
 				Detalles de participantes
 			</HxDropdownItem>
@@ -46,12 +46,22 @@
 				ActivityChanged();
 				_modal.Close();
 			});
-		var options = new ModalOptions()
-		{
-			Position = ModalPosition.Middle,
-		};
 
-		_modal = ModalService.Show<EditActivity>("Editar actividad", parameters, options);
+		_modal = ModalService.Show<EditActivity>("Editar actividad", parameters, new()
+			{
+				Position = ModalPosition.Middle,
+			});
+	}
+
+	private void ShowParticipants()
+	{
+		var parameters = new ModalParameters()
+			.Add(nameof(Participants.Activity), Activity);
+
+		_modal = ModalService.Show<Participants>($"Participantes de {Activity.Name}", parameters, new()
+			{
+				Position = ModalPosition.Middle
+			});
 	}
 
 	private void Remove()
