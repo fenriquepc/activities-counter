@@ -1,4 +1,5 @@
 ﻿@using ActivitiesCounter.Utils;
+@inject IActivitiesManager ActivitiesManager;
 
 <HxTooltip Text="Añadir participante">
     <span class="capacity-counter" @onclick="SimpleCallback.Create(OnClick)">
@@ -13,7 +14,7 @@
 		    <HxCard BodyCssClass="fs-5">
 			    <BodyTemplate>
 				    <InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-                        @bind-Value="_newParticipantName" @onkeydown="SimpleCallback.Create(OnKeyDown)" @onfocusout="HideCollapse" />
+                        @bind-Value="_newParticipantName" @onkeyup="SimpleCallback.Create(OnKeyUp)" @onfocusout="HideCollapse" />
 			    </BodyTemplate>
 		    </HxCard>
 	    </HxCollapse>
@@ -39,12 +40,12 @@
         await _participantNameInput.Element.Value.FocusAsync();
     }
 
-    private async Task OnKeyDown(KeyboardEventArgs e)
+    private async Task OnKeyUp(KeyboardEventArgs e)
     {
         if (e.Code != "Enter" && e.Code != "NumpadEnter")
             return;
 
-        Activity.AddParticipant(_newParticipantName);
+        await ActivitiesManager.AddParticipantAsync(Activity, _newParticipantName);
 
         await HideCollapse();
     }
