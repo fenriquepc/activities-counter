@@ -6,7 +6,7 @@
 			<i class="fa-solid fa-gear options-button"></i>
 		</HxDropdownToggleElement>
 		<HxDropdownMenu>
-			<HxDropdownItem OnClick="ShowModal">
+			<HxDropdownItem OnClick="EditActivity">
 				<i class="fa-regular fa-pen-to-square"></i>
 				Editar actividad
 			</HxDropdownItem>
@@ -29,28 +29,29 @@
 	[CascadingParameter]
 	private Activity Activity { get; set; }
 
-	[CascadingParameter(Name ="ActivityChanged")]
-	private Action ActivityChanged { get; set; }
-
 	[CascadingParameter(Name = "ActivitiesChanged")]
 	private Action ActivitiesChanged { get; set; }
 
 	private IModalReference _modal;
 
-	private void ShowModal()
+	private async Task EditActivity()
 	{
 		var parameters = new ModalParameters()
-			.Add(nameof(EditActivity.Activity), Activity)
-			.Add(nameof(EditActivity.Callback), () =>
-			{
-				ActivityChanged();
-				_modal.Close();
-			});
+			.Add(nameof(Pages.EditActivity.Activity), Activity);
 
 		_modal = ModalService.Show<EditActivity>("Editar actividad", parameters, new()
 			{
 				Position = ModalPosition.Middle,
 			});
+
+		var result = await _modal.Result;
+		if (result.Confirmed)
+		{
+			Activity = result.Data as Activity;
+			ActivitiesChanged();
+		}
+
+		_modal.Close();
 	}
 
 	private void ShowParticipants()

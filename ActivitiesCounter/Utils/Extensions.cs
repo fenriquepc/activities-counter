@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel;
+using System.Text.Json;
 
 namespace ActivitiesCounter.Utils;
 
 public static class Extensions
 {
-    static public string GetDescription(this Enum enumValue)
+    public static string GetDescription(this Enum enumValue)
     {
         var field = enumValue.GetType().GetField(enumValue.ToString());
         if (field == null)
@@ -15,4 +16,12 @@ public static class Extensions
 
         return enumValue.ToString();
     }
+
+	public static T Copy<T>(this T obj)
+	{
+        var serialized = JsonSerializer.Serialize(obj);
+		var copy = JsonSerializer.Deserialize<T>(serialized);
+
+        return copy;
+	}
 }
