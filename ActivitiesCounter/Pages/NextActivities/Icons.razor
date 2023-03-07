@@ -1,0 +1,80 @@
+﻿@implements IDisposable
+<span class="icons">
+
+	@if (StartSoon)
+	{
+		<HxTooltip Text="Inscripciones apunto de abrirse">
+			<i class="fa-solid fa-clock fa-shake"></i>
+		</HxTooltip>
+	}
+
+	@if (RecentlyOpen)
+	{
+		<HxTooltip Text="Inscripciones ya abiertas">
+			<i class="fa-solid fa-burst fa-fade"></i>
+		</HxTooltip>
+	}
+
+	@if (AdultsOnly)
+	{
+		<HxTooltip Text="Solo para mayores de edad">
+			<span class="fa-layers fa-fw adults-only">
+				<i class="fa-solid fa-ban"></i>
+				<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8" style="font-weight:900">18</span>
+			</span>
+		</HxTooltip>
+	}
+
+	@switch (Activity.Type)
+	{
+		case ActivityType.RPG:
+				<HxTooltip Text="Rol">
+					<i class="fa-solid fa-dice-d20"></i>
+				</HxTooltip>
+			break;
+		case ActivityType.BoardGame:
+				<HxTooltip Text="Juegos de mesa">
+					<i class="fa-solid fa-dice"></i>
+				</HxTooltip>
+			break;
+		case ActivityType.LARP:
+				<HxTooltip Text="Rol en vivo">
+					<i class="fa-solid fa-masks-theater"></i>
+				</HxTooltip>
+			break;
+
+	}
+</span>
+
+@code {
+	[CascadingParameter]
+	public Activity Activity { get; set; }
+
+	private Timer _timer;
+	private bool AdultsOnly => Activity.AdultsOnly;
+	private DateTime ActivityDate => Activity.Date;
+	private bool StartSoon => ActivityDate > DateTime.Now && ActivityDate - DateTime.Now < TimeSpan.FromMinutes(10);
+	private bool RecentlyOpen => DateTime.Now > ActivityDate && DateTime.Now - ActivityDate < TimeSpan.FromMinutes(10);
+
+	protected override void OnInitialized()
+	{
+		_timer = new Timer(OnTimeChanged, null, 0, 5000);
+	}
+
+	public void Dispose()
+	{
+		_timer?.Dispose();
+	}
+
+	private void OnTimeChanged(object _)
+	{
+		var startTimeDifference = ActivityDate - DateTime.Now;
+		if (startTimeDifference.Minutes > 10)
+			return;
+
+		if (startTimeDifference.Minutes < -10)
+			_timer.Dispose();
+
+		StateHasChanged();
+	}
+}

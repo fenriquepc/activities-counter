@@ -1,0 +1,57 @@
+﻿@implements IDisposable
+
+<CascadingValue Value="@activity">
+	<CascadingValue Value="@ActivityChanged" Name="ActivityChanged">
+		<tr>
+			<td>
+				<ActivityDate />
+			</td>
+			<td class="user-select-none" style="position: relative">
+				<Icons />
+			</td>
+			<td class="name-cell">
+				<span class="game">
+					@activity.Game
+				</span>
+				<span class="activity">
+					@activity.Name
+				</span>
+				<HxTooltip Text="Más información" CssClass="asdf">
+					<HxCollapseToggleElement Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0">
+						<i class="fa-solid fa-circle-info"></i>
+					</HxCollapseToggleElement>
+				</HxTooltip>
+				<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
+					<HxCard BodyCssClass="fs-5">
+						<BodyTemplate>
+							@activity.Description
+						</BodyTemplate>
+					</HxCard>
+				</HxCollapse>
+			</td>
+			<td class="no-space" style="position: relative">
+				<CapacityCounter Activity="@activity" />
+			</td>
+			<td class="user-select-none">
+				<ActivityOptions />
+			</td>
+		</tr>
+	</CascadingValue>
+</CascadingValue>
+
+@code {
+	[Parameter]
+	public Activity activity { get; set; }
+
+	private event Action ActivityChanged;
+
+	protected override void OnInitialized()
+	{
+		ActivityChanged += StateHasChanged;
+	}
+
+	public void Dispose()
+	{
+		ActivityChanged -= StateHasChanged;
+	}
+}

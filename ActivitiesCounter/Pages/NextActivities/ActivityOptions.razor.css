@@ -1,0 +1,15 @@
+﻿.activity-options {
+	min-width:20px;
+	min-height: 20px;
+}
+
+tr:hover .options-button {
+	visibility: visible;
+	opacity: 1;
+}
+
+.options-button {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+}

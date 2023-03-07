@@ -1,39 +1,59 @@
 ﻿using ActivitiesCounter.Entities;
 using Blazored.LocalStorage;
 
-namespace ActivitiesCounter.Repositories
+namespace ActivitiesCounter.Repositories;
+
+public class ActivityRepository
 {
-    public class ActivityRepository : IActivityRepository
-    {
-        private const string ACTIVITIES_KEY = "activities";
-        private readonly ILocalStorageService _localStorage;
+	private const string ACTIVITIES_KEY = "activities";
+	private readonly ILocalStorageService _localStorage;
 
-        public ActivityRepository(ILocalStorageService localStorage)
-        {
-            _localStorage = localStorage;
-        }
+	public ActivityRepository(ILocalStorageService localStorage)
+	{
+		_localStorage = localStorage;
+	}
 
-        public async ValueTask<IEnumerable<Activity>> GetAll()
-        {
-            var result = await _localStorage.GetItemAsync<IEnumerable<Activity>>(ACTIVITIES_KEY); 
-            return result ?? Enumerable.Empty<Activity>();
-        }
+	public ValueTask<bool> ExistAny() =>
+		_localStorage.ContainKeyAsync(ACTIVITIES_KEY);
 
-        public ValueTask RemoveAll()
-            => _localStorage.RemoveItemAsync(ACTIVITIES_KEY);
+	public async ValueTask<IEnumerable<Activity>> GetAll()
+	{
+		var result = await _localStorage.GetItemAsync<IEnumerable<Activity>>(ACTIVITIES_KEY); 
+		return result ?? Enumerable.Empty<Activity>();
+	}
 
-        public async Task UpsertActivity(Activity activity)
-        {
-            var activities = (await GetAll()).ToList() ?? new List<Activity>();
-            var existingActivityIndex = activities.FindIndex(a => a.Id == activity.Id);
+	public ValueTask RemoveAll()
+		=> _localStorage.RemoveItemAsync(ACTIVITIES_KEY);
 
-            if (existingActivityIndex < 0) activities.Add(activity);
-            else activities[existingActivityIndex] = activity;
+	public async Task UpsertActivity(Activity activity)
+	{
+		var activities = (await GetAll()).ToList() ?? new List<Activity>();
+		var existingActivityIndex = activities.FindIndex(a => a.Id == activity.Id);
 
-            await PersistActivities(activities);
-        }
+		if (existingActivityIndex < 0)
+		{
+			activities.Add(activity);
+		}
+		else 
+			activities[existingActivityIndex] = activity;
 
-        private ValueTask PersistActivities(IEnumerable<Activity> activities)
-            => _localStorage.SetItemAsync(ACTIVITIES_KEY, activities);
-    }
+		await PersistActivities(activities);
+	}
+
+	public ValueTask BulkActivities(IEnumerable<Activity> activities) => 
+		PersistActivities(activities);
+
+	public async Task RemoveActivity(Guid id)
+	{
+		var activities = (await GetAll()).ToList();
+
+		if (activities is null || !activities.Any())
+			return;
+
+		activities.RemoveAll(a => a.Id == id);
+		await PersistActivities(activities);
+	}
+
+	private ValueTask PersistActivities(IEnumerable<Activity> activities)
+		=> _localStorage.SetItemAsync(ACTIVITIES_KEY, activities);
 }

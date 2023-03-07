@@ -1,0 +1,75 @@
+﻿@using ActivitiesCounter.Utils;
+@inject ActivitiesManager ActivitiesManager;
+
+<HxTooltip Text="Añadir participante">
+	<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
+		@Activity.AvailableCapacity / @Activity.Capacity
+
+		@if (LastPlaces)
+		{
+			<span><i class="fa-brands fa-hotjar hot" /></span>
+		}
+
+		<HxCollapse CssClass="activity-description w-50" @ref="_collapse">
+			<HxCard BodyCssClass="fs-5">
+				<BodyTemplate>
+					<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
+						@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+				</BodyTemplate>
+			</HxCard>
+		</HxCollapse>
+
+	</span>
+</HxTooltip>
+
+@code {
+	[CascadingParameter]
+	public IModalService ModalService { get; set; }
+
+	[Parameter]
+	public Activity Activity { get; set; }
+
+	private bool LastPlaces => Activity.AvailableCapacity < 3;
+
+	private InputText _participantNameInput;
+	private HxCollapse _collapse;
+	private string _newParticipantName = string.Empty;
+	private IModalReference _modal;
+
+	private async Task ShowAddParticipant()
+	{
+		await _collapse.ShowAsync();
+
+		await _participantNameInput.Element.Value.FocusAsync();
+	}
+
+	private async Task ShowParticipants()
+	{
+		var parameters = new ModalParameters()
+			.Add(nameof(Participants.Activity), Activity);
+
+		_modal = ModalService.Show<Participants>($"Participantes de {Activity.Name}", parameters, new()
+			{
+				Position = ModalPosition.Middle
+			});
+
+		await _modal.Result;
+		await ActivitiesManager.UpsertActivityAsync(Activity);
+	}
+
+	private async Task OnKeyUp(KeyboardEventArgs e)
+	{
+		if (e.Code != "Enter" && e.Code != "NumpadEnter")
+			return;
+
+		await ActivitiesManager.AddParticipantAsync(Activity, _newParticipantName);
+
+		await HideCollapse();
+	}
+
+	private async Task HideCollapse()
+	{
+		_newParticipantName = string.Empty;
+		await _collapse.HideAsync();
+	}
+}

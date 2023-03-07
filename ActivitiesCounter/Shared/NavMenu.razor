@@ -1,45 +1,66 @@
-﻿<button title="Navigation menu" class="navbar-toggler navbar navbar-dark" @onclick="ToggleNavMenu">
-    <span class="navbar-toggler-icon"></span>
-</button>
+﻿@inject ActivitiesManager ActivitiesManager
 
-
-<div class="sidebar @NavMenuCssClass" @onclick="ToggleNavMenu">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="actividad">
-                <span class="oi oi-plus" aria-hidden="true"></span> Nueva actividad
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="proximasactividades">
-                <span class="oi oi-plus" aria-hidden="true"></span> Próximas actividades
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </div>
-    </nav>
-</div>
+<nav class="sidebar @NavMenuCssClass" @onclick="ToggleNavMenu">
+	<span id="sidebar-hoverer" />
+	<button title="Navigation menu" class="sidebar-toggler btn">
+		<i class="fa-solid fa-bars" />
+	</button>
+	<div class="nav-item px-3">
+		<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+			<i class="oi fa-solid fa-house"/>
+			Home
+		</NavLink>
+	</div>
+	<div class="nav-item px-3">
+		<NavLink class="nav-link" href="actividad">
+			<i class="oi fa-solid fa-plus"/>
+			Nueva actividad
+		</NavLink>
+	</div>
+	<div class="nav-item px-3">
+		<NavLink class="nav-link" href="proximasactividades">
+			<i class="oi fa-solid fa-calendar" />
+			Próximas actividades
+		</NavLink>
+	</div>
+	<div class="nav-item px-3">
+		<NavLink class="nav-link user-select-none" role="button" @onclick="Restore">
+			<i class="oi fa-solid fa-trash-arrow-up"/>
+			Restaurar actividades
+		</NavLink>
+	</div>
+</nav>
 
 @code {
-    private bool collapseNavMenu = true;
+	[CascadingParameter]
+	public IModalService ModalService { get; set; }
+	private IModalReference _modal;
 
-    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+	private bool collapseNavMenu = true;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+	private string NavMenuCssClass => collapseNavMenu ? "collapsed" : null;
+
+	private void ToggleNavMenu()
+	{
+		collapseNavMenu = !collapseNavMenu;
+	}
+
+	private async Task Restore()
+	{
+		var parameters = new ModalParameters()
+			.Add(nameof(ConfirmDialog.Message), "¿Seguro que quieres las activiades? Se borrarán todos los cambios");
+
+		_modal = ModalService.Show<ConfirmDialog>("Confirmar restauración", parameters, new()
+			{
+				Position = ModalPosition.Middle,
+			});
+
+		var result = await _modal.Result;
+		if (result.Confirmed)
+		{
+			await ActivitiesManager.BulkActivitiesFromFiles(true);
+		}
+
+		_modal.Close();
+	}
 }

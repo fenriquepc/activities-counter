@@ -1,35 +1,88 @@
 ﻿@page "/actividad"
-@inject IActivitiesManager ActivitiesManager
+@using ActivitiesCounter.Utils;
+@inject ActivitiesManager ActivitiesManager
 
 <h3>@HeaderText</h3>
 
-<EditForm Model="@Activity" OnValidSubmit="@Upsert">
-    <DataAnnotationsValidator />
-    <ValidationSummary />
+<EditForm Model="@_tempActivity" OnValidSubmit="@Upsert" class="activity-form">
+	<DataAnnotationsValidator />
+	<ValidationSummary />
 
-    <InputText id="name" @bind-Value="Activity.Name" />
+	<div class="row">
+		<div class="col">
+			<label for="name">Nombre de la actividad</label>
+			<InputText id="name" class="form-control" @bind-Value="_tempActivity.Name" />
+		</div>
 
-    <InputNumber id="players" @bind-Value="Activity.Capacity" DisplayName="Jugadores" />
+		<div class="col">
+			<label for="game">Juego</label>
+			<InputText id="game" class="form-control" @bind-Value="_tempActivity.Game" />
+		</div>
+	</div>
 
-    <InputDate id="date" @bind-Value="Activity.Date" Type="InputDateType.DateTimeLocal" />
+	<div class="row">
+		<div class="col">
+			<label for="players">Número de jugadores</label>
+			<InputNumber id="players" class="form-control" @bind-Value="_tempActivity.Capacity" />
+		</div>
 
-    <button type="submit">Guardar</button>
+		<div class="col">
+			<label for="date">Fecha y hora</label>
+			<InputDate id="date" class="form-control" @bind-Value="_tempActivity.Date" Type="InputDateType.DateTimeLocal" />
+		</div>
+
+		<div class="col">
+			<label for="type">Tipo de actividad</label>
+			<InputSelect id="type" class="form-control" @bind-Value="_tempActivity.Type">
+				@foreach (ActivityType type in Enum.GetValues(typeof(ActivityType)))
+				{
+					<option value="@type">@type.GetDescription()</option>
+				}
+			</InputSelect>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<label for="type">Nivel</label>
+			<InputSelect id="type" class="form-control" @bind-Value="_tempActivity.Level">
+				@foreach (ActivityLevel level in Enum.GetValues(typeof(ActivityLevel)))
+				{
+					<option value="@level">@level.GetDescription()</option>
+				}
+			</InputSelect>
+		</div>
+		<HxSwitch Label="Solo para adultos" CssClass="col" @bind-Value="_tempActivity.AdultsOnly" />
+		<HxSwitch Label="Permitir preinscripciones" CssClass="col" @bind-Value="_tempActivity.AllowPreinscription" />
+	</div>
+
+	<div class="form-floating mb-3">
+		<InputTextArea id="description" class="form-control" placeholder="Descripción" @bind-Value="_tempActivity.Description" />
+		<label for="description">Descripción de la actividad</label>
+	</div>
+
+	<button type="submit" class="btn btn-primary">Guardar</button>
 </EditForm>
 
 @code {
-    [Parameter]
-    public Activity Activity { get; set; } = new();
+	[CascadingParameter] 
+	BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
-    private string HeaderText => Activity?.Name ?? "Nueva actividad";
+	[Parameter]
+	public Activity Activity { get; set; }
 
-    public void SetActivity(Activity activity)
-    {
-        Activity = activity;
-        StateHasChanged();
-    }
+	private Activity _tempActivity;
+	private string HeaderText => Activity?.Name ?? "Nueva actividad";
 
-    private async Task Upsert()
-    {
-        await ActivitiesManager.UpsertActivity(Activity);
-    }
+	protected override void OnInitialized()
+	{
+		_tempActivity = Activity.Copy();
+	}
+
+	private async Task Upsert()
+	{
+		await ActivitiesManager.UpsertActivityAsync(_tempActivity);
+
+		await BlazoredModal.CloseAsync(ModalResult.Ok(_tempActivity));
+	}
 }

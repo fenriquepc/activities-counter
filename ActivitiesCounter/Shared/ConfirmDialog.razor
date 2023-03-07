@@ -1,0 +1,18 @@
+﻿<form @onsubmit="SubmitForm">
+    <label>@Message</label>
+
+    <div class="row text-center">
+        <button class="btn btn-primary col-3" type="submit">Ok</button>
+        <button class="btn btn-secondary col-3" @onclick="Cancel" type="button">Cancelar</button>
+    </div>
+</form>
+
+@code {
+    [CascadingParameter] BlazoredModalInstance BlazoredModal { get; set; } = default!; 
+    
+    [Parameter]
+    public string Message { get; set; }
+
+    private async Task SubmitForm() => await BlazoredModal.CloseAsync(ModalResult.Ok());
+    private async Task Cancel() => await BlazoredModal.CancelAsync();
+}

@@ -1,30 +1,44 @@
 ﻿using ActivitiesCounter.Entities;
 using ActivitiesCounter.Repositories;
 
-namespace ActivitiesCounter.Managers
+namespace ActivitiesCounter.Managers;
+
+public class ActivitiesManager
 {
-    public class ActivitiesManager : IActivitiesManager
-    {
-        private readonly IActivityRepository _activityRepository;
+	private readonly FilesManager _filesManager;
+	private readonly ActivityRepository _activityRepository;
 
-        public ActivitiesManager(IActivityRepository activityRepository)
-        {
-            _activityRepository = activityRepository;
-        }
+	public ActivitiesManager(ActivityRepository activityRepository, FilesManager filesManager)
+	{
+		_activityRepository = activityRepository;
+		_filesManager = filesManager;
+	}
 
-        public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
-        {
-            var activities = await _activityRepository.GetAll();
-            return activities.OrderByDescending(a => a.Date);
-        }
+	public async Task BulkActivitiesFromFiles(bool resetExistingActivities = false)
+	{
+		var existActivities = await _activityRepository.ExistAny();
+		if (existActivities && !resetExistingActivities) 
+			return;
 
-        public Task UpsertActivity(Activity activity) 
-            => _activityRepository.UpsertActivity(activity);
+		var activitiesFromFiles = await _filesManager.GetActivitiesFromFiles();
+		await _activityRepository.BulkActivities(activitiesFromFiles);
+	}
 
-        public async Task AddParticipant(Activity activity, string participant)
-        {
-            activity.AddParticipant(participant);
-            await _activityRepository.UpsertActivity(activity);
-        }
-    }
+	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
+	{
+		var activities = await _activityRepository.GetAll();
+		return activities.OrderByDescending(a => a.Date);
+	}
+
+	public Task UpsertActivityAsync(Activity activity) 
+		=> _activityRepository.UpsertActivity(activity);
+
+	public Task AddParticipantAsync(Activity activity, string participant)
+	{
+		activity.AddParticipant(participant);
+		return UpsertActivityAsync(activity);
+	}
+
+	public Task RemoveActivityAsync(Activity activity) => 
+		_activityRepository.RemoveActivity(activity.Id);
 }

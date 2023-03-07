@@ -1,0 +1,21 @@
+﻿@using System.Globalization;
+
+<div class="activity-date">
+	@if (ShowDay)
+	{
+		<HxTooltip Text="@_dayTooltipMessage">
+			<span class="day user-select-none">@_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek).Substring(0, 3)</span>
+		</HxTooltip>
+	}
+
+	@Activity.Date.ToString("HH:mm")
+</div>
+
+@code {
+	[CascadingParameter]
+	public Activity Activity { get; set; }
+
+	private bool ShowDay => Activity.Date.Date != DateTime.Now.Date;
+	private readonly CultureInfo _culture = new CultureInfo("Es-Es");
+	private string _dayTooltipMessage => $"Partida programada para el {_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek)}";
+}
