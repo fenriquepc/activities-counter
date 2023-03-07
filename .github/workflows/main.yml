@@ -24,10 +24,13 @@ jobs:
       run: dotnet workload install wasm-tools
     # Publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish ActivitiesCounter/ActivitiesCounter.csproj -c:Release -p:GHPages=true -o dist/ActivitiesCounter --nologo
+      run: dotnet publish ActivitiesCounter/ActivitiesCounter.csproj -c:Release -o dist/ActivitiesCounter --nologo
     # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
     - name: Change base-tag in index.html from / to ActivitiesCounter
       run: sed -i 's/<base href="\/" \/>/<base href="\/activities-counter\/" \/>/g' dist/ActivitiesCounter/wwwroot/index.html
+    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    - name: Add .nojekyll file
+      run: touch dist/ActivitiesCounter/wwwroot/.nojekyll
     - name: Commit wwwroot to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
