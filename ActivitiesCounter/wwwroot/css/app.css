@@ -8,17 +8,17 @@
 
 @font-face {
     font-family: 'inversionz';
-    src: url('fonts/Inversionz Unboxed.otf');
+    src: url('../fonts/Inversionz Unboxed.otf');
 }
 
 @font-face {
     font-family: 'a-space';
-    src: url('fonts/A-Space Regular Demo.otf');
+    src: url('../fonts/A-Space Regular Demo.otf');
 }
 
 @font-face {
     font-family: 'caviardreams-bold';
-    src: url('fonts/CaviarDreams_Bold.ttf');
+    src: url('../fonts/CaviarDreams_Bold.ttf');
 }
 
 html, body {
