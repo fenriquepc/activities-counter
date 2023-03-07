@@ -7,7 +7,7 @@
 
 		@if (LastPlaces)
 		{
-			<i class="fa-brands fa-hotjar hot"></i>
+			<span><i class="fa-brands fa-hotjar hot" /></span>
 		}
 
 		<HxCollapse CssClass="activity-description w-50" @ref="_collapse">
@@ -54,6 +54,7 @@
 			});
 
 		await _modal.Result;
+		await ActivitiesManager.UpsertActivityAsync(Activity);
 	}
 
 	private async Task OnKeyUp(KeyboardEventArgs e)

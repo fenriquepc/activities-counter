@@ -1,17 +1,32 @@
-﻿<table class="table table-dark table-borderless table-hover">
-	<tbody>
+﻿@inject ActivitiesManager ActivitiesManager
 
-	@for (var i = 0; i < Activity.Participants.Count; i++)
-	{
-		<tr>
-			<th scope="row">@(i+1)</th>
-			<td>@Activity.Participants.ElementAt(i)</td>
-		</tr>
-	}
+<table class="table table-dark table-borderless table-hover">
+	<tbody>
+		@if (Activity.Participants is null || !Activity.Participants.Any())
+		{
+			<tr>
+				<td>No hay participantes inscritos en la actividad</td>
+			</tr>
+		}
+		@foreach (var participant in Activity.Participants)
+		{
+			<tr>
+				<th scope="row">@(Activity.Participants.IndexOf(participant) + 1)</th>
+				<td>@participant</td>
+				<td @onclick="() => RemoveParticipant(participant)">
+					<i class="fa-solid fa-user-xmark" />
+				</td>
+			</tr>
+		}
 	</tbody>
 </table>
 
 @code {
 	[Parameter]
 	public Activity Activity { get; set; }
+
+	private void RemoveParticipant(string participant)
+	{
+		Activity.Participants.Remove(participant);
+	}
 }
