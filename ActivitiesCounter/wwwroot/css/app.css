@@ -1,4 +1,5 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('modals.css');
 
 :root {
     --primary-color: #EA6384;
@@ -39,8 +40,6 @@ a, .btn-link {
     background-color: #1b6ec2;
     border-color: #1861ac;
 }
-
-.content { }
 
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
