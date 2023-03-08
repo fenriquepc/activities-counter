@@ -16,6 +16,7 @@
 	.custom-modal .bm-header {
 		font-family: inversionz;
 		text-align: center;
+		display: block;
 	}
 
 	.custom-modal .button {
@@ -59,5 +60,35 @@
 				.custom-modal .button.primary:hover:before {
 					border-radius: 20px;
 					border: 2px #42D6CA solid;
+				}
+
+		.custom-modal .button.secondary {
+			border: 2px solid #42D6CA;
+			color: #42D6CA;
+			transition: all .5s ease
+		}
+
+			.custom-modal .button.secondary:before {
+				content: ' ';
+				border: 2px transparent solid;
+				position: absolute;
+				left: 50%;
+				top: -44%;
+				transform: translateX(-50%);
+				box-sizing: border-box;
+				width: 120px;
+				height: 50px;
+				transition: all .7s ease;
+				
+			}
+
+			.custom-modal .button.secondary:hover {
+				background-color: transparent;
+				border-radius: 20px;
+			}
+
+				.custom-modal .button.secondary:hover:before {
+					border-radius: 30px;
+					border: 1px #42D6CA solid;
 				}
 
