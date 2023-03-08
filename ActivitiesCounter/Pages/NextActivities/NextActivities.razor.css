@@ -46,30 +46,7 @@ a.boton {
     top: 0;
 }
 
-::deep .name-cell .more-button {
-    color: white;
-    display: none;
-    vertical-align: top;
-    font-size: 0.6em;
-    cursor: pointer;
-}
 
-::deep .name-cell:hover .more-button {
-    display: inherit;
-}
-
-::deep .more-button:hover {
-    color: var(--remark-color);
-}
-
-::deep .activity-description {
-    position: fixed;
-    z-index: 10;
-}
-
-::deep .activity-description .card {
-    background-color: var(--secondary-color) !important;
-}
 
 /* Modal */
 .custom-modal-overlay {

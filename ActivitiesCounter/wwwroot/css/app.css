@@ -22,6 +22,11 @@
     src: url('../fonts/CaviarDreams_Bold.ttf');
 }
 
+@font-face {
+    font-family: 'Share Tech Mono';
+    src: url('../fonts/ShareTechMono-Regular.ttf');
+}
+
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: white;

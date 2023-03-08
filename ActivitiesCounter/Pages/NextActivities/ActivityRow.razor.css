@@ -15,3 +15,32 @@
 		0px 8px 13px rgba(0,0,0,0.1), 
 		0px 18px 23px rgba(0,0,0,0.1);
 }
+
+::deep .name-cell .more-button {
+	color: white;
+	visibility: hidden;
+	vertical-align: top;
+	font-size: 0.6em;
+	cursor: pointer;
+}
+
+::deep .name-cell:hover .more-button {
+	visibility: visible;
+}
+
+::deep .more-button:hover {
+	color: var(--remark-color);
+}
+
+::deep .activity-description {
+	font-family: 'Share Tech Mono', monospace;
+	line-height: initial;
+	position: fixed;
+	z-index: 10;
+}
+
+::deep .activity-description .card {
+	background-color: black !important;
+	border-radius: 4px;
+	border: 1px solid #fff;
+}
