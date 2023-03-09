@@ -86,3 +86,62 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+/*[data-tooltip] {
+    position: relative;
+}
+
+    [data-tooltip]:after {
+        all: initial;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid black;
+        position: absolute;
+        bottom: 100%;
+        content: '';
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-bottom: 5px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-out;
+    }
+        [data-tooltip]:hover::after {
+            visibility: visible;
+            opacity: 0.9;
+        }
+
+    [data-tooltip]:before {
+        all: initial;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: black;
+        content: attr(data-tooltip);
+        color: #f9f9f9;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 14px;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-out;
+    }
+
+        [data-tooltip]::before:hover {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        [data-tooltip]:hover::before {
+            visibility: visible;
+            opacity: 0.9;
+        }*/
