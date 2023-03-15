@@ -27,7 +27,7 @@ public class ActivitiesManager
 	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
 	{
 		var activities = await _activityRepository.GetAll();
-		return activities.OrderByDescending(a => a.Date);
+		return activities.OrderBy(a => a.Date);
 	}
 
 	public Task UpsertActivityAsync(Activity activity) 

@@ -15,6 +15,6 @@ namespace ActivitiesCounter.Managers
 		}
 
 		public Task<IEnumerable<Activity>> GetActivitiesFromFiles() => 
-			_http.GetFromJsonAsync<IEnumerable<Activity>>(ACTIVITIES_JSON);
+			_http.GetFromJsonAsync<IEnumerable<Activity>>($"{ACTIVITIES_JSON}?{Guid.NewGuid()}");
 	}
 }
