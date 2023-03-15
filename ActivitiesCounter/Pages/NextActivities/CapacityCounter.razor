@@ -1,7 +1,8 @@
 ﻿@using ActivitiesCounter.Utils;
 @inject ActivitiesManager ActivitiesManager;
+@inject IJSRuntime JS;
 
-<HxTooltip Text="Añadir participante">
+<Tooltip Text="Añadir participante">
 	<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
 		@Activity.AvailableCapacity / @Activity.Capacity
 
@@ -10,41 +11,37 @@
 			<span><i class="fa-brands fa-hotjar hot" /></span>
 		}
 
-		<HxCollapse CssClass="activity-description w-50" @ref="_collapse">
-			<HxCard BodyCssClass="fs-5">
-				<BodyTemplate>
+		<div class="collapse add-participant @(_showAddParticipants ? "show" : "")" id="@($"add-participants{Activity.Id}")" onclick="event.stopPropagation();">
+			<div class="card fs-5">
+				<div class="card-body">
 					<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-						@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
-				</BodyTemplate>
-			</HxCard>
-		</HxCollapse>
+							   @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+				</div>
+			</div>
+		</div>
 
 	</span>
-</HxTooltip>
+</Tooltip>
 
 @code {
-	[CascadingParameter]
-	public IModalService ModalService { get; set; }
-
-	[Parameter]
-	public Activity Activity { get; set; }
+	[CascadingParameter] public IModalService ModalService { get; set; }
+	[Parameter] public Activity Activity { get; set; }
 
 	private bool LastPlaces => Activity.AvailableCapacity < 3;
 
 	private InputText _participantNameInput;
-	private HxCollapse _collapse;
+	private bool _showAddParticipants = false;
 	private string _newParticipantName = string.Empty;
 	private IModalReference _modal;
 
 	private async Task ShowAddParticipant()
 	{
-		await _collapse.ShowAsync();
-
+		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
 		await _participantNameInput.Element.Value.FocusAsync();
 	}
 
-	private async Task ShowParticipants()
-	{
+    private async Task ShowParticipants()
+    {
 		var parameters = new ModalParameters()
 			.Add(nameof(Participants.Activity), Activity);
 
@@ -63,13 +60,12 @@
 			return;
 
 		await ActivitiesManager.AddParticipantAsync(Activity, _newParticipantName);
-
 		await HideCollapse();
 	}
 
 	private async Task HideCollapse()
 	{
 		_newParticipantName = string.Empty;
-		await _collapse.HideAsync();
+		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
 	}
 }

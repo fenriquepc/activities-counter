@@ -9,3 +9,17 @@
     left: -5px;
     color: #dc3545;
 }
+
+.add-participant {
+    font-family: var(--bs-font-sans-serif);
+    line-height: initial;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+}
+
+    .add-participant .card {
+        background-color: black;
+        border-radius: 4px;
+        border: 1px solid #fff;
+    }
