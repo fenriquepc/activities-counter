@@ -3,9 +3,9 @@
 <div class="activity-date">
 	@if (ShowDay)
 	{
-		<HxTooltip Text="@_dayTooltipMessage">
+		<Tooltip Text="@_dayTooltipMessage">
 			<span class="day user-select-none">@_culture.DateTimeFormat.GetDayName(Activity.Date.DayOfWeek).Substring(0, 3)</span>
-		</HxTooltip>
+		</Tooltip>
 	}
 
 	@Activity.Date.ToString("HH:mm")
