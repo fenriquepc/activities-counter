@@ -1,20 +1,96 @@
 [
   {
-    "name": "Por la isla",
-    "description": "Un grupo de desconocidos acaba en La Isla... ¿Conseguiréis sobrevivir hasta que llegue un rescate? ¿Podréis salir vivos de allí? Descubrid los misterios de La Isla antes de sucumbir a vuestros oscuros secretos.",
-    "capacity": 5,
-    "type": 1,
+    "game": "Pathfinder para Savage Worlds",
+    "name": "El Ojo de Ulthan",
+    "description": "Unas ladronas que solo tenían que entregar un paquete. Unos ex-soldados contratados por una belleza elfa para encontrar a su hermana. El ojo de Ul’than ha llegado a la ciudad y muchos están dispuestos a lo que sea por poseerlo. En los callejones de Runerun va a empezar a correr la sangre.",
+    "capacity": 4,
+    "type": 0,
     "level": 1,
-    "date": "2023-03-25T17:00"
+    "date": "2023-03-24T17:00",
+    "organizer": {
+      "name": "Alcanor"
+    }
   },
   {
-    "game": "Vampiro Edad Oscura (ReV)",
-    "name": "Qarabaqa Oscura. La Reina Dorada",
-    "description": "Se trata de un rol en vivo en forma de escenas narradas y toleradas ideal para conocer lo que es el rol en vivo y para adentrarse en la crónica de Vampiro Edad Oscura que se juega en Caravaca De la Cruz.\r\nLa Vampiresa oscura Zoreen La Reina Dorada administra su feudo con mano de hierro y presentará en sociedad a su chiquilla Nadia en una excepcional ceremonia vampírica.",
-    "capacity": 15,
-    "type": 2,
+    "game": "El resurgir del dragón",
+    "name": "Los preceptos de las Tinieblas",
+    "description": "El rastro de los recuperadores de la Cábala de la Armonía Celeste conduce hasta el Monasterio de Yrelath, cerca de la frontera entre el Imperio Mida y el Reino de Vadania. Aunque los habitantes de los pueblos cercanos evitan el monasterio y sus inmediaciones sin una explicación aparente, parece que los recuperadores se refugiaron en su interior de las tormentas que azotan la región y aún podrían encontrarse allí.",
+    "capacity": 4,
+    "type": 0,
     "level": 1,
-    "date": "2023-03-25T19:00"
+    "date": "2023-03-24T17:00",
+    "organizer": {
+      "name": "Javier Moreno"
+    }
+  },
+  {
+    "name": "Ten candles",
+    "description": "Rol narrativo de canguelo con \"velitas\". TPK asegurado",
+    "capacity": 7,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-24T21:00",
+    "organizer": {
+      "name": "Cristóbal Espinosa"
+    }
+  },
+  {
+    "game": "La Llamada de Cthulhu",
+    "name": "La Oscuridad bajo la Colina",
+    "description": "Juego de rol de investigación ambientado en los Estados Unidos de 1920, no recomendado para menores de 13 o aquellos temerosos de lo que la ocuridad pueda ocultar.",
+    "capacity": 6,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-25T10:30",
+    "organizer": {
+      "name": "Juan Ignacio"
+    }
+  },
+  {
+    "game": "Aventuras en la Marca del Este",
+    "name": "El Túmulo Perdido de Azgoz el Testarudo",
+    "description": "Hace muchos, muchos años, cuando la ciudad de Robleda aún era joven, las tierras más allá de sus murallas eran páramos salvajes y montuosos, ahítos de criaturas terribles y bestias innombrables, que moraban bajo y sobre las colinas, en los tremedales y en las frescas riberas y sotos del Arroyosauce. Fueron muchos los aventureros que recorrieron sus vaguadas y valles, explorando más allá, descubriendo ruinas de otrora y reliquias ignotas. No pocos de ellos perecerían durante sus aventuras, enfrentados a desafíos y cuitas mil. Los menos, aquellos que gozaron de mayor fama, fueron enterrados en las Colinas Azules, horadadas desde hace siglos por cientos de túmulos, cavernas, grutas, pasadizos, criptas y mazmorras de todo tipo. Al trascurrir de los años, estos enterramientos cayeron en el olvido, extraviados en las brumas del tiempo.",
+    "capacity": 6,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-25T10:30",
+    "organizer": {
+      "name": "Pedro Gil"
+    }
+  },
+  {
+    "game": "La Llamada de Cthulhu",
+    "name": "¡Murcia, qué bonica eres!",
+    "description": "Años 20 en en el sur de España. El alcalde de Murcia, Don Francisco Martínez os llama a su despacho en el Ayuntamiento. Parece ser que tiene un asunto delicado y urgente que tratar con vosotros. ¿Cómo vais a negaros ante tan misteriosa oferta?",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T10:30",
+    "organizer": {
+      "name": "Cristóbal Espinosa"
+    }
+  },
+  {
+    "name": "D&D: comienza la aventura",
+    "description": "Edad recomendada: de 8 a 11 años\nD&D: comienza la aventura es un juego de mesa de exploración de mazmorras ideal para los introducir a los niños/as en los juegos de rol.\nEn este juego los chicos/as podrán meterse en la piel de uno de los cuatro aventureros: bardo elfo, hechicero humano, pícaro tiefling o guerrero enano y explorar las tierras de nervenwinter librando combates y teniendo encuentros muy interesantes.",
+    "capacity": 4,
+    "type": 1,
+    "level": 0,
+    "date": "2023-03-25T11:00",
+    "organizer": {
+      "name": "Irene"
+    }
+  },
+  {
+    "name": "Villapueblo de San Ordinario",
+    "description": "En un bosque donde los animales hablan, visten ropa y hacen su vida existe un lugar conocido como la villapueblo de San Ordinario. En el que vuestro cochero ha hecho parada para descansar antes de continuar vuestro viaje y nada raro, extraño, excéntrico, extravagante, original, peculiar, singular, curioso, caprichoso, insólito, inusitado, inusual, infrecuente o excepcional tiene por qué suceder ¿no?",
+    "capacity": 4,
+    "type": 1,
+    "level": 0,
+    "date": "2023-03-25T11:00",
+    "organizer": {
+      "name": "Chema Mayrit"
+    }
   },
   {
     "game": "Zweihänder (D100)",
@@ -24,25 +100,91 @@
     "type": 1,
     "level": 2,
     "date": "2023-03-25T16:00",
-    "adultsOnly": true
+    "adultsOnly": true,
+    "organizer": {
+      "name": "Juanmi"
+    }
   },
   {
-    "name": "Ten candles",
-    "description": "Rol narrativo de canguelo con «velitas». TPK asegurado.",
-    "capacity": 7,
+    "name": "Por la isla",
+    "description": "Un grupo de desconocidos acaba en La Isla... ¿Conseguiréis sobrevivir hasta que llegue un rescate? ¿Podréis salir vivos de allí? Descubrid los misterios de La Isla antes de sucumbir a vuestros oscuros secretos.",
+    "capacity": 5,
     "type": 1,
-    "level": 2,
-    "date": "2023-03-24T21:00",
-    "adultsOnly": false
+    "level": 0,
+    "date": "2023-03-25T17:00",
+    "organizer": {
+      "name": "Fran Sáez"
+    }
   },
   {
     "game": "Warhammer Fantasy 4ª ed.",
     "name": "Noche de Sangre",
-    "description": "La lluvia cae torrencialmente desde unas nubes oscuras y turbulentas. En lo alto, los rayos brillan a través del cielo. A lo lejos se oye el grito ahogado de alguna extraña criatura. Es una noche para estar resguardado porque, ¿Quién sabe qué se esconde bajo los oscuros árboles en los bosques del Imperio?",
+    "description": "La lluvia cae torrencialmente desde unas nubes oscuras y turbulentas. En lo alto, los rayos brillan a través del cielo. A lo lejos se oye el grito ahogado de alguna extraña criatura. Es una noche para estar resguardado porque, ¿Quién sabe qué se esconde bajo los oscuros árboles en los bosques del Imperio?\r\nPartida de rol con violencia, miedo y lenguaje soez. +18",
     "capacity": 4,
     "type": 1,
-    "level": 1,
+    "level": 0,
     "date": "2023-03-25T17:00",
-    "adultsOnly": true
+    "adultsOnly": true,
+    "organizer": {
+      "name": "Chache Perrache"
+    }
+  },
+  {
+    "game": "Vampiro Edad Oscura (ReV)",
+    "name": "Qarabaqa Oscura. La Reina Dorada",
+    "description": "Se trata de un rol en vivo en forma de escenas narradas y toleradas ideal para conocer lo que es el rol en vivo y para adentrarse en la crónica de Vampiro Edad Oscura que se juega en Caravaca De la Cruz.\r\nLa Vampiresa oscura Zoreen La Reina Dorada administra su feudo con mano de hierro y presentará en sociedad a su chiquilla Nadia en una excepcional ceremonia vampírica.",
+    "capacity": 15,
+    "type": 2,
+    "level": 1,
+    "date": "2023-03-25T19:00",
+    "organizer": {
+      "name": "Gremio de Juglares"
+    }
+  },
+  {
+    "game": "Doctor Who",
+    "name": "Los Caballeros del Cometa",
+    "description": "Fin de semana de turismo en Tintagel, en el sur de UK. Algunos vienen a ver el castillo, otros simplemente están disfrutando del día soleado con un picnic. Algunas familias han traído a sus hijos adolescentes obligados que están haciendo todo lo posible para no divertirse de ninguna manera. Pero todo puede cambiar rápidamente en Dr. Who.\nCoge tu destornillador sónico y prepárate para correr de forma ininterrumpida a ritmo de música MIDI (y con bajos efectos especiales).\nUna partida «wibbly wobbly timey wimey»",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-26T10:00",
+    "organizer": {
+      "name": "Cristóbal Espinosa"
+    }
+  },
+  {
+    "name": "Cartas en vez de dados",
+    "description": "Aviso: Pueden suceder escenas de terror, gore o comedia.\n\nDescripción: Un grupo de marineros que regresan de una misión fallida son atacados por una criatura marina. Durante el combate la cubierta cede y el monstruo cae atrapado en la bodega del barco. La criatura permanece viva atrapada en la bodega y todavía quedan varios días de viaje.",
+    "capacity": 4,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-26T11:00",
+    "organizer": {
+      "name": "Chema Mayrit"
+    }
+  },
+  {
+    "game": "Star Trek",
+    "name": "Rescate en Xerxes IV",
+    "description": "Vuestro viaje en runabout a la Estación Narendra para que os asignen a vuestra nave ha resultado más agitado de lo que esperabais.\n\nMientras vosotros y vuestros compañeros graduados en la Flota Estelar charlabais sobre el brillante futuro que os espera, recibisteis una señal de socorro de Xerxes IV, un planeta inhabitado de clase M que no posee vida racional salvo por un equipo científico de la Federación. La señal de socorro no ofrecía información alguna, salvo que el equipo científico allí estacionado estaba en peligro.\n\nMientras os dirigís hacia la superficie del planeta, os veis atrapados en una intensa tormenta de iones que se aproxima al mismo y que anula los sistemas de navegación, entre otros. Con los sistemas fallando y la superficie del planeta alzándose rápidamente hacia vosotros, la situación es peliaguda.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-26T16:15",
+    "organizer": {
+      "name": "Javier Moreno"
+    }
+  },
+  {
+    "name": "Los Santos de Jalisco: Terror en Ciudad Juarez",
+    "description": "(Léase con acento latino) En el México postapocaliptico, tras las Narcoguerras. La única alegría que llega a muchos pueblos son las compañías itinerantes de luchadores y los mejores entre estos son Los Santos de Jalisco. Liderados por el Hijo del Dorado, este variopinto grupo de luchadores enmascarados tendrá que enfrentarse a zombies, momias de Guanajato y todo tipo de monstruos para llevar la paz y la alegría a los débiles y desesperados. Cálzate tus mallas, ponte tu máscara y… ¡A ver de que cuero salen más correas!",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-26T16:30",
+    "organizer": {
+      "name": "Alcanor"
+    }
   }
 ]

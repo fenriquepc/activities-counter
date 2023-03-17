@@ -16,6 +16,23 @@ public class ActivityRepository
 	public ValueTask<bool> ExistAny() =>
 		_localStorage.ContainKeyAsync(ACTIVITIES_KEY);
 
+
+	public async ValueTask<IEnumerable<Activity>> Get(string? name = null, DateTime? from = null, DateTime? to = null)
+	{
+		var activities = await GetAll();
+
+		if (name is not null)
+			activities = activities.Where(x => x.Name.Contains(name));
+
+		if (from is not null)
+			activities = activities.Where(a => a.Date >= from);
+
+		if (to is not null)
+			activities = activities.Where(a => a.Date <= to);
+
+		return activities;
+	}
+
 	public async ValueTask<IEnumerable<Activity>> GetAll()
 	{
 		var result = await _localStorage.GetItemAsync<IEnumerable<Activity>>(ACTIVITIES_KEY); 

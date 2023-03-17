@@ -1,0 +1,11 @@
+﻿article {
+	padding: 50px;
+	color: white;
+	background-color: black;
+	min-height: 100vh;
+}
+
+h1 {
+	text-align: center;
+	color: #1b6ec2;
+}

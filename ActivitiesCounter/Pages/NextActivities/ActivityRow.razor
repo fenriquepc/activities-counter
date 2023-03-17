@@ -16,18 +16,19 @@
 				<span class="activity">
 					@activity.Name
 				</span>
-				<HxTooltip Text="Más información" CssClass="asdf">
-					<HxCollapseToggleElement Text="" CollapseTarget="@($"#description{activity.Id.ToString()}")" CssClass="more-button p-0">
-						<i class="fa-solid fa-circle-info"></i>
-					</HxCollapseToggleElement>
-				</HxTooltip>
-				<HxCollapse Id="@($"description{activity.Id.ToString()}")" CssClass="activity-description w-50">
-					<HxCard BodyCssClass="fs-5">
-						<BodyTemplate>
+				<Tooltip Text="Más información">
+					<span class="more-button p-0 collapsed" data-bs-toggle="collapse" data-bs-target="@($"#description{activity.Id.ToString()}")">
+						<i title="Más información" class="fa-solid fa-circle-info"></i>
+					</span>
+				</Tooltip>
+
+				<div Id="@($"description{activity.Id.ToString()}")" class="collapse activity-description w-50">
+					<div class="card fs-5">
+						<div class="card-body">
 							@activity.Description
-						</BodyTemplate>
-					</HxCard>
-				</HxCollapse>
+						</div>
+					</div>
+				</div>
 			</td>
 			<td class="no-space" style="position: relative">
 				<CapacityCounter Activity="@activity" />
@@ -40,8 +41,7 @@
 </CascadingValue>
 
 @code {
-	[Parameter]
-	public Activity activity { get; set; }
+	[Parameter] public Activity activity { get; set; }
 
 	private event Action ActivityChanged;
 

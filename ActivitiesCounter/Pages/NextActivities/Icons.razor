@@ -3,44 +3,44 @@
 
 	@if (StartSoon)
 	{
-		<HxTooltip Text="Inscripciones apunto de abrirse">
+		<Tooltip Text="Inscripciones apunto de abrirse">
 			<i class="fa-solid fa-clock fa-shake"></i>
-		</HxTooltip>
+		</Tooltip>
 	}
 
 	@if (RecentlyOpen)
 	{
-		<HxTooltip Text="Inscripciones ya abiertas">
+		<Tooltip Text="Inscripciones ya abiertas">
 			<i class="fa-solid fa-burst fa-fade"></i>
-		</HxTooltip>
+		</Tooltip>
 	}
 
 	@if (AdultsOnly)
 	{
-		<HxTooltip Text="Solo para mayores de edad">
+		<Tooltip Text="Solo para mayores de edad">
 			<span class="fa-layers fa-fw adults-only">
 				<i class="fa-solid fa-ban"></i>
 				<span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8" style="font-weight:900">18</span>
 			</span>
-		</HxTooltip>
+		</Tooltip>
 	}
 
 	@switch (Activity.Type)
 	{
 		case ActivityType.RPG:
-				<HxTooltip Text="Rol">
+				<Tooltip Text="Rol">
 					<i class="fa-solid fa-dice-d20"></i>
-				</HxTooltip>
+				</Tooltip>
 			break;
 		case ActivityType.BoardGame:
-				<HxTooltip Text="Juegos de mesa">
+				<Tooltip Text="Juegos de mesa">
 					<i class="fa-solid fa-dice"></i>
-				</HxTooltip>
+				</Tooltip>
 			break;
 		case ActivityType.LARP:
-				<HxTooltip Text="Rol en vivo">
+				<Tooltip Text="Rol en vivo">
 					<i class="fa-solid fa-masks-theater"></i>
-				</HxTooltip>
+				</Tooltip>
 			break;
 
 	}
