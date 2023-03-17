@@ -7,6 +7,7 @@ public class ActivitiesManager
 {
 	private readonly FilesManager _filesManager;
 	private readonly ActivityRepository _activityRepository;
+	private const int ActivityOvertimeMinutes = 30;
 
 	public ActivitiesManager(ActivityRepository activityRepository, FilesManager filesManager)
 	{
@@ -26,7 +27,8 @@ public class ActivitiesManager
 
 	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
 	{
-		var activities = await _activityRepository.GetAll();
+		var now = DateTime.Now;
+		var activities = await _activityRepository.Get(now.AddMinutes(-ActivityOvertimeMinutes), now.Date.AddDays(1));
 		return activities.OrderBy(a => a.Date);
 	}
 
