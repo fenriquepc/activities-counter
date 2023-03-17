@@ -2,30 +2,46 @@
 @using Microsoft.AspNetCore.Components.QuickGrid
 @inject ActivitiesManager ActivitiesManager
 
-<h3>Actividades</h3>
+<article>
+    <h1>Actividades</h1>
 
-<QuickGrid Items="@FilteredActivities" @ref="grid">
-    <PropertyColumn Property="@(p => p.Name)" Sortable="true" Title="Nombre" >
-        <ColumnOptions>
-            <div class="search-box">
-                <input type="search" autofocus @bind="nameFilter" @bind:event="oninput" placeholder="Nombre de la actividad" />
+    <QuickGrid Items="@FilteredActivities" @ref="_grid" Class="table table-dark table-borderless table-hover">
+        <PropertyColumn Property="@(p => p.Name)" Sortable="true" Title="Nombre" >
+            <ColumnOptions>
+                <div class="search-box">
+                    <input type="search" autofocus @bind="nameFilter" @bind:event="oninput" placeholder="Nombre de la actividad" />
+                </div>
+            </ColumnOptions>
+        </PropertyColumn>
+        <PropertyColumn Property="@(p => p.Game)" Sortable="true" Title="Juego" />
+        <PropertyColumn Property="@(p => p.Date.ToDayOfWeek())" Sortable="true" Title="Dia" />
+        <PropertyColumn Property="@(p => p.Date.TimeOfDay)" Sortable="true" Title="Hora" />
+        <TemplateColumn>
+            <div @onclick="() => EditActivity(context)">
+                <Tooltip Text="Editar actividad">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </Tooltip>
             </div>
-        </ColumnOptions>
-    </PropertyColumn>
-    <PropertyColumn Property="@(p => p.Game)" Sortable="true" Title="Juego" />
-    <PropertyColumn Property="@(p => p.Date.ToDayOfWeek())" Sortable="true" Title="Dia" />
-    <PropertyColumn Property="@(p => p.Date.TimeOfDay)" Sortable="true" Title="Hora" />
-</QuickGrid>
+        </TemplateColumn>
+        <TemplateColumn>
+            <div @onclick="() => Remove(context)">
+                <Tooltip Text="Borrar actividad">
+                    <i class="fa-solid fa-trash-can"></i>
+                </Tooltip>
+            </div>
+        </TemplateColumn>
+    </QuickGrid>
+</article>
 
 @code {
-    private QuickGrid<Activity> grid;
+    private QuickGrid<Activity> _grid;
     private IQueryable<Activity> _activities;
     private string nameFilter;
+    [CascadingParameter] public IModalService ModalService { get; set; } = default!;
+    private IModalReference _modal;
 
-    protected override async Task OnInitializedAsync()
-    {
-        _activities = (await ActivitiesManager.GetAll()).AsQueryable();
-    }
+    protected override Task OnInitializedAsync() => 
+       RefreshActivities();
 
     IQueryable<Activity> FilteredActivities
     {
@@ -39,5 +55,47 @@
 
             return result;
         }
+    }
+
+    private async Task RefreshActivities() =>
+        _activities = (await ActivitiesManager.GetAll()).AsQueryable();
+
+    private async Task EditActivity(Activity activity)
+    {
+        var parameters = new ModalParameters()
+            .Add(nameof(Pages.EditActivity.Activity), activity);
+
+        _modal = ModalService.Show<EditActivity>("Editar actividad", parameters, new()
+            {
+                Position = ModalPosition.Middle,
+            });
+
+        var result = await _modal.Result;
+        if (result.Confirmed)
+        {
+            await RefreshActivities();
+        }
+
+        _modal.Close();
+    }
+
+    private async Task Remove(Activity activity)
+    {
+        var parameters = new ModalParameters()
+            .Add(nameof(ConfirmModal.Message), "¿Seguro que quieres borrar la actividad?");
+
+        _modal = ModalService.Show<ConfirmModal>("Confirmar borrado", parameters, new()
+            {
+                Position = ModalPosition.Middle,
+            });
+
+        var result = await _modal.Result;
+        if (result.Confirmed)
+        {
+            await ActivitiesManager.RemoveActivityAsync(activity);
+        }
+
+        await RefreshActivities();
+        _modal.Close();
     }
 }

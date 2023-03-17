@@ -3,7 +3,7 @@
     font-size: 2em;
     color: white;
     background-image: url('img/background.jpg');
-    height: 100vh;
+    min-height: 100vh;
 }
 
 h1 {
