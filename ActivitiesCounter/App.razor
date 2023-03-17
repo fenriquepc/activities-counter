@@ -1,4 +1,6 @@
-﻿<CascadingBlazoredModal Class="custom-modal" HideCloseButton="true" HideHeader="true">
+﻿@inject ActivitiesManager ActivitiesManager
+
+<CascadingBlazoredModal Class="custom-modal" HideCloseButton="true" HideHeader="true">
     <Router AppAssembly="@typeof(App).Assembly">
         <Found Context="routeData">
             <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
@@ -12,3 +14,12 @@
         </NotFound>
     </Router>
 </CascadingBlazoredModal>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender) return;
+
+        await ActivitiesManager.BulkActivitiesFromFiles();
+    }
+}
