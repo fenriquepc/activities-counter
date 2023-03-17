@@ -25,10 +25,13 @@ public class ActivitiesManager
 		await _activityRepository.BulkActivities(activitiesFromFiles);
 	}
 
+	public ValueTask<IEnumerable<Activity>> GetAll() => 
+		_activityRepository.Get();
+
 	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
 	{
 		var now = DateTime.Now;
-		var activities = await _activityRepository.Get(now.AddMinutes(-ActivityOvertimeMinutes), now.Date.AddDays(1));
+		var activities = await _activityRepository.Get(from: now.AddMinutes(-ActivityOvertimeMinutes), to: now.Date.AddDays(1));
 		return activities.OrderBy(a => a.Date);
 	}
 

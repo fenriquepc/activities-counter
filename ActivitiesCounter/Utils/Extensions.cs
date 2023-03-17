@@ -1,10 +1,17 @@
 ﻿using System.ComponentModel;
+using System.Globalization;
 using System.Text.Json;
 
 namespace ActivitiesCounter.Utils;
 
 public static class Extensions
 {
+    public static string ToDayOfWeek(this DateTime dateTime)
+    {
+        var culture = new CultureInfo("Es-Es");
+        return culture.DateTimeFormat.GetDayName(dateTime.Date.DayOfWeek);
+    }
+
     public static string GetDescription(this Enum enumValue)
     {
         var field = enumValue.GetType().GetField(enumValue.ToString());

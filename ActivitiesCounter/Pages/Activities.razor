@@ -1,0 +1,43 @@
+﻿@page "/actividades"
+@using Microsoft.AspNetCore.Components.QuickGrid
+@inject ActivitiesManager ActivitiesManager
+
+<h3>Actividades</h3>
+
+<QuickGrid Items="@FilteredActivities" @ref="grid">
+    <PropertyColumn Property="@(p => p.Name)" Sortable="true" Title="Nombre" >
+        <ColumnOptions>
+            <div class="search-box">
+                <input type="search" autofocus @bind="nameFilter" @bind:event="oninput" placeholder="Nombre de la actividad" />
+            </div>
+        </ColumnOptions>
+    </PropertyColumn>
+    <PropertyColumn Property="@(p => p.Game)" Sortable="true" Title="Juego" />
+    <PropertyColumn Property="@(p => p.Date.ToDayOfWeek())" Sortable="true" Title="Dia" />
+    <PropertyColumn Property="@(p => p.Date.TimeOfDay)" Sortable="true" Title="Hora" />
+</QuickGrid>
+
+@code {
+    private QuickGrid<Activity> grid;
+    private IQueryable<Activity> _activities;
+    private string nameFilter;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _activities = (await ActivitiesManager.GetAll()).AsQueryable();
+    }
+
+    IQueryable<Activity> FilteredActivities
+    {
+        get
+        {
+            var result = _activities;
+            if (!string.IsNullOrEmpty(nameFilter))
+            {
+                result = result.Where(c => c.Name.Contains(nameFilter, StringComparison.CurrentCultureIgnoreCase));
+            }
+
+            return result;
+        }
+    }
+}
