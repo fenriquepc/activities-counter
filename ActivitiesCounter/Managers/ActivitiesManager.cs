@@ -6,14 +6,16 @@ namespace ActivitiesCounter.Managers;
 public class ActivitiesManager
 {
 	private readonly FilesManager _filesManager;
-	private readonly ActivityRepository _activityRepository;
+    private readonly IConfiguration _configuration;
+    private readonly ActivityRepository _activityRepository;
 	private const int ActivityOvertimeMinutes = 30;
 
-	public ActivitiesManager(ActivityRepository activityRepository, FilesManager filesManager)
+	public ActivitiesManager(ActivityRepository activityRepository, FilesManager filesManager, IConfiguration configuration)
 	{
 		_activityRepository = activityRepository;
 		_filesManager = filesManager;
-	}
+        _configuration = configuration;
+    }
 
 	public async Task BulkActivitiesFromFiles(bool resetExistingActivities = false)
 	{
@@ -30,6 +32,9 @@ public class ActivitiesManager
 
 	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
 	{
+		if (bool.Parse(_configuration["showAll"]))
+			return await _activityRepository.GetAll();
+
 		var now = DateTime.Now;
 		var activities = await _activityRepository.Get(from: now.AddMinutes(-ActivityOvertimeMinutes), to: now.Date.AddDays(1));
 		return activities.OrderBy(a => a.Date);
