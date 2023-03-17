@@ -1,13 +1,15 @@
 {
   "cacheBootResources": true,
-  "config": [ ],
+  "config": [
+    "appsettings.json"
+  ],
   "debugBuild": false,
   "entryAssembly": "ActivitiesCounter",
   "icuDataMode": 0,
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "ActivitiesCounter.dll": "sha256-0zjyRgnn6+YAAIk8JHaQvtNTBzQs76Gc9ZwgUw2ur6s=",
+      "ActivitiesCounter.dll": "sha256-E4xogWaOHSoGJjLXG5JG+nOajRI4ABH7p5+8H\/EA9Q0=",
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
       "Blazored.Modal.dll": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
       "Havit.Blazor.Components.Web.Bootstrap.dll": "sha256-9V9i3\/4OpVUQ5Ek8p9qjpIe8DmJ7kBLomxE2CvK0ve8=",
@@ -17,9 +19,9 @@
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-OMFTj9oq7FmRbczwSnfLVEzuTS4TsnJxtpaIw5O61cA=",
       "Microsoft.AspNetCore.Components.QuickGrid.dll": "sha256-PW\/wHFaTp8vYiuguHaQ3AwRZufEAL3poOUlA2LvA0BA=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-dmIKwkW0qDl3m7AgYkEcuCzQPrYzjh7Ke8Nipouv\/7c=",
-      "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-0oSgdIRzIW\/86CTNJ1Bt1wHXdGy2tzqfhHghYIOpEPo=",
-      "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-X\/f4fDl2cuIRXeWHhK\/f2UqQbFioD+RU4a4CEh0zrrQ=",
-      "Microsoft.Extensions.Configuration.dll": "sha256-DBOKSPriP2JDxVbbWrLXyD3K4\/x3RBifNBWk\/q1I39M=",
+      "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-H2RIuSXpMmDrXCI+AO4nuL2ktNapvkKitrg+90MXV9s=",
+      "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-V0oRy1b46ajOla6f+2uYdfMfM1GWZHA\/i8NKvGY45rI=",
+      "Microsoft.Extensions.Configuration.dll": "sha256-Z6ygSiVPRAnzRHQZ5JyYa\/jDy07aQ24EGfrW3qUt3Ro=",
       "Microsoft.Extensions.Configuration.Json.dll": "sha256-nTqLKuydttqLtE3VT3p6XhPmLxuaJDd0cL3Qzt8D4Ro=",
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-AI6XQNGM+S86s3upxQ1lRFPqYczbNGeQyty5QXW3Up0=",
       "Microsoft.Extensions.DependencyInjection.dll": "sha256-qi0kE7rp0kdsNqdL6DyPZEeimjUGvcLT4iWQX0YnRus=",
