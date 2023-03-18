@@ -1,6 +1,9 @@
 ﻿.activity-options {
 	min-width:20px;
 	min-height: 20px;
+	cursor: pointer;
+	position: absolute;
+	word-spacing: 0;
 }
 
 tr:hover .options-button {
@@ -12,4 +15,5 @@ tr:hover .options-button {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s, opacity 0.5s linear;
+	display: inline-block;
 }

@@ -4,33 +4,30 @@
 <PageTitle>Próximas actividades</PageTitle>
 
 <div class="next-activities">
-<h1>Próximas actividades</h1>
+	<h1>Próximas actividades</h1>
+	<Clock/>
 
-@if (_activities == null)
-{
-	<p><em>Cargando...</em></p>
-}
-else
-{
-	<CascadingValue Value="@TimeChanged" Name="TimeChanged">
-		<CascadingValue Value="@ActivitiesChanged" Name="@nameof(ActivitiesChanged)">
-			<table class="activities-table">
-				<tbody>
-					@foreach (var activity in _activities)
-					{
-						<ActivityRow activity="@activity" />
-					}
-				</tbody>
-			</table>
+	@if (_activities == null)
+	{
+		<p><em>Cargando...</em></p>
+	}
+	else
+	{
+			<CascadingValue Value="@ActivitiesChanged" Name="@nameof(ActivitiesChanged)">
+				<table class="activities-table">
+					<tbody>
+						@foreach (var activity in _activities)
+						{
+							<ActivityRow activity="@activity" />
+						}
+					</tbody>
+				</table>
 
-			<Clock/>
-		</CascadingValue>
-	</CascadingValue>
-}
+			</CascadingValue>
+	}
 </div>
 @code {
 	private IEnumerable<Activity> _activities;
-	private event Action TimeChanged;
 
 	protected override async Task OnInitializedAsync()
 	{

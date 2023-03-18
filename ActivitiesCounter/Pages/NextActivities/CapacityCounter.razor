@@ -2,26 +2,28 @@
 @inject ActivitiesManager ActivitiesManager;
 @inject IJSRuntime JS;
 
-<Tooltip Text="Añadir participante">
-	<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
-		@Activity.AvailableCapacity / @Activity.Capacity
+<div style="text-align: right">
+	<Tooltip Text="Añadir participante">
+		<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
+			@Activity.AvailableCapacity / @Activity.Capacity
 
-		@if (LastPlaces)
-		{
-			<span><i class="fa-brands fa-hotjar hot" /></span>
-		}
+			@if (LastPlaces)
+			{
+				<span><i class="fa-brands fa-hotjar hot" /></span>
+			}
 
-		<div class="collapse add-participant @(_showAddParticipants ? "show" : "")" id="@($"add-participants{Activity.Id}")" onclick="event.stopPropagation();">
-			<div class="card fs-5">
-				<div class="card-body">
-					<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-							   @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+			<div class="collapse add-participant @(_showAddParticipants ? "show" : "")" id="@($"add-participants{Activity.Id}")" onclick="event.stopPropagation();">
+				<div class="card fs-5">
+					<div class="card-body">
+						<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
+								   @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+					</div>
 				</div>
 			</div>
-		</div>
 
-	</span>
-</Tooltip>
+		</span>
+	</Tooltip>
+</div>
 
 @code {
 	[CascadingParameter] public IModalService ModalService { get; set; }

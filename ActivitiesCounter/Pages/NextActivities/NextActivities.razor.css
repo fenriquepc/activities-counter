@@ -4,17 +4,21 @@
     color: white;
     background-image: url('img/background.jpg');
     min-height: 100vh;
+    padding: 50px 80px;
+    position: relative;
 }
 
 h1 {
-    text-align: center;
+    display: inline-block;
+    text-align: left;
     font-size: 4rem;
-    text-shadow: 0px 3px 0px #ed74a6, 0px 14px 10px rgba(0,0,0,0.15), 0px 24px 2px rgba(0,0,0,0.1), 0px 34px 30px rgba(0,0,0,0.1);
+    line-height: 0.7;
+    text-shadow: 0px 3px 0px #ed74a6, 0px 14px 10px rgba(0,0,0,0.15), 0px 15px 2px rgba(0,0,0,0.1), 0px 34px 30px rgba(0,0,0,0.1);
+    margin-bottom: 0.5em;
 }
 
 table {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .nombre.completo {
@@ -45,7 +49,6 @@ a.boton {
     position: absolute;
     top: 0;
 }
-
 
 /* Modal */
 .custom-modal-overlay {
