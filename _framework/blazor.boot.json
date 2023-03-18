@@ -9,7 +9,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "ActivitiesCounter.dll": "sha256-E4xogWaOHSoGJjLXG5JG+nOajRI4ABH7p5+8H\/EA9Q0=",
+      "ActivitiesCounter.dll": "sha256-xvsWbpDGyExL79aiqS1qMvTTzwIRPu15jn6GToNy6PQ=",
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
       "Blazored.Modal.dll": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
       "Havit.Blazor.Components.Web.Bootstrap.dll": "sha256-9V9i3\/4OpVUQ5Ek8p9qjpIe8DmJ7kBLomxE2CvK0ve8=",
