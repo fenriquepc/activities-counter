@@ -43,6 +43,7 @@
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
+    z-index: 100;
 }
 
 .sidebar.collapsed {
