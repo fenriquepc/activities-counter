@@ -1,6 +1,7 @@
 ﻿.activity-options {
 	min-width:20px;
 	min-height: 20px;
+	cursor: pointer;
 }
 
 tr:hover .options-button {

@@ -2,25 +2,25 @@
 @inject ActivitiesManager ActivitiesManager
 
 <div class="activity-options">
-	<HxDropdown>
-		<HxDropdownToggleElement role="button">
+	<div class="dropdown">
+		<span class="options-button p-0" data-bs-toggle="dropdown">
 			<i class="fa-solid fa-gear options-button"></i>
-		</HxDropdownToggleElement>
-		<HxDropdownMenu>
-			<HxDropdownItem OnClick="EditActivity">
+		</span>
+		<ul class="dropdown-menu">
+			<li class="dropdown-item" @onclick="EditActivity">
 				<i class="fa-regular fa-pen-to-square"></i>
 				Editar actividad
-			</HxDropdownItem>
-			<HxDropdownItem OnClick="ShowParticipants">
+			</li>
+			<li class="dropdown-item" @onclick="ShowParticipants">
 				<i class="fa-solid fa-user-gear"></i>
 				Detalles de participantes
-			</HxDropdownItem>
-			<HxDropdownItem OnClick="Remove">
+			</li>
+			<li class="dropdown-item" @onclick="Remove">
 				<i class="fa-solid fa-trash-can"></i>
 				Borrar actividad
-			</HxDropdownItem>
-		</HxDropdownMenu>
-	</HxDropdown>
+			</li>
+		</ul>
+	</div>
 </div>
 
 @code {
