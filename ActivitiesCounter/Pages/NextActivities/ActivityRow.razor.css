@@ -35,7 +35,7 @@
 ::deep .activity-description {
 	font-family: 'Share Tech Mono', monospace;
 	line-height: initial;
-	position: fixed;
+	position: absolute;
 	z-index: 10;
 }
 
