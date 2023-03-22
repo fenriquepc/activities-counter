@@ -5,7 +5,7 @@
 
 <div style="text-align: right">
 	<Tooltip Text="@TooltipText">
-		<span class="capacity-counter" @onclick="ShowAddParticipant"@oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
+		<span class="capacity-counter" @onclick="ShowAddParticipant"@oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true" @onmousedown="() => _toggleling = true">
 				
 			@AvailableCapacity / @Activity.Capacity
 
@@ -40,6 +40,7 @@
 	private string _newParticipantName = string.Empty;
 	private IModalReference _modal;
 	private bool _previousOpen;
+	private bool _toggleling;
 
 	protected override void OnInitialized()
 	{
@@ -73,6 +74,8 @@
 
 		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
 		await _participantNameInput.Element.Value.FocusAsync();
+
+		_toggleling = false;
 	}
 
 	private async Task ShowParticipants()
@@ -100,6 +103,9 @@
 
 	private async Task HideCollapse()
 	{
+		if (_toggleling)
+			return;
+
 		_newParticipantName = string.Empty;
 		await JS.InvokeAsync<object>("Hide", $"add-participants{Activity.Id}");
 	}
