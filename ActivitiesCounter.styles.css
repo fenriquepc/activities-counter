@@ -129,7 +129,7 @@ td[b-bqpfnqedla] {
 [b-bqpfnqedla] .activity-description {
 	font-family: 'Share Tech Mono', monospace;
 	line-height: initial;
-	position: fixed;
+	position: absolute;
 	z-index: 10;
 }
 
@@ -154,7 +154,7 @@ td[b-bqpfnqedla] {
 .add-participant[b-fz00g9njpp] {
     font-family: var(--bs-font-sans-serif);
     line-height: initial;
-    position: fixed;
+    position: absolute;
     right: 0;
     z-index: 10;
 }

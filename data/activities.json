@@ -24,6 +24,30 @@
     }
   },
   {
+    "game": "Mácula",
+    "name": "Más allá de la frontera menguante",
+    "description": "El juego de rol «Mácula» transcurre en una versión apocalíptica de Europa a inicios del siglo XVII. Hace un par de siglos una extraña bruma de origen desconocido conocida como la Mácula comenzó a extenderse por el mundo, consumiendo y transformando todo aquello que engullía. Europa ha sido completamente rodeada y aislada por los terribles miasmas de la Mácula, y la sociedad tal y como la conocemos se ha desmoronado por completo. Han aparecido fuerzas sobrenaturales nunca antes vistas: Extraños fenómenos atmosféricos que azotan la tierra, individuos que desarrollan capacidades sobrehumanas, y horribles criaturas mutantes que emergen de la bruma para atormentar a una humanidad que ya se encuentra al borde de la extinción. Bienvenido a la Nueva Europa.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-24T17:00",
+    "organizer": {
+      "name": "Aku"
+    }
+  },
+  {
+    "game": "Star Wars: Al filo del imperio",
+    "name": "Huida de Moss Hutta",
+    "description": "La galaxia atraviesa un periodo turbulento, pero también lleno de oportunidades. El Imperio Galáctico se afana por mantener el control en plena guerra civil. Entre tanto, granujas y contrabandistas, exploradores y exiliados, fronterizos de todo tipo de ganan la vida como pueden en los confines de la civilización galáctica. Es una existencia llena de penurias, pero estos renegados gozan de más libertad y posibilidades que cualquier ciudadano de los planetas del Núcleo.",
+    "capacity": 4,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-24T17:00",
+    "organizer": {
+      "name": "Raúl Fernández"
+    }
+  },
+  {
     "name": "Ten candles",
     "description": "Rol narrativo de canguelo con \"velitas\". TPK asegurado",
     "capacity": 7,
@@ -32,6 +56,41 @@
     "date": "2023-03-24T21:00",
     "organizer": {
       "name": "Cristóbal Espinosa"
+    }
+  },
+  {
+    "name": "La Encrucijada",
+    "description": "Un grupo de supervivientes se han reunido en un refugio, allí tienen que tomar decisiones de las que dependerá su supervivencia de la amenaza zombie.",
+    "capacity": 20,
+    "type": 2,
+    "level": 1,
+    "date": "2023-03-24T22:30",
+    "organizer": {
+      "name": "Caos Controlado"
+    }
+  },
+  {
+    "game": "Savage Worlds",
+    "name": "El tamaño importa",
+    "description": "El azar une a seis personas mientras una compañía de investigación va a hacer una demostración de su última tecnología.",
+    "capacity": 6,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-25T10:00",
+    "organizer": {
+      "name": "Luis Carlos Suárez"
+    }
+  },
+  {
+    "game": "Degenesis",
+    "name": "Última guardia",
+    "description": "La atalaya N17 se eleva por encima de las praderas varios kilómetros al norte de la ciudad de Asedio. Forma parte de la línea defensiva que garantiza la seguridad de los habitantes del Protectorado… y se ha quedado en silencio. Han pasado días desde que su personal enviara su habitual señal de radio a la torre de control principal.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T10:15",
+    "organizer": {
+      "name": "Rakjoh"
     }
   },
   {
@@ -71,6 +130,30 @@
     }
   },
   {
+    "game": "Mácula",
+    "name": "Más allá de la frontera menguante",
+    "description": "El juego de rol «Mácula» transcurre en una versión apocalíptica de Europa a inicios del siglo XVII. Hace un par de siglos una extraña bruma de origen desconocido conocida como la Mácula comenzó a extenderse por el mundo, consumiendo y transformando todo aquello que engullía. Europa ha sido completamente rodeada y aislada por los terribles miasmas de la Mácula, y la sociedad tal y como la conocemos se ha desmoronado por completo. Han aparecido fuerzas sobrenaturales nunca antes vistas: Extraños fenómenos atmosféricos que azotan la tierra, individuos que desarrollan capacidades sobrehumanas, y horribles criaturas mutantes que emergen de la bruma para atormentar a una humanidad que ya se encuentra al borde de la extinción. Bienvenido a la Nueva Europa.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T10:30",
+    "organizer": {
+      "name": "Aku"
+    }
+  },
+  {
+    "game": "La Llamada de Cthulhu",
+    "name": "Yuggoth-lab",
+    "description": "El polémico ingeniero el Dr. Willian Shortcut de la universidad de Miskatonic ha desaparecido sin dejar rastro. Los investigadores, cercanos al doctor y bajo petición del rector, viajarán a la antigua granja familiar del desaparecido donde solía pasar temporadas de meditación. La granja parece ser algo más que un viejo cortijo y será allí donde los investigadores tratarán de resolver el misterio del paradero del Dr. Shortcut y de paso salvar a la humanidad.",
+    "capacity": 5,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-25T10:30",
+    "organizer": {
+      "name": "GregoNomicón"
+    }
+  },
+  {
     "name": "D&D: comienza la aventura",
     "description": "Edad recomendada: de 8 a 11 años\nD&D: comienza la aventura es un juego de mesa de exploración de mazmorras ideal para los introducir a los niños/as en los juegos de rol.\nEn este juego los chicos/as podrán meterse en la piel de uno de los cuatro aventureros: bardo elfo, hechicero humano, pícaro tiefling o guerrero enano y explorar las tierras de nervenwinter librando combates y teniendo encuentros muy interesantes.",
     "capacity": 4,
@@ -85,7 +168,7 @@
     "name": "Villapueblo de San Ordinario",
     "description": "En un bosque donde los animales hablan, visten ropa y hacen su vida existe un lugar conocido como la villapueblo de San Ordinario. En el que vuestro cochero ha hecho parada para descansar antes de continuar vuestro viaje y nada raro, extraño, excéntrico, extravagante, original, peculiar, singular, curioso, caprichoso, insólito, inusitado, inusual, infrecuente o excepcional tiene por qué suceder ¿no?",
     "capacity": 4,
-    "type": 1,
+    "type": 0,
     "level": 0,
     "date": "2023-03-25T11:00",
     "organizer": {
@@ -97,7 +180,7 @@
     "name": "Desapariciones en Mullensburg",
     "description": "Ha estallado la guerra entre el Reino de Barrenburg y el Ducado de Lapsburg, y el hambre y la ruina ha caído sobre el pequeño pueblo de Mullensburg, dominada por el férreo barón Von Aspinfeld. Nuestros protagonistas hacen una parada en Mullensburg para aprovisionarse de camino al frente, y pronto se verán envueltos en sucesos oscuros y peligrosos que arrojan su sombra sobre la otrora tranquila villa...\r\nAventura del juego de rol 'Zweihänder', sistema D100. Sólo para audiencia adulta.",
     "capacity": 5,
-    "type": 1,
+    "type": 0,
     "level": 2,
     "date": "2023-03-25T16:00",
     "adultsOnly": true,
@@ -109,7 +192,7 @@
     "name": "Por la isla",
     "description": "Un grupo de desconocidos acaba en La Isla... ¿Conseguiréis sobrevivir hasta que llegue un rescate? ¿Podréis salir vivos de allí? Descubrid los misterios de La Isla antes de sucumbir a vuestros oscuros secretos.",
     "capacity": 5,
-    "type": 1,
+    "type": 0,
     "level": 0,
     "date": "2023-03-25T17:00",
     "organizer": {
@@ -121,7 +204,7 @@
     "name": "Noche de Sangre",
     "description": "La lluvia cae torrencialmente desde unas nubes oscuras y turbulentas. En lo alto, los rayos brillan a través del cielo. A lo lejos se oye el grito ahogado de alguna extraña criatura. Es una noche para estar resguardado porque, ¿Quién sabe qué se esconde bajo los oscuros árboles en los bosques del Imperio?\r\nPartida de rol con violencia, miedo y lenguaje soez. +18",
     "capacity": 4,
-    "type": 1,
+    "type": 0,
     "level": 0,
     "date": "2023-03-25T17:00",
     "adultsOnly": true,
@@ -130,15 +213,27 @@
     }
   },
   {
-    "game": "Vampiro Edad Oscura (ReV)",
-    "name": "Qarabaqa Oscura. La Reina Dorada",
-    "description": "Se trata de un rol en vivo en forma de escenas narradas y toleradas ideal para conocer lo que es el rol en vivo y para adentrarse en la crónica de Vampiro Edad Oscura que se juega en Caravaca De la Cruz.\r\nLa Vampiresa oscura Zoreen La Reina Dorada administra su feudo con mano de hierro y presentará en sociedad a su chiquilla Nadia en una excepcional ceremonia vampírica.",
-    "capacity": 15,
-    "type": 2,
-    "level": 1,
-    "date": "2023-03-25T19:00",
+    "game": "Savage Worlds",
+    "name": "Un plan perfecto",
+    "description": "Seis ingleses están en su pub degustando sus bebidas favoritas cuando se ven forzados a preparar un robo.",
+    "capacity": 6,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T17:00",
     "organizer": {
-      "name": "Gremio de Juglares"
+      "name": "Luis Carlos Suárez"
+    }
+  },
+  {
+    "game": "Pequeños detectives de Monstruos",
+    "name": "¡El ladrón de juegos tenía un hijo!",
+    "description": "Partida de rol de iniciación de pequeños detectives de monstruos. Edad recomendada entre 3 y 5 años.\nEn las últimas jornadas la agencia de detectives capturó un molesto monstruo que se dedicaba a robar las piezas de los juegos de mesa y a entorpecer el normal funcionamiento de las jornadas. Todo parecía tranquilo y controlado, hasta que otra vez en las jornadas Ludus Myrtea empezaron a desaparecer otra vez los dados, las fichas, incluso algunos juegos. ¿Es posible que no se capturaran a todos los monstruos? Es otro trabajo para la agencia de detectives!",
+    "capacity": 6,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T17:00",
+    "organizer": {
+      "name": "Maligno"
     }
   },
   {
@@ -151,6 +246,42 @@
     "date": "2023-03-26T10:00",
     "organizer": {
       "name": "Cristóbal Espinosa"
+    }
+  },
+  {
+    "name": "CBR-PNK",
+    "description": "Partida de rol de iniciación de pequeños detectives de monstruos. Edad recomendada entre 3 y 5 años.\nUn grupo de veteranos agentes a sueldo que atraviesan una mala racha reciben la oferta de sus vidas: si logran infiltrarse en un impenetrable laboratorio corporativo y «extraer» a una misteriosa investigadora de sus instalaciones, todas sus deudas e historiales se desvanecerán. Es su última oportunidad. ¿Lograrán una vida tranquila… o una muerte violenta?\n\nAviso de contenido: ambientación cyberpunk, combate y violencia gráfica, acción con el tiempo en contra.\nHerramientas de seguridad: conversación previa, líneas y velos, tarjeta X.",
+    "capacity": 6,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-26T10:00",
+    "organizer": {
+      "name": "Yeray"
+    }
+  },
+  {
+    "game": "Áureo: La Edad de los Héroes",
+    "name": "Los protectores de la Tregua Sagrada",
+    "description": "Los heraldos elegidos por los Dioses tienen el deber de proteger la tregua sagrada durante las olimpiadas, esto parece una tarea sencilla, comer, beber pasearse por los campamentos de las polis y participar de jurado en alguna de las pruebas. Pero ¿Serán capaces los heraldos de mantener la paz cuando la sangre amenace con romper la tregua sagrada?",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-26T10:00",
+    "organizer": {
+      "name": "Leahryde"
+    }
+  },
+  {
+    "game": "Necromunda",
+    "name": "EL RITUAL",
+    "description": "En las profundidades de la subcolmena los viles siervos de los dioses del caos se han aliado para realizar un impío ritual que de no detenerse corromperá a todos los habitantes de Necromunda, mancillando su cuerpo y alma. Únete a las bandas que defenderán su territorio de la corrupción del caos o si lo prefieres abraza el poder que la disformidad ofrece…. a cambio de tu alma.\r\nVen, mira, curiosea, pregunta o si te atreves toma las riendas del destino de la subcolmena y juega con una banda, nosotros te facilitamos una y te enseñamos a jugar.\r\n\r\nPartida para mayores de 18 años.\r\n\r\nAlabado sea Tzeentch!",
+    "capacity": 3,
+    "type": 1,
+    "level": 0,
+    "date": "2023-03-26T10:00",
+    "adultsOnly": true,
+    "organizer": {
+      "name": "La Escotilla"
     }
   },
   {
@@ -185,6 +316,18 @@
     "date": "2023-03-26T16:30",
     "organizer": {
       "name": "Alcanor"
+    }
+  },
+  {
+    "game": "Pequeños detectives de Monstruos",
+    "name": "La desaparición de las llaves",
+    "description": "Partida de rol de iniciación de pequeños detectives de monstruos. Edad recomendada entre 3 y 5 años.\r\n\r\nDescripción: Tras la actuación de nuestros jovenes detectives, han empezado a desaparecer otro tipo de objetos. Objetos que los adultos valoran mucho, como las llaves de sus coches o de la casa. Ahora la gente está más preocupada en guardar bien sus llaveros que en jugar en las jornadas y esto no puede seguir así. Hay que encontrar al monstruo y capturarlo.",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-26T17:00",
+    "organizer": {
+      "name": "Maligno"
     }
   }
 ]

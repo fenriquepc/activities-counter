@@ -9,7 +9,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "ActivitiesCounter.dll": "sha256-xvsWbpDGyExL79aiqS1qMvTTzwIRPu15jn6GToNy6PQ=",
+      "ActivitiesCounter.dll": "sha256-Fq4DIMOVuL3Ad8ySpJ3lDCk3vhfAzkBI6xCpbfPCcOg=",
       "Blazored.LocalStorage.dll": "sha256-eXVgTw72kEn74FZgDQbLtvAmXbiZDSj5gzUnxVmwowQ=",
       "Blazored.Modal.dll": "sha256-Sr30UiM7JErBe8hojY6HAgaOOgfQE5zHijI0uVypmkM=",
       "Havit.Blazor.Components.Web.Bootstrap.dll": "sha256-9V9i3\/4OpVUQ5Ek8p9qjpIe8DmJ7kBLomxE2CvK0ve8=",
@@ -53,7 +53,7 @@
       "System.Net.Mail.dll": "sha256-cPPzWgernLWKhVlncPo0CkpV+r2U7kdht780EgjYdKo=",
       "System.Net.Primitives.dll": "sha256-fdj8ClbuNZB9Sv1Ex+tD6P+FVTkCMEu+vscbHXeYpAw=",
       "System.ObjectModel.dll": "sha256-6q9o7fOKpE1GIdGEsRke7JakJRXL6nM0qXclaBb218c=",
-      "System.Private.CoreLib.dll": "sha256-YHPs9ZQGuM2H4mDqE4jZ3TQu9R+EIFatDFtG\/kAVOjY=",
+      "System.Private.CoreLib.dll": "sha256-i1vzkOXMDNXQ3XHscx9OTPls8NrmrCKKGfqgrFze0II=",
       "System.Private.Uri.dll": "sha256-rsTkTaWjZbp91fh4CefgP7JWrMEYbLGQo37vK6KrMtg=",
       "System.Runtime.dll": "sha256-iTNc4VpDfbdtxTINkfqFm\/nPhPBfu0UObT9euEmqrYE=",
       "System.Runtime.InteropServices.JavaScript.dll": "sha256-lZNDJmCZjUCPBkc8yiASvRb9kYy34iHR8ptuOTmGMP0=",
@@ -74,7 +74,7 @@
     "runtime": {
       "dotnet.7.0.4.apdocu108m.js": "sha256-kyiYJdz7rmiBVrdYXGOhIHV9PneP2Q9d18ur+d0BoIw=",
       "dotnet.timezones.blat": "sha256-UEt3EzX1Ts6UAzZ8vHZJ3Nb0gAVPqeNmtxuFnUvzxVI=",
-      "dotnet.wasm": "sha256-7N\/Kk4160STvq5ixa9Q+922\/BzlnwDwUk6iSqy+67Es=",
+      "dotnet.wasm": "sha256-5SzKKUYvDxMQHfsEmMCDLQKECd\/KYzXhKP+3\/hOVSWU=",
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
       "icudt_EFIGS.dat": "sha256-8fItetYY8kQ0ww6oxwTLiT3oXlBwHKumbeP2pRF4yTc=",
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37\/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs=",
@@ -83,7 +83,7 @@
     "runtimeAssets": {
       "dotnet.wasm": {
         "behavior": "dotnetwasm",
-        "hash": "sha256-7N\/Kk4160STvq5ixa9Q+922\/BzlnwDwUk6iSqy+67Es="
+        "hash": "sha256-5SzKKUYvDxMQHfsEmMCDLQKECd\/KYzXhKP+3\/hOVSWU="
       }
     },
     "satelliteResources": {
