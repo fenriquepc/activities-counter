@@ -2,6 +2,8 @@
 
 public class Activity
 {
+	public const int InscriptionMinutes = 30;
+
 	public Guid Id { get; set; } = Guid.NewGuid();
 	public string Game { get; set; }
 	public string Name { get; set; }
@@ -15,9 +17,14 @@ public class Activity
 	public Organizer Organizer { get; set; }
 	public bool AdultsOnly { get; set; }
 	public bool AllowPreinscription { get; set; }
+	public bool HasOpenInscriptions => AllowPreinscription || (OpenInscriptionDate <= DateTime.Now);
+	private DateTime OpenInscriptionDate => Date.AddMinutes(-InscriptionMinutes);
 
 	public void AddParticipant(string participant)
 	{
+		if (!HasOpenInscriptions) 
+			return;
+
 		Participants.Add(participant);
 	}
 }

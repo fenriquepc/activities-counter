@@ -3,9 +3,10 @@
 @inject IJSRuntime JS;
 
 <div style="text-align: right">
-	<Tooltip Text="Añadir participante">
+	<Tooltip Text="@TooltipText">
 		<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
-			@Activity.AvailableCapacity / @Activity.Capacity
+				
+			@AvailableCapacity / @Activity.Capacity
 
 			@if (LastPlaces)
 			{
@@ -16,7 +17,7 @@
 				<div class="card fs-5">
 					<div class="card-body">
 						<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-								   @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+									@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
 					</div>
 				</div>
 			</div>
@@ -35,9 +36,14 @@
 	private bool _showAddParticipants = false;
 	private string _newParticipantName = string.Empty;
 	private IModalReference _modal;
+	private string TooltipText => Activity.HasOpenInscriptions ? "Añadir participante" : "Inscripciones cerradas";
+	private string AvailableCapacity => Activity.HasOpenInscriptions ? Activity.AvailableCapacity.ToString() : "-";
 
 	private async Task ShowAddParticipant()
 	{
+		if (!Activity.HasOpenInscriptions)
+			return;
+
 		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
 		await _participantNameInput.Element.Value.FocusAsync();
 	}
