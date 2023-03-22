@@ -1,55 +1,39 @@
-﻿@implements IDisposable
-
-<CascadingValue Value="@activity">
-	<CascadingValue Value="@ActivityChanged" Name="ActivityChanged">
-		<tr>
-			<td>
-				<ActivityDate />
-			</td>
-			<td class="user-select-none" style="position: relative">
-				<Icons />
-			</td>
-			<td class="name-cell">
-				<span class="game">
-					@activity.Game
+﻿<CascadingValue Value="@activity">
+	<tr>
+		<td>
+			<ActivityDate />
+		</td>
+		<td class="user-select-none" style="position: relative">
+			<Icons />
+		</td>
+		<td class="name-cell">
+			<span class="game">
+				@activity.Game
+			</span>
+			<span class="activity">
+				@activity.Name
+			</span>
+			<Tooltip Text="Más información">
+				<span class="more-button p-0 collapsed" data-bs-toggle="collapse" data-bs-target="@($"#description{activity.Id.ToString()}")">
+					<i title="Más información" class="fa-solid fa-circle-info"></i>
 				</span>
-				<span class="activity">
-					@activity.Name
-				</span>
-				<Tooltip Text="Más información">
-					<span class="more-button p-0 collapsed" data-bs-toggle="collapse" data-bs-target="@($"#description{activity.Id.ToString()}")">
-						<i title="Más información" class="fa-solid fa-circle-info"></i>
-					</span>
-				</Tooltip>
+			</Tooltip>
 
-				<div Id="@($"description{activity.Id.ToString()}")" class="collapse activity-description w-50">
-					<div class="card fs-5">
-						<div class="card-body">
-							@activity.Description
-						</div>
+			<div Id="@($"description{activity.Id.ToString()}")" class="collapse activity-description w-50">
+				<div class="card fs-5">
+					<div class="card-body">
+						@activity.Description
 					</div>
 				</div>
-			</td>
-			<td class="no-space" style="position: relative">
-				<ActivityOptions />
-				<CapacityCounter Activity="@activity" />
-			</td>
-		</tr>
-	</CascadingValue>
+			</div>
+		</td>
+		<td class="no-space" style="position: relative">
+			<ActivityOptions />
+			<CapacityCounter Activity="@activity" />
+		</td>
+	</tr>
 </CascadingValue>
 
 @code {
 	[Parameter] public Activity activity { get; set; }
-
-	private event Action ActivityChanged;
-
-	protected override void OnInitialized()
-	{
-		ActivityChanged += StateHasChanged;
-	}
-
-	public void Dispose()
-	{
-		ActivityChanged -= StateHasChanged;
-	}
 }

@@ -13,7 +13,7 @@
 .add-participant {
     font-family: var(--bs-font-sans-serif);
     line-height: initial;
-    position: fixed;
+    position: absolute;
     right: 0;
     z-index: 10;
 }

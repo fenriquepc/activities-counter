@@ -1,22 +1,24 @@
 ﻿@using ActivitiesCounter.Utils;
+@implements IDisposable;
 @inject ActivitiesManager ActivitiesManager;
 @inject IJSRuntime JS;
 
 <div style="text-align: right">
-	<Tooltip Text="Añadir participante">
-		<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
-			@Activity.AvailableCapacity / @Activity.Capacity
+	<Tooltip Text="@TooltipText">
+		<span class="capacity-counter" @onclick="ShowAddParticipant"@oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true" @onmousedown="() => _toggleling = true">
+				
+			@AvailableCapacity / @Activity.Capacity
 
 			@if (LastPlaces)
 			{
 				<span><i class="fa-brands fa-hotjar hot" /></span>
 			}
 
-			<div class="collapse add-participant @(_showAddParticipants ? "show" : "")" id="@($"add-participants{Activity.Id}")" onclick="event.stopPropagation();">
+			<div class="collapse add-participant" id="@($"add-participants{Activity.Id}")" @onclick:stopPropagation="true">
 				<div class="card fs-5">
 					<div class="card-body">
 						<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-								   @bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+									@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
 					</div>
 				</div>
 			</div>
@@ -30,20 +32,54 @@
 	[Parameter] public Activity Activity { get; set; }
 
 	private bool LastPlaces => Activity.AvailableCapacity < 3;
+	private string TooltipText => Activity.HasOpenInscriptions ? "Añadir participante" : "Inscripciones cerradas";
+	private string AvailableCapacity => Activity.HasOpenInscriptions ? Activity.AvailableCapacity.ToString() : "-";
 
+	private Timer _timer;
 	private InputText _participantNameInput;
-	private bool _showAddParticipants = false;
 	private string _newParticipantName = string.Empty;
 	private IModalReference _modal;
+	private bool _previousOpen;
+	private bool _toggleling;
+
+	protected override void OnInitialized()
+	{
+		_timer = new Timer(OnTimeChanged, null, 0, 5000);
+		_previousOpen = Activity.HasOpenInscriptions;
+	}
+
+	public void Dispose()
+	{
+		_timer?.Dispose();
+	}
+
+	private void OnTimeChanged(object _)
+	{
+		if (_previousOpen != Activity.HasOpenInscriptions)
+		{
+			_previousOpen = Activity.HasOpenInscriptions;
+			StateHasChanged();
+		}
+
+		if (Activity.HasOpenInscriptions)
+		{
+			_timer.Dispose();
+		}
+	}
 
 	private async Task ShowAddParticipant()
 	{
+		if (!Activity.HasOpenInscriptions)
+			return;
+
 		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
 		await _participantNameInput.Element.Value.FocusAsync();
+
+		_toggleling = false;
 	}
 
-    private async Task ShowParticipants()
-    {
+	private async Task ShowParticipants()
+	{
 		var parameters = new ModalParameters()
 			.Add(nameof(Participants.Activity), Activity);
 
@@ -67,7 +103,10 @@
 
 	private async Task HideCollapse()
 	{
+		if (_toggleling)
+			return;
+
 		_newParticipantName = string.Empty;
-		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
+		await JS.InvokeAsync<object>("Hide", $"add-participants{Activity.Id}");
 	}
 }

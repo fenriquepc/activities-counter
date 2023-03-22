@@ -1,7 +1,7 @@
 ﻿@implements IDisposable
 <span class="icons">
 
-	@if (StartSoon)
+	@if (OpenSoon)
 	{
 		<Tooltip Text="Inscripciones apunto de abrirse">
 			<i class="fa-solid fa-clock fa-shake"></i>
@@ -42,7 +42,6 @@
 					<i class="fa-solid fa-masks-theater"></i>
 				</Tooltip>
 			break;
-
 	}
 </span>
 
@@ -50,15 +49,24 @@
 	[CascadingParameter]
 	public Activity Activity { get; set; }
 
+	[CascadingParameter(Name = "ActivitiesChanged")]
+	private Action ActivitiesChanged { get; set; }
+
 	private Timer _timer;
 	private bool AdultsOnly => Activity.AdultsOnly;
-	private DateTime ActivityDate => Activity.Date;
-	private bool StartSoon => ActivityDate > DateTime.Now && ActivityDate - DateTime.Now < TimeSpan.FromMinutes(10);
-	private bool RecentlyOpen => DateTime.Now > ActivityDate && DateTime.Now - ActivityDate < TimeSpan.FromMinutes(10);
+	private bool InscriptionsOpen => Activity.HasOpenInscriptions;
+	private DateTime OpenInscriptionsTime => Activity.OpenInscriptionTime;
+	private bool OpenSoon => !InscriptionsOpen && OpenInscriptionsTime.AddMinutes(-10) < DateTime.Now;
+	private bool RecentlyOpen => InscriptionsOpen && !Activity.AllowPreinscription && OpenInscriptionsTime.AddMinutes(10) > DateTime.Now;
+
+	private bool _previousOpenSoon;
+	private bool _previousRecentlyOpen;
 
 	protected override void OnInitialized()
 	{
 		_timer = new Timer(OnTimeChanged, null, 0, 5000);
+		_previousOpenSoon = OpenSoon;
+		_previousRecentlyOpen = RecentlyOpen;
 	}
 
 	public void Dispose()
@@ -68,13 +76,27 @@
 
 	private void OnTimeChanged(object _)
 	{
-		var startTimeDifference = ActivityDate - DateTime.Now;
-		if (startTimeDifference.Minutes > 10)
-			return;
+		var changes = false;
 
-		if (startTimeDifference.Minutes < -10)
+		if (_previousOpenSoon != OpenSoon)
+		{
+			_previousOpenSoon = OpenSoon;
+			changes = true;
+		}
+
+		if (_previousRecentlyOpen != RecentlyOpen)
+		{
+			_previousRecentlyOpen = RecentlyOpen;
+			changes = true;
+		}
+
+		if (changes)
+			StateHasChanged();
+
+		if (Activity.IsElapsed)
+		{
 			_timer.Dispose();
-
-		StateHasChanged();
+			ActivitiesChanged();
+		}
 	}
 }
