@@ -5,7 +5,7 @@
 
 <div style="text-align: right">
 	<Tooltip Text="@TooltipText">
-		<span class="capacity-counter" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
+		<span class="capacity-counter" @onclick="ShowAddParticipant"@oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true">
 				
 			@AvailableCapacity / @Activity.Capacity
 
@@ -14,7 +14,7 @@
 				<span><i class="fa-brands fa-hotjar hot" /></span>
 			}
 
-			<div class="collapse add-participant @(_showAddParticipants ? "show" : "")" id="@($"add-participants{Activity.Id}")" onclick="event.stopPropagation();">
+			<div class="collapse add-participant" id="@($"add-participants{Activity.Id}")" @onclick:stopPropagation="true">
 				<div class="card fs-5">
 					<div class="card-body">
 						<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
@@ -37,7 +37,6 @@
 
 	private Timer _timer;
 	private InputText _participantNameInput;
-	private bool _showAddParticipants = false;
 	private string _newParticipantName = string.Empty;
 	private IModalReference _modal;
 	private bool _previousOpen;
@@ -76,8 +75,8 @@
 		await _participantNameInput.Element.Value.FocusAsync();
 	}
 
-    private async Task ShowParticipants()
-    {
+	private async Task ShowParticipants()
+	{
 		var parameters = new ModalParameters()
 			.Add(nameof(Participants.Activity), Activity);
 
@@ -102,6 +101,6 @@
 	private async Task HideCollapse()
 	{
 		_newParticipantName = string.Empty;
-		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
+		await JS.InvokeAsync<object>("Hide", $"add-participants{Activity.Id}");
 	}
 }
