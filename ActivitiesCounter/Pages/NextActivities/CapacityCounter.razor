@@ -1,4 +1,5 @@
 ﻿@using ActivitiesCounter.Utils;
+@implements IDisposable;
 @inject ActivitiesManager ActivitiesManager;
 @inject IJSRuntime JS;
 
@@ -31,13 +32,40 @@
 	[Parameter] public Activity Activity { get; set; }
 
 	private bool LastPlaces => Activity.AvailableCapacity < 3;
+	private string TooltipText => Activity.HasOpenInscriptions ? "Añadir participante" : "Inscripciones cerradas";
+	private string AvailableCapacity => Activity.HasOpenInscriptions ? Activity.AvailableCapacity.ToString() : "-";
 
+	private Timer _timer;
 	private InputText _participantNameInput;
 	private bool _showAddParticipants = false;
 	private string _newParticipantName = string.Empty;
 	private IModalReference _modal;
-	private string TooltipText => Activity.HasOpenInscriptions ? "Añadir participante" : "Inscripciones cerradas";
-	private string AvailableCapacity => Activity.HasOpenInscriptions ? Activity.AvailableCapacity.ToString() : "-";
+	private bool _previousOpen;
+
+	protected override void OnInitialized()
+	{
+		_timer = new Timer(OnTimeChanged, null, 0, 5000);
+		_previousOpen = Activity.HasOpenInscriptions;
+	}
+
+	public void Dispose()
+	{
+		_timer?.Dispose();
+	}
+
+	private void OnTimeChanged(object _)
+	{
+		if (_previousOpen != Activity.HasOpenInscriptions)
+		{
+			_previousOpen = Activity.HasOpenInscriptions;
+			StateHasChanged();
+		}
+
+		if (Activity.HasOpenInscriptions)
+		{
+			_timer.Dispose();
+		}
+	}
 
 	private async Task ShowAddParticipant()
 	{
