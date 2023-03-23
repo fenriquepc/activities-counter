@@ -59,6 +59,18 @@
     }
   },
   {
+    "game": "FANHUNTER El juego de rol epicodecadente",
+    "name": "Terror en la campiña",
+    "description": "Aprovechando un puente de fin de semana. La Resistencia ha organizado una excursión de 50 jubilados a San Menemene del Monte, bello pueblillo a 180km de Murciah, famoso por sus quesos de bola y sus morcillas gigantes. Habéis sido asignados como cuerpo de protección, ya que el único miembro de la expedición que aún no está en edad de cobrar el retiro es el conductor del autobús.",
+    "capacity": 6,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-24T22:00",
+    "organizer": {
+      "name": "HDLogan"
+    }
+  },
+  {
     "name": "La Encrucijada",
     "description": "Un grupo de supervivientes se han reunido en un refugio, allí tienen que tomar decisiones de las que dependerá su supervivencia de la amenaza zombie.",
     "capacity": 20,
@@ -176,6 +188,17 @@
     }
   },
   {
+    "name": "La fiesta de los Aristogatos",
+    "description": "Muy bien, ya por fin y estando seguros que esto solo lo estan leyendo los ARISTOGATOS, le queremos invitar a usted y a un acompañante a la reunion anual de la alta sociedad gatuna, a la que solo pueden asistir los gatos de la mas alta sociedad.",
+    "capacity": 9,
+    "type": 2,
+    "level": 1,
+    "date": "2023-03-25T12:00",
+    "organizer": {
+      "name": "Francisco Cabrera"
+    }
+  },
+  {
     "game": "Zweihänder (D100)",
     "name": "Desapariciones en Mullensburg",
     "description": "Ha estallado la guerra entre el Reino de Barrenburg y el Ducado de Lapsburg, y el hambre y la ruina ha caído sobre el pequeño pueblo de Mullensburg, dominada por el férreo barón Von Aspinfeld. Nuestros protagonistas hacen una parada en Mullensburg para aprovisionarse de camino al frente, y pronto se verán envueltos en sucesos oscuros y peligrosos que arrojan su sombra sobre la otrora tranquila villa...\r\nAventura del juego de rol 'Zweihänder', sistema D100. Sólo para audiencia adulta.",
@@ -234,6 +257,18 @@
     "date": "2023-03-25T17:00",
     "organizer": {
       "name": "Maligno"
+    }
+  },
+  {
+    "game": "FANHUNTER El juego de rol epicodecadente",
+    "name": "Terror en la campiña",
+    "description": "Aprovechando un puente de fin de semana. La Resistencia ha organizado una excursión de 50 jubilados a San Menemene del Monte, bello pueblillo a 180km de Murciah, famoso por sus quesos de bola y sus morcillas gigantes. Habéis sido asignados como cuerpo de protección, ya que el único miembro de la expedición que aún no está en edad de cobrar el retiro es el conductor del autobús.",
+    "capacity": 6,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T22:00",
+    "organizer": {
+      "name": "HDLogan"
     }
   },
   {
