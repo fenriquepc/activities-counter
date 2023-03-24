@@ -59,6 +59,18 @@
     }
   },
   {
+    "name": "Alice is missing",
+    "description": "Alice, una estudiante del pequeño puebloSilent Falls, ha desaparecido Sus amigos más cercanos se conectan a través del móvil para saber que ha ocurrido y buscarla.\nPartida para personas mayores de edad que deben contar con un móvil con datos y suficiente batería para utilizarlo durante una hora.",
+    "capacity": 5,
+    "type": 0,
+    "level": 1,
+    "date": "2023-03-24T21:00",
+    "adultsOnly": true,
+    "organizer": {
+      "name": "Dioni"
+    }
+  },
+  {
     "game": "FANHUNTER El juego de rol epicodecadente",
     "name": "Terror en la campiña",
     "description": "Aprovechando un puente de fin de semana. La Resistencia ha organizado una excursión de 50 jubilados a San Menemene del Monte, bello pueblillo a 180km de Murciah, famoso por sus quesos de bola y sus morcillas gigantes. Habéis sido asignados como cuerpo de protección, ya que el único miembro de la expedición que aún no está en edad de cobrar el retiro es el conductor del autobús.",
