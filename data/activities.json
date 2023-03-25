@@ -284,6 +284,18 @@
     }
   },
   {
+    "game": "Dungeons & Dragons 5e",
+    "name": "Midnight – el pozo de la rebelión",
+    "description": "Han pasado cien años desde que cayó la Sombra. Hace un siglo, las fuerzas de la oscuridad descendieron desde el norte, aplastaron las ciudades libres de la humanidad, hicieron retroceder a los elfos a las profundidades de los bosques y sitiaron a los enanos en sus bastiones de las montañas. Ahora, los corruptos lugartenientes de un oscuro dios gobiernan estos reinos devastados con mano de hierro, mientras dan caza a los pocos valientes que todavía luchan desafiantes contra el mal que consume su mundo.",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2023-03-25T22:30",
+    "organizer": {
+      "name": "Alcanor"
+    }
+  },
+  {
     "game": "Doctor Who",
     "name": "Los Caballeros del Cometa",
     "description": "Fin de semana de turismo en Tintagel, en el sur de UK. Algunos vienen a ver el castillo, otros simplemente están disfrutando del día soleado con un picnic. Algunas familias han traído a sus hijos adolescentes obligados que están haciendo todo lo posible para no divertirse de ninguna manera. Pero todo puede cambiar rápidamente en Dr. Who.\nCoge tu destornillador sónico y prepárate para correr de forma ininterrumpida a ritmo de música MIDI (y con bajos efectos especiales).\nUna partida «wibbly wobbly timey wimey»",
