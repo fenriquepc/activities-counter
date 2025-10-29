@@ -1,403 +1,109 @@
 [
   {
-    "game": "Pathfinder para Savage Worlds",
-    "name": "El Ojo de Ulthan",
-    "description": "Unas ladronas que solo tenían que entregar un paquete. Unos ex-soldados contratados por una belleza elfa para encontrar a su hermana. El ojo de Ul’than ha llegado a la ciudad y muchos están dispuestos a lo que sea por poseerlo. En los callejones de Runerun va a empezar a correr la sangre.",
-    "capacity": 4,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-24T17:00",
-    "organizer": {
-      "name": "Alcanor"
-    }
-  },
-  {
-    "game": "El resurgir del dragón",
-    "name": "Los preceptos de las Tinieblas",
-    "description": "El rastro de los recuperadores de la Cábala de la Armonía Celeste conduce hasta el Monasterio de Yrelath, cerca de la frontera entre el Imperio Mida y el Reino de Vadania. Aunque los habitantes de los pueblos cercanos evitan el monasterio y sus inmediaciones sin una explicación aparente, parece que los recuperadores se refugiaron en su interior de las tormentas que azotan la región y aún podrían encontrarse allí.",
-    "capacity": 4,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-24T17:00",
-    "organizer": {
-      "name": "Javier Moreno"
-    }
-  },
-  {
-    "game": "Mácula",
-    "name": "Más allá de la frontera menguante",
-    "description": "El juego de rol «Mácula» transcurre en una versión apocalíptica de Europa a inicios del siglo XVII. Hace un par de siglos una extraña bruma de origen desconocido conocida como la Mácula comenzó a extenderse por el mundo, consumiendo y transformando todo aquello que engullía. Europa ha sido completamente rodeada y aislada por los terribles miasmas de la Mácula, y la sociedad tal y como la conocemos se ha desmoronado por completo. Han aparecido fuerzas sobrenaturales nunca antes vistas: Extraños fenómenos atmosféricos que azotan la tierra, individuos que desarrollan capacidades sobrehumanas, y horribles criaturas mutantes que emergen de la bruma para atormentar a una humanidad que ya se encuentra al borde de la extinción. Bienvenido a la Nueva Europa.",
-    "capacity": 4,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-24T17:00",
-    "organizer": {
-      "name": "Aku"
-    }
-  },
-  {
-    "game": "Star Wars: Al filo del imperio",
-    "name": "Huida de Moss Hutta",
-    "description": "La galaxia atraviesa un periodo turbulento, pero también lleno de oportunidades. El Imperio Galáctico se afana por mantener el control en plena guerra civil. Entre tanto, granujas y contrabandistas, exploradores y exiliados, fronterizos de todo tipo de ganan la vida como pueden en los confines de la civilización galáctica. Es una existencia llena de penurias, pero estos renegados gozan de más libertad y posibilidades que cualquier ciudadano de los planetas del Núcleo.",
-    "capacity": 4,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-24T17:00",
-    "organizer": {
-      "name": "Raúl Fernández"
-    }
-  },
-  {
-    "name": "Ten candles",
-    "description": "Rol narrativo de canguelo con \"velitas\". TPK asegurado",
-    "capacity": 7,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-24T21:00",
-    "organizer": {
-      "name": "Cristóbal Espinosa"
-    }
-  },
-  {
-    "name": "Alice is missing",
-    "description": "Alice, una estudiante del pequeño puebloSilent Falls, ha desaparecido Sus amigos más cercanos se conectan a través del móvil para saber que ha ocurrido y buscarla.\nPartida para personas mayores de edad que deben contar con un móvil con datos y suficiente batería para utilizarlo durante una hora.",
-    "capacity": 5,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-24T21:30",
-    "adultsOnly": true,
-    "organizer": {
-      "name": "Dioni"
-    }
-  },
-  {
-    "game": "FANHUNTER El juego de rol epicodecadente",
-    "name": "Terror en la campiña",
-    "description": "Aprovechando un puente de fin de semana. La Resistencia ha organizado una excursión de 50 jubilados a San Menemene del Monte, bello pueblillo a 180km de Murciah, famoso por sus quesos de bola y sus morcillas gigantes. Habéis sido asignados como cuerpo de protección, ya que el único miembro de la expedición que aún no está en edad de cobrar el retiro es el conductor del autobús.",
-    "capacity": 6,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-24T22:00",
-    "organizer": {
-      "name": "HDLogan"
-    }
-  },
-  {
-    "name": "La Encrucijada",
-    "description": "Un grupo de supervivientes se han reunido en un refugio, allí tienen que tomar decisiones de las que dependerá su supervivencia de la amenaza zombie.",
-    "capacity": 20,
-    "type": 2,
-    "level": 1,
-    "date": "2023-03-25T22:00",
-    "organizer": {
-      "name": "Caos Controlado"
-    }
-  },
-  {
-    "game": "Savage Worlds",
-    "name": "El tamaño importa",
-    "description": "El azar une a seis personas mientras una compañía de investigación va a hacer una demostración de su última tecnología.",
-    "capacity": 6,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-25T10:00",
-    "organizer": {
-      "name": "Luis Carlos Suárez"
-    }
-  },
-  {
-    "game": "Degenesis",
-    "name": "Última guardia",
-    "description": "La atalaya N17 se eleva por encima de las praderas varios kilómetros al norte de la ciudad de Asedio. Forma parte de la línea defensiva que garantiza la seguridad de los habitantes del Protectorado… y se ha quedado en silencio. Han pasado días desde que su personal enviara su habitual señal de radio a la torre de control principal.",
-    "capacity": 4,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T10:15",
-    "organizer": {
-      "name": "Rakjoh"
-    }
-  },
-  {
-    "game": "La Llamada de Cthulhu",
-    "name": "La Oscuridad bajo la Colina",
-    "description": "Juego de rol de investigación ambientado en los Estados Unidos de 1920, no recomendado para menores de 13 o aquellos temerosos de lo que la ocuridad pueda ocultar.",
-    "capacity": 6,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-25T10:30",
-    "organizer": {
-      "name": "Juan Ignacio"
-    }
-  },
-  {
-    "game": "Aventuras en la Marca del Este",
-    "name": "El Túmulo Perdido de Azgoz el Testarudo",
-    "description": "Hace muchos, muchos años, cuando la ciudad de Robleda aún era joven, las tierras más allá de sus murallas eran páramos salvajes y montuosos, ahítos de criaturas terribles y bestias innombrables, que moraban bajo y sobre las colinas, en los tremedales y en las frescas riberas y sotos del Arroyosauce. Fueron muchos los aventureros que recorrieron sus vaguadas y valles, explorando más allá, descubriendo ruinas de otrora y reliquias ignotas. No pocos de ellos perecerían durante sus aventuras, enfrentados a desafíos y cuitas mil. Los menos, aquellos que gozaron de mayor fama, fueron enterrados en las Colinas Azules, horadadas desde hace siglos por cientos de túmulos, cavernas, grutas, pasadizos, criptas y mazmorras de todo tipo. Al trascurrir de los años, estos enterramientos cayeron en el olvido, extraviados en las brumas del tiempo.",
-    "capacity": 6,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-25T10:30",
-    "organizer": {
-      "name": "Pedro Gil"
-    }
-  },
-  {
-    "game": "La Llamada de Cthulhu",
-    "name": "¡Murcia, qué bonica eres!",
-    "description": "Años 20 en en el sur de España. El alcalde de Murcia, Don Francisco Martínez os llama a su despacho en el Ayuntamiento. Parece ser que tiene un asunto delicado y urgente que tratar con vosotros. ¿Cómo vais a negaros ante tan misteriosa oferta?",
-    "capacity": 4,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T10:30",
-    "organizer": {
-      "name": "Cristóbal Espinosa"
-    }
-  },
-  {
-    "game": "Mácula",
-    "name": "Más allá de la frontera menguante",
-    "description": "El juego de rol «Mácula» transcurre en una versión apocalíptica de Europa a inicios del siglo XVII. Hace un par de siglos una extraña bruma de origen desconocido conocida como la Mácula comenzó a extenderse por el mundo, consumiendo y transformando todo aquello que engullía. Europa ha sido completamente rodeada y aislada por los terribles miasmas de la Mácula, y la sociedad tal y como la conocemos se ha desmoronado por completo. Han aparecido fuerzas sobrenaturales nunca antes vistas: Extraños fenómenos atmosféricos que azotan la tierra, individuos que desarrollan capacidades sobrehumanas, y horribles criaturas mutantes que emergen de la bruma para atormentar a una humanidad que ya se encuentra al borde de la extinción. Bienvenido a la Nueva Europa.",
-    "capacity": 4,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T10:30",
-    "organizer": {
-      "name": "Aku"
-    }
-  },
-  {
-    "game": "La Llamada de Cthulhu",
-    "name": "Yuggoth-lab",
-    "description": "El polémico ingeniero el Dr. Willian Shortcut de la universidad de Miskatonic ha desaparecido sin dejar rastro. Los investigadores, cercanos al doctor y bajo petición del rector, viajarán a la antigua granja familiar del desaparecido donde solía pasar temporadas de meditación. La granja parece ser algo más que un viejo cortijo y será allí donde los investigadores tratarán de resolver el misterio del paradero del Dr. Shortcut y de paso salvar a la humanidad.",
-    "capacity": 5,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-25T10:30",
-    "organizer": {
-      "name": "GregoNomicón"
-    }
-  },
-  {
-    "name": "D&D: comienza la aventura",
-    "description": "Edad recomendada: de 8 a 11 años\nD&D: comienza la aventura es un juego de mesa de exploración de mazmorras ideal para los introducir a los niños/as en los juegos de rol.\nEn este juego los chicos/as podrán meterse en la piel de uno de los cuatro aventureros: bardo elfo, hechicero humano, pícaro tiefling o guerrero enano y explorar las tierras de nervenwinter librando combates y teniendo encuentros muy interesantes.",
+    "game": "Dungeons and Dragons",
+    "name": "Comienza la aventura",
+    "description": "Actividad para niños. Juego de mesa cooperativo que consiste en una entrada divertida y rápida al mundo de Dungeons & Dragons.",
     "capacity": 4,
     "type": 1,
     "level": 0,
-    "date": "2023-03-25T11:00",
+    "date": "2025-11-08T11:00",
     "organizer": {
       "name": "Irene"
     }
   },
   {
-    "name": "Villapueblo de San Ordinario",
-    "description": "En un bosque donde los animales hablan, visten ropa y hacen su vida existe un lugar conocido como la villapueblo de San Ordinario. En el que vuestro cochero ha hecho parada para descansar antes de continuar vuestro viaje y nada raro, extraño, excéntrico, extravagante, original, peculiar, singular, curioso, caprichoso, insólito, inusitado, inusual, infrecuente o excepcional tiene por qué suceder ¿no?",
+    "name": "El Esquivo Legado",
+    "description": "Que puede salir mal en la fiesta de celebración de la Herencia de la joven Kamile? Y por qué las tierras de su madre parecen las únicas prósperas de esa zona de Curonia? Y porque hace de repente tanto calor y parece entreverse algo oculto en cada reflejo?",
     "capacity": 4,
     "type": 0,
     "level": 0,
-    "date": "2023-03-25T11:00",
+    "date": "2025-11-08T11:00",
     "organizer": {
-      "name": "Chema Mayrit"
+      "name": "Luis"
     }
   },
   {
-    "name": "La fiesta de los Aristogatos",
-    "description": "Muy bien, ya por fin y estando seguros que esto solo lo estan leyendo los ARISTOGATOS, le queremos invitar a usted y a un acompañante a la reunion anual de la alta sociedad gatuna, a la que solo pueden asistir los gatos de la mas alta sociedad.",
-    "capacity": 9,
-    "type": 2,
+    "game": "Daggerheart",
+    "name": "Antes de que nos desangren",
+    "description": "Tras las Guerras del Ki distintos guerreros han obtenido la capacidad de viajar de mundo en mundo con el objetivo de restaurar el equilibrio del multiverso. Vosotros sois esos guerreros. Desde hace semanas comandos armados de simios inteligentes, pertenecientes al autoproclamado Nuevo Ejercito Simio, están secuestrando a eminentes científicos sin objetivo concreto. La última ha sido la Doctora Luva Ullman. Sin embargo, han cometido un error porque ahora estáis sobre su pista. La persecución ha comenzado pero ¡Oh! ¿Es eso un portal hacia otro universo? ¿Acaso planean huir hacia Mundo Simio? ¿Y por qué esos samuráis nos apuntan con sus mosquetes?",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2025-11-08T10:30",
+    "organizer": {
+      "name": "Alcanor"
+    }
+  },
+  {
+    "game": "Outgunned",
+    "name": "Tras los pasos de El Zorro",
+    "description": "El Zorro ha desaparecido, y la injusticia cabalga sin freno. Pero en las sombras de California, nuevas figuras se alzan: un vampiro parisino, un espadachín felino, un guerrero del lejano oriente y un hombre de dudosa moralidad. Nadie los esperaba. Nadie los comprende. Y, sin embargo… puede que sean justo lo que el pueblo necesita. Tras los pasos de El Zorro es un one-shot de tono cinematográfico y gamberro, diseñado para 4 jugadores que encarnarán personajes inspirados en las películas de Antonio Banderas. Una mezcla imposible de géneros (aventura, acción, drama, comedia e incluso terror). Espionaje en fiestas de alta sociedad, mapas robados, trenes desbocados y duelos al amanecer. Todo puede pasar… y probablemente pasará. `Ideal para fliparse con varios momentos épicos y muchas frases dichas con acento.",
+    "capacity": 4,
+    "type": 0,
     "level": 1,
-    "date": "2023-03-25T12:00",
+    "date": "2025-11-08T10:30",
     "organizer": {
-      "name": "Francisco Cabrera"
+      "name": "Kolander"
     }
   },
   {
-    "game": "Zweihänder (D100)",
-    "name": "Desapariciones en Mullensburg",
-    "description": "Ha estallado la guerra entre el Reino de Barrenburg y el Ducado de Lapsburg, y el hambre y la ruina ha caído sobre el pequeño pueblo de Mullensburg, dominada por el férreo barón Von Aspinfeld. Nuestros protagonistas hacen una parada en Mullensburg para aprovisionarse de camino al frente, y pronto se verán envueltos en sucesos oscuros y peligrosos que arrojan su sombra sobre la otrora tranquila villa...\r\nAventura del juego de rol 'Zweihänder', sistema D100. Sólo para audiencia adulta.",
+    "game": "Dungeons and Dragons 5",
+    "name": "La llave de Quinari",
+    "description": "Kenders, un bardo misterioso, una leyenda a descubrir, caballeros negros... Qué más se puede pedir??",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2025-11-08T16:00",
+    "organizer": {
+      "name": "Luis"
+    }
+  },
+  {
+    "game": "Legend in the Mist",
+    "name": "El montón de cosas",
+    "description": "Desde que se tiene memoria, al final del invierno y antes de las fiestas de primavera, los aldeanos de Ravenhome acarreaban sus ropas viejas, herramientas rotas y otros objetos desechados у los arrojaban por un afloramiento rocoso a un barranco conocido como Skunk Glen. Este año, corren rumores de que el concejal quiere cambiar la costumbre, y quizás no solo los aldeanos estén molestos con el cambio…",
+    "capacity": 3,
+    "type": 0,
+    "level": 2,
+    "date": "2025-11-08T16:00",
+    "adultsOnly": true,
+    "organizer": {
+      "name": "JM_Hastur"
+    }
+  },
+  {
+    "game": "Ten Candles",
+    "name": "El último puerto",
+    "description": "+16 Esta es la historia de cómo terminó todo. Éramos una tripulación pirata, curtida por la sal y la pólvora. El sol se apagó mientras estábamos en alta mar, y durante 3 días navegamos bajo una oscuridad inmensa, solo guiados por las velas del barco y el crujir de la madera. En el horizonte, habrá algún puerto estamos seguros de ello. Quizás haya supervivientes. Quizás haya comida. Quizás… haya esperanza.",
     "capacity": 5,
     "type": 0,
     "level": 2,
-    "date": "2023-03-25T16:00",
-    "adultsOnly": true,
+    "date": "2025-11-08T16:30",
     "organizer": {
-      "name": "Juanmi"
+      "name": "Pablo García"
     }
   },
   {
-    "name": "Por la isla",
-    "description": "Un grupo de desconocidos acaba en La Isla... ¿Conseguiréis sobrevivir hasta que llegue un rescate? ¿Podréis salir vivos de allí? Descubrid los misterios de La Isla antes de sucumbir a vuestros oscuros secretos.",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T11:00",
-    "organizer": {
-      "name": "Fran Sáez"
-    }
-  },
-  {
-    "game": "Warhammer Fantasy 4ª ed.",
-    "name": "Noche de Sangre",
-    "description": "La lluvia cae torrencialmente desde unas nubes oscuras y turbulentas. En lo alto, los rayos brillan a través del cielo. A lo lejos se oye el grito ahogado de alguna extraña criatura. Es una noche para estar resguardado porque, ¿Quién sabe qué se esconde bajo los oscuros árboles en los bosques del Imperio?\r\nPartida de rol con violencia, miedo y lenguaje soez. +18",
+    "game": "El Anillo Único 2 ed",
+    "name": "Cueva de Trolles donde las haya",
     "capacity": 4,
     "type": 0,
     "level": 0,
-    "date": "2023-03-25T17:00",
-    "adultsOnly": true,
+    "date": "2025-11-08T17:00",
     "organizer": {
-      "name": "Chache Perrache"
+      "name": "Caos Controlado"
     }
   },
   {
-    "game": "Savage Worlds",
-    "name": "Un plan perfecto",
-    "description": "Seis ingleses están en su pub degustando sus bebidas favoritas cuando se ven forzados a preparar un robo.",
-    "capacity": 6,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T17:00",
-    "organizer": {
-      "name": "Luis Carlos Suárez"
-    }
-  },
-  {
-    "game": "Pequeños detectives de Monstruos",
-    "name": "¡El ladrón de juegos tenía un hijo!",
-    "description": "Partida de rol de iniciación de pequeños detectives de monstruos. Edad recomendada entre 3 y 5 años.\nEn las últimas jornadas la agencia de detectives capturó un molesto monstruo que se dedicaba a robar las piezas de los juegos de mesa y a entorpecer el normal funcionamiento de las jornadas. Todo parecía tranquilo y controlado, hasta que otra vez en las jornadas Ludus Myrtea empezaron a desaparecer otra vez los dados, las fichas, incluso algunos juegos. ¿Es posible que no se capturaran a todos los monstruos? Es otro trabajo para la agencia de detectives!",
-    "capacity": 6,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T17:00",
-    "organizer": {
-      "name": "Maligno"
-    }
-  },
-  {
-    "game": "FANHUNTER El juego de rol epicodecadente",
-    "name": "Terror en la campiña",
-    "description": "Aprovechando un puente de fin de semana. La Resistencia ha organizado una excursión de 50 jubilados a San Menemene del Monte, bello pueblillo a 180km de Murciah, famoso por sus quesos de bola y sus morcillas gigantes. Habéis sido asignados como cuerpo de protección, ya que el único miembro de la expedición que aún no está en edad de cobrar el retiro es el conductor del autobús.",
-    "capacity": 6,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T22:00",
-    "organizer": {
-      "name": "HDLogan"
-    }
-  },
-  {
-    "game": "Dungeons & Dragons 5e",
-    "name": "Midnight – el pozo de la rebelión",
-    "description": "Han pasado cien años desde que cayó la Sombra. Hace un siglo, las fuerzas de la oscuridad descendieron desde el norte, aplastaron las ciudades libres de la humanidad, hicieron retroceder a los elfos a las profundidades de los bosques y sitiaron a los enanos en sus bastiones de las montañas. Ahora, los corruptos lugartenientes de un oscuro dios gobiernan estos reinos devastados con mano de hierro, mientras dan caza a los pocos valientes que todavía luchan desafiantes contra el mal que consume su mundo.",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-25T22:30",
-    "organizer": {
-      "name": "Alcanor"
-    }
-  },
-  {
-    "game": "Doctor Who",
-    "name": "Los Caballeros del Cometa",
-    "description": "Fin de semana de turismo en Tintagel, en el sur de UK. Algunos vienen a ver el castillo, otros simplemente están disfrutando del día soleado con un picnic. Algunas familias han traído a sus hijos adolescentes obligados que están haciendo todo lo posible para no divertirse de ninguna manera. Pero todo puede cambiar rápidamente en Dr. Who.\nCoge tu destornillador sónico y prepárate para correr de forma ininterrumpida a ritmo de música MIDI (y con bajos efectos especiales).\nUna partida «wibbly wobbly timey wimey»",
+    "game": "Mothership RPG",
+    "name": "Decagone",
+    "description": "Mothership es un juego de rol sencillo, de survival horror y ciencia ficción, al estilo de Alien u Horizonte Final. Tu primer día de trabajo en una instalación científica en lo profundo del océano, en un planeta lejano, debería haber sido sencillo, pero en seguida se hace evidente que el personal está atrapado en una situación aterradora. No te preocupes si las cosas se repiten... pronto lo entenderás.",
     "capacity": 4,
     "type": 0,
     "level": 0,
-    "date": "2023-03-26T10:00",
+    "date": "2025-11-08T16:00",
     "organizer": {
-      "name": "Cristóbal Espinosa"
-    }
-  },
-  {
-    "name": "CBR-PNK",
-    "description": "Partida de rol de iniciación de pequeños detectives de monstruos. Edad recomendada entre 3 y 5 años.\nUn grupo de veteranos agentes a sueldo que atraviesan una mala racha reciben la oferta de sus vidas: si logran infiltrarse en un impenetrable laboratorio corporativo y «extraer» a una misteriosa investigadora de sus instalaciones, todas sus deudas e historiales se desvanecerán. Es su última oportunidad. ¿Lograrán una vida tranquila… o una muerte violenta?\n\nAviso de contenido: ambientación cyberpunk, combate y violencia gráfica, acción con el tiempo en contra.\nHerramientas de seguridad: conversación previa, líneas y velos, tarjeta X.",
-    "capacity": 6,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-26T10:00",
-    "organizer": {
-      "name": "Yeray"
-    }
-  },
-  {
-    "game": "Áureo: La Edad de los Héroes",
-    "name": "Los protectores de la Tregua Sagrada",
-    "description": "Los heraldos elegidos por los Dioses tienen el deber de proteger la tregua sagrada durante las olimpiadas, esto parece una tarea sencilla, comer, beber pasearse por los campamentos de las polis y participar de jurado en alguna de las pruebas. Pero ¿Serán capaces los heraldos de mantener la paz cuando la sangre amenace con romper la tregua sagrada?",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-26T10:00",
-    "organizer": {
-      "name": "Leahryde"
-    }
-  },
-  {
-    "game": "Necromunda",
-    "name": "EL RITUAL",
-    "description": "En las profundidades de la subcolmena los viles siervos de los dioses del caos se han aliado para realizar un impío ritual que de no detenerse corromperá a todos los habitantes de Necromunda, mancillando su cuerpo y alma. Únete a las bandas que defenderán su territorio de la corrupción del caos o si lo prefieres abraza el poder que la disformidad ofrece…. a cambio de tu alma.\r\nVen, mira, curiosea, pregunta o si te atreves toma las riendas del destino de la subcolmena y juega con una banda, nosotros te facilitamos una y te enseñamos a jugar.\r\n\r\nPartida para mayores de 18 años.\r\n\r\nAlabado sea Tzeentch!",
-    "capacity": 3,
-    "type": 1,
-    "level": 0,
-    "date": "2023-03-26T10:00",
-    "adultsOnly": true,
-    "organizer": {
-      "name": "La Escotilla"
-    }
-  },
-  {
-    "name": "Cartas en vez de dados",
-    "description": "Aviso: Pueden suceder escenas de terror, gore o comedia.\n\nDescripción: Un grupo de marineros que regresan de una misión fallida son atacados por una criatura marina. Durante el combate la cubierta cede y el monstruo cae atrapado en la bodega del barco. La criatura permanece viva atrapada en la bodega y todavía quedan varios días de viaje.",
-    "capacity": 4,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-26T11:00",
-    "organizer": {
-      "name": "Chema Mayrit"
-    }
-  },
-  {
-    "game": "Star Trek",
-    "name": "Rescate en Xerxes IV",
-    "description": "Vuestro viaje en runabout a la Estación Narendra para que os asignen a vuestra nave ha resultado más agitado de lo que esperabais.\n\nMientras vosotros y vuestros compañeros graduados en la Flota Estelar charlabais sobre el brillante futuro que os espera, recibisteis una señal de socorro de Xerxes IV, un planeta inhabitado de clase M que no posee vida racional salvo por un equipo científico de la Federación. La señal de socorro no ofrecía información alguna, salvo que el equipo científico allí estacionado estaba en peligro.\n\nMientras os dirigís hacia la superficie del planeta, os veis atrapados en una intensa tormenta de iones que se aproxima al mismo y que anula los sistemas de navegación, entre otros. Con los sistemas fallando y la superficie del planeta alzándose rápidamente hacia vosotros, la situación es peliaguda.",
-    "capacity": 4,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-26T16:15",
-    "organizer": {
-      "name": "Javier Moreno"
-    }
-  },
-  {
-    "name": "Los Santos de Jalisco: Terror en Ciudad Juarez",
-    "description": "(Léase con acento latino) En el México postapocaliptico, tras las Narcoguerras. La única alegría que llega a muchos pueblos son las compañías itinerantes de luchadores y los mejores entre estos son Los Santos de Jalisco. Liderados por el Hijo del Dorado, este variopinto grupo de luchadores enmascarados tendrá que enfrentarse a zombies, momias de Guanajato y todo tipo de monstruos para llevar la paz y la alegría a los débiles y desesperados. Cálzate tus mallas, ponte tu máscara y… ¡A ver de que cuero salen más correas!",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-26T16:30",
-    "organizer": {
-      "name": "Alcanor"
-    }
-  },
-  {
-    "name": "Cartas en vez de dados",
-    "description": "Aviso: Pueden suceder escenas de terror, gore o comedia.\n\nDescripción: Un grupo de marineros que regresan de una misión fallida son atacados por una criatura marina. Durante el combate la cubierta cede y el monstruo cae atrapado en la bodega del barco. La criatura permanece viva atrapada en la bodega y todavía quedan varios días de viaje.",
-    "capacity": 4,
-    "type": 0,
-    "level": 1,
-    "date": "2023-03-26T16:30",
-    "organizer": {
-      "name": "Chema Mayrit"
-    }
-  },
-  {
-    "game": "Pequeños detectives de Monstruos",
-    "name": "La desaparición de las llaves",
-    "description": "Partida de rol de iniciación de pequeños detectives de monstruos. Edad recomendada entre 3 y 5 años.\r\n\r\nDescripción: Tras la actuación de nuestros jovenes detectives, han empezado a desaparecer otro tipo de objetos. Objetos que los adultos valoran mucho, como las llaves de sus coches o de la casa. Ahora la gente está más preocupada en guardar bien sus llaveros que en jugar en las jornadas y esto no puede seguir así. Hay que encontrar al monstruo y capturarlo.",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2023-03-26T17:00",
-    "organizer": {
-      "name": "Maligno"
+      "name": "Rober (Hamleto)"
     }
   }
 ]

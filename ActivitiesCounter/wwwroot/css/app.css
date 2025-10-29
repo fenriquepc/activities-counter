@@ -8,11 +8,6 @@
 }
 
 @font-face {
-    font-family: 'inversionz';
-    src: url('../fonts/Inversionz Unboxed.otf');
-}
-
-@font-face {
     font-family: 'a-space';
     src: url('../fonts/A-Space Regular Demo.otf');
 }
@@ -25,6 +20,16 @@
 @font-face {
     font-family: 'Share Tech Mono';
     src: url('../fonts/ShareTechMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Heavitas';
+    src: url('../fonts/Heavitas.ttf');
+}
+
+@font-face {
+    font-family: 'Gothica Moderna';
+    src: url('../fonts/Gotica Moderna KK Italic v1.1.ttf')
 }
 
 html, body {
