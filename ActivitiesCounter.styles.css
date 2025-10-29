@@ -94,16 +94,19 @@ tr:hover .options-button[b-fogdxa5jde] {
 /* /Pages/NextActivities/ActivityRow.razor.rz.scp.css */
 td[b-bqpfnqedla] {
 	vertical-align: bottom;
-	padding: 9px 0px;
+	padding: 11px 0px;
 }
 
 .game[b-bqpfnqedla] {
 	display: block;
 	font-size: 0.6em;
 	min-height: 0.6em;
+	margin-bottom: 10px;
 }
 
 .activity[b-bqpfnqedla] {
+	font-size: 2em;
+	font-family: Gothica Moderna;
 	text-shadow: 
 		0px 4px 3px rgba(0,0,0,0.4), 
 		0px 8px 13px rgba(0,0,0,0.1), 
@@ -142,6 +145,11 @@ td[b-bqpfnqedla] {
 .capacity-counter[b-fz00g9njpp] {
     user-select: none;
     cursor: pointer;
+    font-family: 'Edo';
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    color: #fe2f49;
+    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
 .hot[b-fz00g9njpp] {
@@ -170,7 +178,7 @@ td[b-bqpfnqedla] {
 	display: inline-block;
 	float: right;
 	line-height: 0.7em;
-	font-family: 'inversionz', monospace;
+	font-family: 'Heavitas', monospace;
 	font-size: 1.7em;
 	color: #daf6ff;
 	text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
@@ -182,10 +190,11 @@ td[b-bqpfnqedla] {
     text-align: right;
     padding-right: 10px;
     padding-bottom: 0.13em;
+    font-size: 1.5em;
 }
 
 .adults-only[b-npb3zlzr5l] {
-    height: 0.5em;
+    height: 0.64em;
 }
 
 .adults-only svg[b-npb3zlzr5l] {
@@ -198,10 +207,11 @@ td[b-bqpfnqedla] {
 }
 /* /Pages/NextActivities/NextActivities.razor.rz.scp.css */
 .next-activities[b-1x1hyw2trh] {
-    font-family: inversionz;
+    font-family: Heavitas;
     font-size: 2em;
     color: white;
     background-image: url('img/background.jpg');
+    background-position:center 28%;
     min-height: 100vh;
     padding: 50px 80px;
     position: relative;
@@ -212,7 +222,6 @@ h1[b-1x1hyw2trh] {
     text-align: left;
     font-size: 4rem;
     line-height: 0.7;
-    text-shadow: 0px 3px 0px #ed74a6, 0px 14px 10px rgba(0,0,0,0.15), 0px 15px 2px rgba(0,0,0,0.1), 0px 34px 30px rgba(0,0,0,0.1);
     margin-bottom: 0.5em;
 }
 
