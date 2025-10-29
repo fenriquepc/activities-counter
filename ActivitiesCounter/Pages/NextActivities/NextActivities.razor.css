@@ -3,6 +3,7 @@
     font-size: 2em;
     color: white;
     background-image: url('img/background.jpg');
+    background-position:center 28%;
     min-height: 100vh;
     padding: 50px 80px;
     position: relative;
