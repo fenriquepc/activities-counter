@@ -5,6 +5,8 @@
 <article>
     <h1>Actividades</h1>
 
+    <NavLink href="actividad" > Nueva actividad </NavLink>
+
     <QuickGrid Items="@FilteredActivities" @ref="_grid" Class="table table-dark table-borderless table-hover">
         <PropertyColumn Property="@(p => p.Name)" Sortable="true" Title="Nombre" >
             <ColumnOptions>

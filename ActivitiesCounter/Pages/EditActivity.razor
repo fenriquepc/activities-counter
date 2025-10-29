@@ -68,7 +68,7 @@
 	BlazoredModalInstance BlazoredModal { get; set; } = default!;
 
 	[Parameter]
-	public Activity Activity { get; set; }
+	public Activity Activity { get; set; } = new Activity();
 
 	private Activity _tempActivity;
 	private string HeaderText => Activity?.Name ?? "Nueva actividad";

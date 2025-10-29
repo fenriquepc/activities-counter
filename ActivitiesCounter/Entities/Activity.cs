@@ -1,4 +1,6 @@
-﻿namespace ActivitiesCounter.Entities;
+﻿using System.Text.Json.Serialization;
+
+namespace ActivitiesCounter.Entities;
 
 public class Activity
 {
@@ -20,7 +22,7 @@ public class Activity
 	public bool AllowPreinscription { get; set; }
 	public bool HasOpenInscriptions => AllowPreinscription || (OpenInscriptionTime <= DateTime.Now);
 	public bool IsElapsed => Date.AddMinutes(OvertimeMinutes) < DateTime.Now;
-	public DateTime OpenInscriptionTime => Date.AddMinutes(-InscriptionMinutes);
+	public DateTime OpenInscriptionTime => Date == DateTime.MinValue ? DateTime.MinValue : Date.AddMinutes(-InscriptionMinutes);
 
 	public void AddParticipant(string participant)
 	{
