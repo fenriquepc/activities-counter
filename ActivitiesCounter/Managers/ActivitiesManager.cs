@@ -35,12 +35,11 @@ public class ActivitiesManager
 
 	public async Task<IEnumerable<Activity>> GetNextActivitiesAsync()
 	{
-		if (_showAll)
-			return await _activityRepository.GetAll();
+		var activitiesToShow = _showAll ? 
+			await _activityRepository.GetAll() : 
+			await _activityRepository.Get(from: DateTime.Now.AddMinutes(-Activity.OvertimeMinutes), to: DateTime.Now.Date.AddDays(1));
 
-		var now = DateTime.Now;
-		var activities = await _activityRepository.Get(from: now.AddMinutes(-Activity.OvertimeMinutes), to: now.Date.AddDays(1));
-		return activities.OrderBy(a => a.Date);
+		return activitiesToShow.OrderBy(a => a.Date);
 	}
 
 	public Task UpsertActivityAsync(Activity activity) 
