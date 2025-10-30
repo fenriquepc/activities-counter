@@ -95,6 +95,10 @@ tr:hover .options-button[b-fogdxa5jde] {
 td[b-bqpfnqedla] {
 	vertical-align: bottom;
 	padding: 11px 0px;
+	border-bottom: 1px groove grey;
+}
+tr:not(:first-child) td[b-bqpfnqedla] {
+	padding-top: 21px;
 }
 
 .game[b-bqpfnqedla] {
@@ -105,12 +109,13 @@ td[b-bqpfnqedla] {
 }
 
 .activity[b-bqpfnqedla] {
-	font-size: 2em;
+	font-size: 1.6em;
 	font-family: Gothica Moderna;
+    letter-spacing:4px;
 	text-shadow: 
-		0px 4px 3px rgba(0,0,0,0.4), 
-		0px 8px 13px rgba(0,0,0,0.1), 
-		0px 18px 23px rgba(0,0,0,0.1);
+		0px 4px 3px rgba(0,0,0,0.7), 
+		0px 8px 13px rgba(0,0,0,0.2), 
+		0px 18px 23px rgba(0,0,0,0.2);
 }
 
 [b-bqpfnqedla] .name-cell .more-button {
@@ -146,16 +151,20 @@ td[b-bqpfnqedla] {
     user-select: none;
     cursor: pointer;
     font-family: 'Edo';
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    color: #fe2f49;
+    font-size: 1.4em;
+    letter-spacing: 0.2em;
+    color: white;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.capacity-counter.last-places[b-fz00g9njpp] {
+    color: #fe2f49;
 }
 
 .hot[b-fz00g9njpp] {
     position: absolute;
     bottom: -1px;
-    left: -5px;
+    left: -20px;
     color: #dc3545;
 }
 
@@ -213,7 +222,7 @@ td[b-bqpfnqedla] {
     background-image: url('img/background.jpg');
     background-position:center 28%;
     min-height: 100vh;
-    padding: 50px 80px;
+    padding: 50px 10%;
     position: relative;
 }
 
