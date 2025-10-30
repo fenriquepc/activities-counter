@@ -1,6 +1,10 @@
 ﻿td {
 	vertical-align: bottom;
 	padding: 11px 0px;
+	border-bottom: 1px groove grey;
+}
+tr:not(:first-child) td {
+	padding-top: 21px;
 }
 
 .game {
@@ -11,12 +15,13 @@
 }
 
 .activity {
-	font-size: 2em;
+	font-size: 1.6em;
 	font-family: Gothica Moderna;
+    letter-spacing:4px;
 	text-shadow: 
-		0px 4px 3px rgba(0,0,0,0.4), 
-		0px 8px 13px rgba(0,0,0,0.1), 
-		0px 18px 23px rgba(0,0,0,0.1);
+		0px 4px 3px rgba(0,0,0,0.7), 
+		0px 8px 13px rgba(0,0,0,0.2), 
+		0px 18px 23px rgba(0,0,0,0.2);
 }
 
 ::deep .name-cell .more-button {

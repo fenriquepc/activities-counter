@@ -5,7 +5,7 @@
 
 <div style="text-align: right">
 	<Tooltip Text="@TooltipText">
-		<span class="capacity-counter" @onclick="ShowAddParticipant"@oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true" @onmousedown="() => _toggleling = true">
+		<span class="capacity-counter @(LastPlaces ? "last-places" : "")" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true" @onmousedown="() => _toggleling = true">
 				
 			@AvailableCapacity / @Activity.Capacity
 

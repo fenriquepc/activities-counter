@@ -2,16 +2,20 @@
     user-select: none;
     cursor: pointer;
     font-family: 'Edo';
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    color: #fe2f49;
+    font-size: 1.4em;
+    letter-spacing: 0.2em;
+    color: white;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+}
+
+.capacity-counter.last-places {
+    color: #fe2f49;
 }
 
 .hot {
     position: absolute;
     bottom: -1px;
-    left: -5px;
+    left: -20px;
     color: #dc3545;
 }
 
