@@ -48,6 +48,18 @@
     }
   },
   {
+    "game": "Aventuras en la Marca del Este",
+    "name": "La Isla Misteriosa",
+    "description": "Más allá de las Islas Piratas, en los mares del sur, se dice hay una isla misteriosa, siempre envuelta en una densa bruma, fría cual sudario de muerto, donde aguardan criaturas monstruosas, extraños artefactos y reliquias de otrora. ¿Quién será tan valiente como para explorarla y descubrir sus secretos?",
+    "capacity": 4,
+    "type": 0,
+    "level": 1,
+    "date": "2025-11-08T10:30",
+    "organizer": {
+      "name": "SmoleSA"
+    }
+  },
+  {
     "game": "Dungeons and Dragons 5",
     "name": "La llave de Quinari",
     "description": "Kenders, un bardo misterioso, una leyenda a descubrir, caballeros negros... Qué más se puede pedir??",
@@ -82,6 +94,18 @@
     "date": "2025-11-08T16:30",
     "organizer": {
       "name": "Pablo García"
+    }
+  },
+  {
+    "game": "Dungeons and Dragons 5",
+    "name": "El Alzamiento de los Escamas Rojas",
+    "description": "Sois un grupo de Kobolds al servicio de la más terrible de las dragonas. Pero tras despertar de su sueño de 10 años y marcharse, lleva una eternidad (10 días) sin dar señales de vida, lo que significa que probablemente esté muerta. Lo que es peor, vuestros terribles rivales, los Escamas Azules, han saqueado el tesoro de la dragona y se dirigen a reclamar la Gran Pila. Está en vuestro deber pararlos y respetar el tesoro de la gran dragona... o reclamarlo para vosotros.",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2025-11-08T16:30",
+    "organizer": {
+      "name": "Juan Quintero"
     }
   },
   {
