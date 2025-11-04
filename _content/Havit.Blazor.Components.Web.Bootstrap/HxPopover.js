@@ -10,21 +10,37 @@ export function initialize(element, hxDotnetObjectReference, options) {
 }
 
 export function show(element) {
-	var i = bootstrap.Popover.getInstance(element);
+	const i = bootstrap.Popover.getInstance(element);
 	if (i) {
 		i.show();
 	}
 }
 
 export function hide(element) {
-	var i = bootstrap.Popover.getInstance(element);
+	const i = bootstrap.Popover.getInstance(element);
 	if (i) {
 		i.hide();
 	}
 }
 
+export function enable(element) {
+	const i = bootstrap.Popover.getInstance(element);
+	if (i) {
+		i.enable();
+		console.warn("enabled");
+	}
+}
+
+export function disable(element) {
+	const i = bootstrap.Popover.getInstance(element);
+	if (i) {
+		i.disable();
+		console.warn("disabled");
+	}
+}
+
 export function setContent(element, newContent) {
-	var i = bootstrap.Popover.getInstance(element);
+	const i = bootstrap.Popover.getInstance(element);
 	if (i) {
 		i.setContent(newContent);
 	}
@@ -45,7 +61,7 @@ export function dispose(element) {
 	element.removeEventListener('shown.bs.popover', handleShown);
 	element.removeEventListener('hidden.bs.popover', handleHidden);
 	element.hxDotnetObjectReference = null;
-	var popover = bootstrap.Popover.getInstance(element);
+	const popover = bootstrap.Popover.getInstance(element);
 	if (popover) {
 		popover.dispose();
 	}

@@ -1,31 +1,62 @@
-﻿export function create(element, hxDropdownDotnetObjectReference, reference) {
+﻿export function create(element, hxDropdownDotnetObjectReference, options, subscribeToHideEvent) {
 	if (!element) {
 		return;
 	}
 	element.hxDropdownDotnetObjectReference = hxDropdownDotnetObjectReference;
+	if (subscribeToHideEvent) {
+		element.addEventListener('hide.bs.dropdown', handleDropdownHide);
+	}
 	element.addEventListener('shown.bs.dropdown', handleDropdownShown);
 	element.addEventListener('hidden.bs.dropdown', handleDropdownHidden);
 
-	if (reference) {
-		var referenceOption = document.querySelector(reference);
-		var d = new bootstrap.Dropdown(element, {
-			reference: referenceOption
-		});
+	if (options) {
+		prepareOptions(options);
+		const d = new bootstrap.Dropdown(element, options);
 	}
 	else {
-		var d = new bootstrap.Dropdown(element);
+		const d = new bootstrap.Dropdown(element);
+	}
+}
+
+function prepareOptions(options) {
+	if (options.reference !== undefined) {
+		if (options.reference === null) {
+			options.reference = "toggle"; // default Bootstrap value
+		}
+		else if (options.reference.startsWith("#")) {
+			options.reference = document.querySelector(options.reference);
+		}
+	}
+}
+
+export function update(element, options) {
+	if (!element) {
+		return;
+	}
+
+	const dOld = bootstrap.Dropdown.getInstance(element);
+	if (dOld) {
+		dOld.dispose();
+	}
+
+	if (options) {
+		prepareOptions(options);
+		const d = new bootstrap.Dropdown(element, options);
+	}
+	else {
+		const d = new bootstrap.Dropdown(element);
 	}
 }
 
 export function show(element) {
-	var d = bootstrap.Dropdown.getInstance(element);
+	const d = bootstrap.Dropdown.getInstance(element);
 	if (d) {
 		d.show();
 	}
 }
 
 export function hide(element) {
-	var d = bootstrap.Dropdown.getInstance(element);
+	const d = bootstrap.Dropdown.getInstance(element);
 	if (d) {
 		d.hide();
 	}
@@ -33,6 +64,23 @@ export function hide(element) {
 
 function handleDropdownShown(event) {
 	event.target.hxDropdownDotnetObjectReference.invokeMethodAsync('HxDropdown_HandleJsShown');
+};
+
+async function handleDropdownHide(event) {
+	const d = bootstrap.Dropdown.getInstance(event.target);
+
+	if (d.hidePreventionDisabled) {
+		d.hidePreventionDisabled = false;
+		return;
+	}
+
+	event.preventDefault();
+
+	const cancel = await event.target.hxDropdownDotnetObjectReference.invokeMethodAsync('HxDropdown_HandleJsHide');
+	if (!cancel) {
+		d.hidePreventionDisabled = true;
+		d.hide();
+	}
 };
 
 function handleDropdownHidden(event) {
@@ -46,7 +94,7 @@ export function dispose(element) {
 	element.removeEventListener('shown.bs.dropdown', handleDropdownShown);
 	element.removeEventListener('hidden.bs.dropdown', handleDropdownHidden);
 	element.hxDropdownDotnetObjectReference = null;
-	var d = bootstrap.Dropdown.getInstance(element);
+	const d = bootstrap.Dropdown.getInstance(element);
 	if (d) {
 		d.dispose();
 	}
