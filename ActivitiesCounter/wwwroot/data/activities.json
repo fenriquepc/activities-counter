@@ -1,146 +1,173 @@
 [
   {
-    "game": "Dungeons and Dragons",
-    "name": "Comienza la aventura",
-    "description": "Actividad para niños. Juego de mesa cooperativo que consiste en una entrada divertida y rápida al mundo de Dungeons & Dragons.",
-    "capacity": 4,
-    "type": 1,
-    "level": 0,
-    "date": "2025-11-08T11:00",
-    "organizer": {
-      "name": "Irene"
-    }
-  },
-  {
-    "game": "7º Mar 2 edición",
-    "name": "El Esquivo Legado",
-    "description": "Que puede salir mal en la fiesta de celebración de la Herencia de la joven Kamile? Y por qué las tierras de su madre parecen las únicas prósperas de esa zona de Curonia? Y porque hace de repente tanto calor y parece entreverse algo oculto en cada reflejo?",
-    "capacity": 4,
-    "type": 0,
-    "level": 0,
-    "date": "2025-11-08T10:30",
-    "organizer": {
-      "name": "Luis"
-    }
-  },
-  {
-    "game": "Daggerheart",
-    "name": "Antes de que nos desangren",
-    "description": "Tras las Guerras del Ki distintos guerreros han obtenido la capacidad de viajar de mundo en mundo con el objetivo de restaurar el equilibrio del multiverso. Vosotros sois esos guerreros. Desde hace semanas comandos armados de simios inteligentes, pertenecientes al autoproclamado Nuevo Ejercito Simio, están secuestrando a eminentes científicos sin objetivo concreto. La última ha sido la Doctora Luva Ullman. Sin embargo, han cometido un error porque ahora estáis sobre su pista. La persecución ha comenzado pero ¡Oh! ¿Es eso un portal hacia otro universo? ¿Acaso planean huir hacia Mundo Simio? ¿Y por qué esos samuráis nos apuntan con sus mosquetes?",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2025-11-08T10:30",
-    "organizer": {
-      "name": "Alcanor"
-    }
-  },
-  {
-    "game": "Outgunned",
-    "name": "Tras los pasos de El Zorro",
-    "description": "El Zorro ha desaparecido, y la injusticia cabalga sin freno. Pero en las sombras de California, nuevas figuras se alzan: un vampiro parisino, un espadachín felino, un guerrero del lejano oriente y un hombre de dudosa moralidad. Nadie los esperaba. Nadie los comprende. Y, sin embargo… puede que sean justo lo que el pueblo necesita. Tras los pasos de El Zorro es un one-shot de tono cinematográfico y gamberro, diseñado para 4 jugadores que encarnarán personajes inspirados en las películas de Antonio Banderas. Una mezcla imposible de géneros (aventura, acción, drama, comedia e incluso terror). Espionaje en fiestas de alta sociedad, mapas robados, trenes desbocados y duelos al amanecer. Todo puede pasar… y probablemente pasará. `Ideal para fliparse con varios momentos épicos y muchas frases dichas con acento.",
-    "capacity": 4,
-    "type": 0,
-    "level": 1,
-    "date": "2025-11-08T10:30",
-    "organizer": {
-      "name": "Kolander"
-    }
-  },
-  {
     "game": "Aventuras en la Marca del Este",
-    "name": "La Isla Misteriosa",
-    "description": "Más allá de las Islas Piratas, en los mares del sur, se dice hay una isla misteriosa, siempre envuelta en una densa bruma, fría cual sudario de muerto, donde aguardan criaturas monstruosas, extraños artefactos y reliquias de otrora. ¿Quién será tan valiente como para explorarla y descubrir sus secretos?",
+    "name": "B10*: El túmulo perdido de Azgoz el testarudo",
+    "description": "Hace muchos, muchos años, cuando la ciudad de Robleda aún era joven, no pocos de perecerían durante sus aventuras, enfrentados a desafios y cuitas mil. Los menos, aquellos que gozaron de mayor fama, fueron enterrados en las Colinas Azules. Al trascurrir de los años, estos enterramientos cayeron en el olvido, extraviados en las brumas del tiempo. Hasta ahora.",
     "capacity": 4,
     "type": 0,
-    "level": 1,
-    "date": "2025-11-08T10:30",
+    "level": 0,
+    "date": "2026-05-22T17:00",
     "organizer": {
       "name": "SmoleSA"
     }
   },
   {
-    "game": "Dungeons and Dragons 5",
-    "name": "La llave de Quinari",
-    "description": "Kenders, un bardo misterioso, una leyenda a descubrir, caballeros negros... Qué más se puede pedir??",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2025-11-08T16:00",
-    "organizer": {
-      "name": "Luis"
-    }
-  },
-  {
-    "game": "Legend in the Mist",
-    "name": "El montón de cosas",
-    "description": "Desde que se tiene memoria, al final del invierno y antes de las fiestas de primavera, los aldeanos de Ravenhome acarreaban sus ropas viejas, herramientas rotas y otros objetos desechados у los arrojaban por un afloramiento rocoso a un barranco conocido como Skunk Glen. Este año, corren rumores de que el concejal quiere cambiar la costumbre, y quizás no solo los aldeanos estén molestos con el cambio…",
+    "game": "Mörk borg",
+    "name": "Somnium. Partida de rol de terror",
+    "description": "Una partida de rol con el sistema de Mörk borg hecha para aquellos a los que no les importa la salvación de sus almas.",
     "capacity": 3,
     "type": 0,
-    "level": 2,
-    "date": "2025-11-08T16:00",
-    "adultsOnly": true,
+    "level": 0,
+    "date": "2026-05-22T17:00",
     "organizer": {
-      "name": "JM_Hastur"
+      "name": "Darío Esteban Domenech"
     }
   },
   {
-    "game": "Crónicas de la Marca",
-    "name": "El legado perdido",
-    "description": "Hace décadas que los pescadores de Aguasmuertas atrapan algo más que peces cuando salen a faenar al pantano que moja sus orillas. A pesar de los años transcurridos desde la guerra de la reina loca, los cadáveres siguen apareciendo en el agua estancada, muchos de ellos animados por una vil nigromancia que les niega la paz de la muerte.\nAlgunos dicen que un nigromante se ha instalado de nuevo en el decrépito castillo que domina la isla del pantano; otros que la reina Denira no deja descansar en paz a los que participaron en la guerra que la dio muerte; otros que el castillo está embrujado por la cantidad de sufrimiento que se produjo entre sus muros…\nEn lo que todos están de acuerdo es en que este mal no para de crecer y que terminará engullendo también al pueblo de Aguasmuertas si alguien no hace nada por detenerlo.\nEn este momento aparecen nuestros héroes, conocedores de las miserias del pueblo de Aguasmuertas, dispuestos a dar una solución a sus ciudadanos y alcanzar la gloria o caer en el intento. Un castillo embrujado, unos personajes marcados por actos del pasado, un misterio que clama por ser resuelto y una mazmorra llena de horrores.",
+    "game": "La Llamada de Cthulhu",
+    "name": "Panacea",
+    "description": "Chuck Ogle va a dar una gran fiesta, y por supuesto estáis todos invitados. ¡Pónganse sus mejores galas para disfrutar de la mayor fiesta del año!,",
     "capacity": 4,
     "type": 0,
     "level": 0,
-    "date": "2025-11-08T16:00",
+    "date": "2026-05-22T17:00",
+    "organizer": {
+      "name": "Diana"
+    }
+  },
+  {
+    "game": "Ysystem",
+    "name": "La ira de los cándidos",
+    "description": "Los jugadores de esta aventura interpretan, en la España de 1937, a Isabel y a sus hermanos, unos críos de entre siete y doce años que viven con su tía Remedios en «la Casona». Situada en un apacible y solitario entorno natural denominado «el Valle», se trata de una antigua casa montañesa del siglo XVIII que aún guarda demasiados secretos familiares.",
+    "capacity": 4,
+    "adultsOnly": true,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T10:15",
+    "organizer": {
+      "name": "Aletheia"
+    }
+  },
+  {
+    "game": "Outgunned",
+    "name": "Tras los pasos del Zorro",
+    "description": "El Zorro ha desaparecido, y la injusticia cabalga sin freno. Pero en las sombras de California, nuevas figuras se alzan: un vampiro parisino, un espadachín felino, un guerrero del lejano oriente y un hombre de dudosa moralidad. Nadie los esperaba. Nadie los comprende. Y, sin embargo… puede que sean justo lo que el pueblo necesita.",
+    "capacity": 4,
+    "adultsOnly": true,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T10:30",
+    "organizer": {
+      "name": "Kolander"
+    }
+  },
+  {
+    "name": "Doctor Who Elysium",
+    "description": "Los jugadores de esta aventura interpretan, en la España de 1937, a Isabel y a sus hermanos, unos críos de entre siete y doce años que viven con su tía Remedios en «la Casona». Situada en un apacible y solitario entorno natural denominado «el Valle», se trata de una antigua casa montañesa del siglo XVIII que aún guarda demasiados secretos familiares.",
+    "capacity": 7,
+    "type": 2,
+    "level": 0,
+    "date": "2026-05-23T17:00",
+    "organizer": {
+      "name": "Inzo"
+    }
+  },
+  {
+    "game": "Charla",
+    "name": "Trucos para Creación de Personajes",
+    "description": "Charla interactiva sobre creación de personajes para rolear tanto en vivo, como en mesa como en formatos online. Se enseñarán trucos para crear personajes interesantes que puedan evolucionar a lo largo de una historia. Además, se explicará qué hay que tener en cuenta para divertirse más al jugar con un personaje y cómo plantearlo desde un inicio.",
+    "type": 3,
+    "level": 0,
+    "date": "2026-05-23T17:00",
+    "organizer": {
+      "name": "Ares"
+    }
+  },
+  {
+    "game": "Áureo",
+    "name": "El sentido de la Vida",
+    "description": "Áureo es un juego de rol tipo PBTA en el que encarnas a un héroe o heroína de la Grecia Clásica, que tendrá que luchar contra monstruos, conspiraciones políticas y su hibris interior mientras trata de cumplir las misiones que los caprichosos dioses ponen en su camino. En el Sentido de la Vida, en tono de comedia, tendrán que averiguar la respuesta a uno de los grandes enigmas del universo con la ayuda de los grandes filósofos atenienses, si quieren recuperar un gran tesoro y evitar que le pongan precio a su cabeza. Todo esto mientras huyen de piratas, luchan contra calamares gigantes y evitan ser devorados por leones… buena suerte.",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T16:00",
+    "organizer": {
+      "name": "Cuco"
+    }
+  },
+  {
+    "game": "Outgunned",
+    "name": "X-men 97: Grandes Xpectativas",
+    "description": "Tras la desaparición del Profesor Xavier, los X-Men intentan mantener viva su causa en un planeta que los teme más que nunca. Nuevos enemigos se alzan, viejas alianzas se ponen a prueba y un oscuro futuro amenaza con borrar el sueño de la coexistencia.",
+    "capacity": 4,
+    "adultsOnly": true,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T16:30",
+    "organizer": {
+      "name": "Kolander"
+    }
+  },
+  {
+    "game": "Daggerheart",
+    "name": "La huida de Lady Blackbird",
+    "description": "Lady Blackbird está huyendo de un matrimonio concertado con el Conde Carlowe. Ha contratado una nave contrabandista, El Búho, para que la lleven desde su palacio en el mundo imperial de Ilysium hasta los lejanos confines de los Restos, y poder encontrarse con su antiguo amante secreto, el Rey Pirata Uriah Flint. SIN EMBARGO — antes de alcanzar el punto intermedio de su viaje a Mundorrefugio, El Búho fue perseguido y capturado por el crucero Imperial Mano del Pesar, bajo cargo de volar con pabellón falso. EN ESTE MOMENTO, Lady Blackbird, su escolta, y la tripulación de El Búho permanecen retenidos en el calabozo de la nave, mientras el comandante del crucero, el Capitán Hollas, comprueba por radio la matrícula del buque. Es solo cuestión de tiempo que descubran las órdenes de arresto pendientes y sepan que El Búho es propiedad de nada menos que el infame forajido Cyrus Vance.",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T16:30",
+    "organizer": {
+      "name": "Alcanor"
+    }
+  },
+  {
+    "game": "Fomoria",
+    "name": "Rol Grimdark Épico de Horror",
+    "description": "En un mundo hostil sumido en la oscuridad donde no hay un Sol los jugadores tomarán el papel de personajes antropomórficos, su misión será encontrar a un ser querido pero se encontrarán con problemas inesperados, dioses oscuros y aberraciones espeluznantes.",
+    "capacity": 6,
+    "type": 0,
+    "level": 1,
+    "date": "2026-05-23T16:30",
+    "organizer": {
+      "name": "Mikeranjero"
+    }
+  },
+  {
+    "game": "La Llamada de Cthulhu",
+    "name": "Forget me not",
+    "capacity": 4,
+    "adultsOnly": true,
+    "type": 0,
+    "level": 1,
+    "date": "2026-05-23T19:00",
     "organizer": {
       "name": "Quique"
     }
   },
   {
-    "game": "Ten Candles",
-    "name": "El último puerto",
-    "description": "+16 Esta es la historia de cómo terminó todo. Éramos una tripulación pirata, curtida por la sal y la pólvora. El sol se apagó mientras estábamos en alta mar, y durante 3 días navegamos bajo una oscuridad inmensa, solo guiados por las velas del barco y el crujir de la madera. En el horizonte, habrá algún puerto estamos seguros de ello. Quizás haya supervivientes. Quizás haya comida. Quizás… haya esperanza.",
-    "capacity": 5,
-    "type": 0,
-    "level": 2,
-    "date": "2025-11-08T16:30",
-    "organizer": {
-      "name": "Pablo García"
-    }
-  },
-  {
-    "game": "Dungeons and Dragons 5",
-    "name": "El Alzamiento de los Escamas Rojas",
-    "description": "Sois un grupo de Kobolds al servicio de la más terrible de las dragonas. Pero tras despertar de su sueño de 10 años y marcharse, lleva una eternidad (10 días) sin dar señales de vida, lo que significa que probablemente esté muerta. Lo que es peor, vuestros terribles rivales, los Escamas Azules, han saqueado el tesoro de la dragona y se dirigen a reclamar la Gran Pila. Está en vuestro deber pararlos y respetar el tesoro de la gran dragona... o reclamarlo para vosotros.",
-    "capacity": 5,
-    "type": 0,
-    "level": 0,
-    "date": "2025-11-08T16:30",
-    "organizer": {
-      "name": "Juan Quintero"
-    }
-  },
-  {
-    "game": "El Anillo Único 2 ed",
-    "name": "Cueva de Trolles donde las haya",
+    "game": "Mácula",
+    "name": "Los últimos días de Venecia",
+    "description": "La Mácula devora nuestro mundo.\nUn miasma de oscuridad insondable que se extiende lenta pero inexorablemente por la tierra, engullendo todo lo que encuentra a su paso y corrompiendo aquello que alcanza. Aislada del resto del mundo y rodeada por la Mácula, la Nueva Europa se enfrenta a una amenaza imparable que podría suponer la extinción de la raza humana.\n¿Estás preparado?",
     "capacity": 4,
+    "adultsOnly": true,
     "type": 0,
     "level": 0,
-    "date": "2025-11-08T17:00",
+    "date": "2026-05-23T20:20",
     "organizer": {
-      "name": "Caos Controlado"
+      "name": "Kolander"
     }
   },
   {
-    "game": "Mothership RPG",
-    "name": "Decagone",
-    "description": "Mothership es un juego de rol sencillo, de survival horror y ciencia ficción, al estilo de Alien u Horizonte Final. Tu primer día de trabajo en una instalación científica en lo profundo del océano, en un planeta lejano, debería haber sido sencillo, pero en seguida se hace evidente que el personal está atrapado en una situación aterradora. No te preocupes si las cosas se repiten... pronto lo entenderás.",
+    "game": "Dungeons and Dragons 5.5",
+    "name": "El Paso de Neverwinter",
+    "description": "Está claro por qué elegisteis El Paso como trayecto. Una ruta abandonada a través de las montañas, usada principalmente por forajidos y contrabandistas, justo lo que sois vosotros.\nTambién está claro por qué está abandonada, y más ahora en invierno. Con la nieve a la altura de las rodillas y un viento que corta la cara, cada metro avanzado es un logro.\nLa situación se ha ido a la mierda, el prisionero es un lastre más que se suma al de la herida del jefe, que parece estar jodido.\nPor suerte ahí delante se distingue una cabaña abandonada, quizás tiempo atrás fuese un refugio de guardabosques. Sea lo que sea, es un lugar donde guarecerse de este infierno helado en la Costa de la Espada.",
     "capacity": 4,
+    "adultsOnly": true,
     "type": 0,
     "level": 0,
-    "date": "2025-11-08T16:00",
+    "date": "2026-05-23T21:00",
     "organizer": {
-      "name": "Rober (Hamleto)"
+      "name": "Chache Perrache"
     }
   }
 ]
