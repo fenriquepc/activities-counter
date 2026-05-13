@@ -71,6 +71,12 @@ h1[b-t0pe2x2lin] {
 	border-radius: 5px;
 	vertical-align: middle;
 }
+
+.activity-date[b-9j0ew65nka] {
+	font-family: Draculaz;
+	letter-spacing: 4px;
+	font-size: 1.1em;
+}
 /* /Pages/NextActivities/ActivityOptions.razor.rz.scp.css */
 .activity-options[b-fogdxa5jde] {
 	min-width:20px;
@@ -102,6 +108,7 @@ tr:not(:first-child) td[b-bqpfnqedla] {
 }
 
 .game[b-bqpfnqedla] {
+	font-family: Typewriter;
 	display: block;
 	font-size: 0.6em;
 	min-height: 0.6em;
@@ -109,8 +116,8 @@ tr:not(:first-child) td[b-bqpfnqedla] {
 }
 
 .activity[b-bqpfnqedla] {
-	font-size: 1.6em;
-	font-family: Gothica Moderna;
+	font-size: 1.2em;
+	font-family: Darkella;
     letter-spacing:4px;
 	text-shadow: 
 		0px 4px 3px rgba(0,0,0,0.7), 
@@ -150,11 +157,11 @@ tr:not(:first-child) td[b-bqpfnqedla] {
 .capacity-counter[b-fz00g9njpp] {
     user-select: none;
     cursor: pointer;
-    font-family: 'Edo';
-    font-size: 1.4em;
+    font-family: 'Typewriter';
+    font-size: 1.2em;
     letter-spacing: 0.2em;
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .capacity-counter.last-places[b-fz00g9njpp] {
@@ -187,7 +194,7 @@ tr:not(:first-child) td[b-bqpfnqedla] {
 	display: inline-block;
 	float: right;
 	line-height: 0.7em;
-	font-family: 'Heavitas', monospace;
+	font-family: Draculaz, 'Heavitas', monospace;
 	font-size: 1.7em;
 	color: #daf6ff;
 	text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
@@ -220,18 +227,20 @@ tr:not(:first-child) td[b-bqpfnqedla] {
     font-size: 2em;
     color: white;
     background-image: url('img/background.jpg');
-    background-position:center 28%;
+    background-size:cover;
     min-height: 100vh;
     padding: 50px 10%;
     position: relative;
 }
 
 h1[b-1x1hyw2trh] {
+    font-family: Horror Brush;
     display: inline-block;
     text-align: left;
     font-size: 4rem;
     line-height: 0.7;
     margin-bottom: 0.5em;
+    letter-spacing: 6px;
 }
 
 table[b-1x1hyw2trh] {
