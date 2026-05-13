@@ -23,8 +23,23 @@
 }
 
 @font-face {
-    font-family: 'Edo';
-    src: url('../fonts/edosz.ttf');
+    font-family: 'Horror Brush';
+    src: url('../fonts/Horror Brush.ttf');
+}
+
+@font-face {
+    font-family: 'Darkella';
+    src: url('../fonts/Darkella.otf');
+}
+
+@font-face {
+    font-family: 'Draculaz';
+    src: url('../fonts/Dracutaz.ttf');
+}
+
+@font-face {
+    font-family: 'Typewriter';
+    src: url('../fonts/veteran typewriter.ttf');
 }
 
 html, body {

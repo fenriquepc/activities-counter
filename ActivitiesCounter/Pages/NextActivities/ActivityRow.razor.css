@@ -8,6 +8,7 @@ tr:not(:first-child) td {
 }
 
 .game {
+	font-family: Typewriter;
 	display: block;
 	font-size: 0.6em;
 	min-height: 0.6em;
@@ -15,8 +16,8 @@ tr:not(:first-child) td {
 }
 
 .activity {
-	font-size: 1.6em;
-	font-family: Gothica Moderna;
+	font-size: 1.2em;
+	font-family: Darkella;
     letter-spacing:4px;
 	text-shadow: 
 		0px 4px 3px rgba(0,0,0,0.7), 

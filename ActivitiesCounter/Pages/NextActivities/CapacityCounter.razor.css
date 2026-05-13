@@ -1,11 +1,11 @@
 ﻿.capacity-counter {
     user-select: none;
     cursor: pointer;
-    font-family: 'Edo';
-    font-size: 1.4em;
+    font-family: 'Typewriter';
+    font-size: 1.2em;
     letter-spacing: 0.2em;
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 .capacity-counter.last-places {
