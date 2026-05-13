@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace ActivitiesCounter.Entities;
+﻿namespace ActivitiesCounter.Entities;
 
 public class Activity
 {

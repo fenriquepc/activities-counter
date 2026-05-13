@@ -3,29 +3,32 @@
 @inject ActivitiesManager ActivitiesManager;
 @inject IJSRuntime JS;
 
+@if (HasCapacity)
+			{
 <div style="text-align: right">
 	<Tooltip Text="@TooltipText">
 		<span class="capacity-counter @(LastPlaces ? "last-places" : "")" @onclick="ShowAddParticipant" @oncontextmenu="ShowParticipants" @oncontextmenu:preventDefault="true" @onmousedown="() => _toggleling = true">
 				
 			@AvailableCapacity / @Activity.Capacity
 
-			@if (LastPlaces)
-			{
-				<span><i class="fa-brands fa-hotjar hot" /></span>
-			}
+				@if (LastPlaces)
+				{
+					<span><i class="fa-brands fa-hotjar hot" /></span>
+				}
 
-			<div class="collapse add-participant" id="@($"add-participants{Activity.Id}")" @onclick:stopPropagation="true">
-				<div class="card fs-5">
-					<div class="card-body">
-						<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
-									@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+				<div class="collapse add-participant" id="@($"add-participants{Activity.Id}")" @onclick:stopPropagation="true">
+					<div class="card fs-5">
+						<div class="card-body">
+							<InputText placeholder="Nombre del nuevo participante" @ref="_participantNameInput"
+							@bind-Value="_newParticipantName" @onkeyup="OnKeyUp" @onfocusout="HideCollapse" />
+						</div>
 					</div>
 				</div>
-			</div>
 
-		</span>
-	</Tooltip>
-</div>
+			</span>
+		</Tooltip>
+	</div>
+}
 
 @code {
 	[CascadingParameter] public IModalService ModalService { get; set; }
@@ -34,6 +37,7 @@
 	private bool LastPlaces => Activity.AvailableCapacity < 3;
 	private string TooltipText => Activity.HasOpenInscriptions ? "Añadir participante" : "Inscripciones cerradas";
 	private string AvailableCapacity => Activity.HasOpenInscriptions ? Activity.AvailableCapacity.ToString() : "-";
+	private bool HasCapacity => Activity.Capacity > 0;
 
 	private Timer _timer;
 	private InputText _participantNameInput;
@@ -69,7 +73,7 @@
 
 	private async Task ShowAddParticipant()
 	{
-		if (!Activity.HasOpenInscriptions)
+		if (Activity.Capacity == 0 || !Activity.HasOpenInscriptions)
 			return;
 
 		await JS.InvokeAsync<object>("Collapse", $"add-participants{Activity.Id}");
