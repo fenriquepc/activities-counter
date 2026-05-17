@@ -36,6 +36,29 @@
     }
   },
   {
+    "name": "Los Santos de Jalisco en el Nuevo Mundo",
+    "description": "(Léase con acento latino) Los Santos de Jalisco regresan para su última aventura. Las puertas de la Tierra Hueca se han abierto y terribles monstruos de pesadilla están surgiendo de ella. Un antiguo némesis del luchador más grande de todos los tiempos, el Dorado, ha vuelto de su destierro para tomarse venganza. ¿Podrán los Santos de Jalisco hacer frente a las malvadas conspiraciones del Doctor Caronte? Dinosauros, junglas antediluvianas, bikinis de pieles y quebradoras.",
+    "capacity": 5,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-22T17:00",
+    "organizer": {
+      "name": "Alcanor"
+    }
+  },
+  {
+    "game": "Micromunda",
+    "name": "Puesto Avanzado Luciérnaga",
+    "description": "Mayores de 16 años. Tras la desaparición de los humanos, un mundo vasto y olvidado quedó en manos de insectos y pequeñas criaturas que han desarrollado conciencia, lenguaje y cultura. Micromunda es un juego de rol postapocalíptico donde los jugadores interpretan bichos únicos que luchan por sobrevivir en un entorno hostil, repleto de ruinas humanas, monstruos mutados y secretos enterrados.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-22T17:00",
+    "organizer": {
+      "name": "Aku"
+    }
+  },
+  {
     "game": "Ysystem",
     "name": "La ira de los cándidos",
     "description": "Los jugadores de esta aventura interpretan, en la España de 1937, a Isabel y a sus hermanos, unos críos de entre siete y doce años que viven con su tía Remedios en «la Casona». Situada en un apacible y solitario entorno natural denominado «el Valle», se trata de una antigua casa montañesa del siglo XVIII que aún guarda demasiados secretos familiares.",
