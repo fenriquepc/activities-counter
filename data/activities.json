@@ -156,6 +156,18 @@
     }
   },
   {
+    "game": "Fallout 2d20",
+    "name": "2297: Rescate en Nuka-World",
+    "description": "Mientras se dirigía a una cumbre diplomática en la Commonwealth, el vertibird que transportaba al presidente de la República de Nueva California ha sido estrellado en Nuka-World, el infame parque temático convertido ahora en una prisión de saqueadores y criminales, sitiada por los Minutemen, aislada del exterior y transformada en un laberinto de distritos hostiles donde ninguna facción ejerce control absoluto.\nCon el presidente de la RNC retenido en su interior y una crisis diplomática a punto de estallar, los personajes deberán infiltrarse en el parque y abrirse paso por una ciudad sin ley donde cada atracción sigue sus propias reglas.",
+    "capacity": 4,
+    "type": 0,
+    "level": 1,
+    "date": "2026-05-23T17:00",
+    "organizer": {
+      "name": "Aku"
+    }
+  },
+  {
     "game": "La Llamada de Cthulhu",
     "name": "Forget me not",
     "capacity": 4,
