@@ -85,6 +85,18 @@
     }
   },
   {
+    "game": "Fomoria",
+    "name": "Rol Grimdark Épico de Horror",
+    "description": "En un mundo hostil sumido en la oscuridad donde no hay un Sol los jugadores tomarán el papel de personajes antropomórficos, su misión será encontrar a un ser querido pero se encontrarán con problemas inesperados, dioses oscuros y aberraciones espeluznantes.",
+    "capacity": 6,
+    "type": 0,
+    "level": 1,
+    "date": "2026-05-23T10:30",
+    "organizer": {
+      "name": "Mikeranjero"
+    }
+  },
+  {
     "name": "Doctor Who Elysium",
     "description": "Los jugadores de esta aventura interpretan, en la España de 1937, a Isabel y a sus hermanos, unos críos de entre siete y doce años que viven con su tía Remedios en «la Casona». Situada en un apacible y solitario entorno natural denominado «el Valle», se trata de una antigua casa montañesa del siglo XVIII que aún guarda demasiados secretos familiares.",
     "capacity": 7,
@@ -141,18 +153,6 @@
     "date": "2026-05-23T16:30",
     "organizer": {
       "name": "Alcanor"
-    }
-  },
-  {
-    "game": "Fomoria",
-    "name": "Rol Grimdark Épico de Horror",
-    "description": "En un mundo hostil sumido en la oscuridad donde no hay un Sol los jugadores tomarán el papel de personajes antropomórficos, su misión será encontrar a un ser querido pero se encontrarán con problemas inesperados, dioses oscuros y aberraciones espeluznantes.",
-    "capacity": 6,
-    "type": 0,
-    "level": 1,
-    "date": "2026-05-23T16:30",
-    "organizer": {
-      "name": "Mikeranjero"
     }
   },
   {
