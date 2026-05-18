@@ -97,6 +97,18 @@
     }
   },
   {
+    "game": "El anillo único 2ºEdición",
+    "name": "El festival Veraniego de Anillos de Humo",
+    "description": "La aventura tiene lugar en la víspera del solsticio de verano, durante el Festival Veraniego de Anillos de Humo, una celebración que atrae a hombres y hobbits de todas las aldeas cercanas al pueblo de Bree. Pero una amenaza oscura pondrá el festival y el pueblo en terrible peligro.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T10:30",
+    "organizer": {
+      "name": "Thorrjam"
+    }
+  },
+  {
     "name": "Doctor Who Elysium",
     "description": "Los jugadores de esta aventura interpretan, en la España de 1937, a Isabel y a sus hermanos, unos críos de entre siete y doce años que viven con su tía Remedios en «la Casona». Situada en un apacible y solitario entorno natural denominado «el Valle», se trata de una antigua casa montañesa del siglo XVIII que aún guarda demasiados secretos familiares.",
     "capacity": 7,
