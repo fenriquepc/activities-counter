@@ -109,6 +109,18 @@
     }
   },
   {
+    "game": "Magissa - Rol para niños",
+    "name": "El glotón de la magia",
+    "description": "Rol para niños mayores de 5 años. Nuestros héroes reciben una llamada de socorro por parte de la mismísima reina de las hadas, pues una extraña aflicción está haciendo que los seres mágicos, como hadas, hombres arboles, etc.. se sientan enfermos. La causa no esta clara pero las corrientes de la magia que fluyen a través del reino parece estar secándose.\nArmados de valor y con la ayuda de la reina de las hadas nuestros héroes deberán de emprender una nueva aventura para averiguar la razón de este extraño fenómeno y ponerle solución antes de que la magia desaparezca por completo.",
+    "capacity": 3,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T10:30",
+    "organizer": {
+      "name": "Maligno"
+    }
+  },
+  {
     "name": "Doctor Who Elysium",
     "description": "Los jugadores de esta aventura interpretan, en la España de 1937, a Isabel y a sus hermanos, unos críos de entre siete y doce años que viven con su tía Remedios en «la Casona». Situada en un apacible y solitario entorno natural denominado «el Valle», se trata de una antigua casa montañesa del siglo XVIII que aún guarda demasiados secretos familiares.",
     "capacity": 7,
@@ -177,6 +189,17 @@
     "date": "2026-05-23T17:00",
     "organizer": {
       "name": "Aku"
+    }
+  },
+  {
+    "game": "Patas arriba!, Pirate King! y Bin Ban Bun",
+    "name": "Demostraciones de juegos de Boquerón games",
+    "description": "En esta mesa podrás conocer los juegos de Boqueron Games como Patas arriba!, Pirate King! y Bin Ban Bun.",
+    "type": 1,
+    "level": 0,
+    "date": "2026-05-23T17:00",
+    "organizer": {
+      "name": "Dioni"
     }
   },
   {

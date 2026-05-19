@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "ActivitiesCounter",
   "resources": {
-    "hash": "sha256-5K/F5h+NLZ2Krmir3IlBhZHmkcjvIoUGsuDi6JyokAs=",
+    "hash": "sha256-FLkIcI4NFLUWOC9sfDNOSk2peGocXHWIR7RrD1Vrthk=",
     "fingerprinting": {
       "Blazored.LocalStorage.12n6dz54qr.wasm": "Blazored.LocalStorage.wasm",
       "Blazored.Modal.h7t7ava08f.wasm": "Blazored.Modal.wasm",
@@ -63,7 +63,7 @@
       "System.Threading.vqtbgn6p3h.wasm": "System.Threading.wasm",
       "System.t250xnkyfs.wasm": "System.wasm",
       "System.Private.CoreLib.7p3v92mbvz.wasm": "System.Private.CoreLib.wasm",
-      "ActivitiesCounter.kae9osqs0w.wasm": "ActivitiesCounter.wasm",
+      "ActivitiesCounter.3stnnnmni7.wasm": "ActivitiesCounter.wasm",
       "dotnet.native.vksf36c1w4.js": "dotnet.native.js",
       "dotnet.native.k6g2steoe8.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -153,7 +153,7 @@
       "System.Threading.Thread.eecxf1p56e.wasm": "sha256-+l+fJAw3/AfDjkGcEuBd+d5mJGWsrkTa1rj8VfImk3E=",
       "System.Threading.vqtbgn6p3h.wasm": "sha256-V9e8nCYSBgYr0qvBBR+OMOlBUbHJoM8cYUQseOqTKMI=",
       "System.t250xnkyfs.wasm": "sha256-tVaTeiubnxofQV5rO7ga2UOORIQEtLkQr36ewcMO+tw=",
-      "ActivitiesCounter.kae9osqs0w.wasm": "sha256-ZKcRk8wQqhmVvLmXjCIBpFuSgaOKgy4i932KLYexwGY="
+      "ActivitiesCounter.3stnnnmni7.wasm": "sha256-g0kEyCFiD6drCfF4cRQxW2Pe4MdRmTj6idK4RHV1KFI="
     },
     "satelliteResources": {
       "cs": {
