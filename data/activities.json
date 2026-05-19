@@ -155,6 +155,18 @@
     }
   },
   {
+    "game": "Magissa - Rol para niños",
+    "name": "La perdición de los Enanos",
+    "description": "Los primos enanos de uno de nuestros héroes se han metido en problemas, excavando excavando en busca de tesoros han llegado a un lugar demasiado profundo. Al parecer tienen problemas y no pueden salir. Una vez más nuestros héroes deben de ir a las profundidades de las minas enanas para ver que pueden hacer y rescatarlos. Allí descubrirán que no es oro todo lo que reluce y que por la avaricia los enanos se están metiendo en un buen lio.",
+    "capacity": 4,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T16:00",
+    "organizer": {
+      "name": "Maligno"
+    }
+  },
+  {
     "game": "Outgunned",
     "name": "X-men 97: Grandes Xpectativas",
     "description": "Tras la desaparición del Profesor Xavier, los X-Men intentan mantener viva su causa en un planeta que los teme más que nunca. Nuevos enemigos se alzan, viejas alianzas se ponen a prueba y un oscuro futuro amenaza con borrar el sueño de la coexistencia.",
