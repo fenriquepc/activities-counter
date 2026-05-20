@@ -215,6 +215,18 @@
     }
   },
   {
+    "game": "Granujas",
+    "name": "Una Oca, Tres Idiotas y Un Gigante",
+    "description": "Si, los idiotas sois vosotros. Vuestro primer error fue planear robarle la oca de los huevos de oro a Tom Rompehuesos, un gigante de las nubes. El segundo, huir con ella a cuestas a través del bosque… Y el tercero, refugiaros en la vieja mansión Willowby Hall. Ahora, el gigante aguarda fuera, la oca tiene sus propios planes (entre los cuales no está poner huevos) y la mansión parece de todo, menos un refugio seguro. Así que, sí, sois unos idiotas y lo tenéis crudo.",
+    "capacity": 3,
+    "type": 0,
+    "level": 0,
+    "date": "2026-05-23T17:30",
+    "organizer": {
+      "name": "HamLeto"
+    }
+  },
+  {
     "game": "La Llamada de Cthulhu",
     "name": "Forget me not",
     "capacity": 4,
